@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  4 MAR 2024 00:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  5 MAR 2024 00:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -300,7 +300,25 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip53
 \dth@everypar=\toks24
 )
-\c@theorem=\count280
+(c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen156
+\ar@mcellbox=\box51
+\extrarowheight=\dimen157
+\NC@list=\toks25
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box52
+)
+(c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count280
+\float@exts=\toks26
+\float@box=\box53
+\@float@everytoks=\toks27
+\@floatcapt=\box54
+)
+\c@theorem=\count281
 
 (c:/texlive/2023/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -311,8 +329,8 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count282
+\l__pdf_internal_box=\box55
 )
 (./thesis_gwjz4t.aux)
 \openout1 = `thesis_gwjz4t.aux'.
@@ -412,17 +430,17 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen156
-\scratchbox=\box52
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen157
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count283
+\scratchdimen=\dimen158
+\scratchbox=\box56
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen159
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks29
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -432,7 +450,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<eszterhazy-logo-en.pdf, id=149, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-en.pdf, id=165, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-en.pdf Graphic file (type pdf)
 <use eszterhazy-logo-en.pdf>
 Package pdftex.def Info: eszterhazy-logo-en.pdf  used on input line 26.
@@ -442,12 +460,12 @@ Package pdftex.def Info: eszterhazy-logo-en.pdf  used on input line 26.
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <c:/texlive/2023/texmf-dist/tex/latex/
 thesis-ekf/eszterhazy-logo-en.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 31--36
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--36
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
@@ -465,7 +483,7 @@ Chapter 1.
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-5.
+8.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [6{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
@@ -478,91 +496,122 @@ Chapter 3.
 
 ]
 Chapter 4.
+<img/usecase.png, id=270, 478.78876pt x 443.6575pt>
+File: img/usecase.png Graphic file (type png)
+<use img/usecase.png>
+Package pdftex.def Info: img/usecase.png  used on input line 83.
+(pdftex.def)             Requested size: 227.62204pt x 210.92227pt.
 [9
 
-]
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.89 \subsection
+                {Functional Requirements} <./img/usecase.png>] [10
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.158 
+      ] [11
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.167 	\item \textbf
+                    {Error Handling}: When the user tries to initialize game...
+] [12]
 Chapter 5.
-[10
-
-]
-Chapter 6.
-[11
-
-]
-Chapter 7.
-[12
-
-]
-Chapter 8.
 [13
 
 ]
-Chapter 9.
+Chapter 6.
 [14
 
 ]
-Chapter 10.
+Chapter 7.
 [15
 
 ]
-Chapter 11.
+Chapter 8.
 [16
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-38.
+Chapter 9.
+[17
+
+]
+Chapter 10.
+[18
+
+]
+Chapter 11.
+[19
+
+]
+Chapter 12.
+[20
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+41.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 137--139
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 240--242
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[17
+[21
 
-] [18] (./thesis_gwjz4t.aux)
+] [22] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
-(rerunfilecheck)             Checksum: DE87205B081CB7B7B27DB14DBCD66AB6;5462.
+(rerunfilecheck)             Checksum: 9379FDE9E0C8649D3C1E269195B857BD;6201.
  ) 
 Here is how much of TeX's memory you used:
- 10932 strings out of 474116
- 174413 string characters out of 5747718
- 1934190 words of memory out of 5000000
- 33022 multiletter control sequences out of 15000+600000
- 615896 words of font info for 74 fonts, out of 8000000 for 9000
+ 11122 strings out of 474116
+ 177252 string characters out of 5747718
+ 1940190 words of memory out of 5000000
+ 33179 multiletter control sequences out of 15000+600000
+ 628678 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,694b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,93p,737b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
-/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (18 pages, 182308 bytes).
+/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
+r12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/
+2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/font
+s/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/
+lmtt12.pfb>
+Output written on thesis_gwjz4t.pdf (22 pages, 279263 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,7 +4,7 @@
 
 
 
-\usepackage{amsthm, url}
+\usepackage{amsthm, url, array, float, graphicx}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \theoremstyle{definition}
@@ -25,6 +25,7 @@
 
 \maketitle
 
+
 \clearpage
 \section*{Acknowledgments}
 \thispagestyle{empty} 
@@ -34,20 +35,22 @@ I would like to express my gratitude to Dr.~Eric Grono and Mr.~Garrett Weinzierl
 \newline\newline
 \noindent Thank you both for your generosity in sharing your time and knowledge, and your patience in addressing my myriad of questions throughout my studies. 
 
+
 \tableofcontents
+
 
 \chapter{Introduction}
 In today’s world, data has become of paramount importance, profoundly influencing our lives and shaping decision making processes. The acquisition, processing, and interpretation of data is fundamental across multiple domains. \cite{Mondaut} Recognized as the cornerstone of contemporary insights, data serves as the basis of deriving valuable insights, and making informed projections, thereby guiding strategic planning and allowing for suitable preparation in the face of uncertainty. However, utilizing the full potential of acquired information effectively in a complex, multi-variable dynamic environment can be a challenging task \cite{Kornwitz}.
 
 This thesis approaches data collection and forecasting from a sports analytical perspective, aiming to derive statistical insights and formulate projections regarding future performance. It endeavors to utilize a combination of web scarping techniques \cite{Khder} and Monte Carlo simulation \cite{Aderibigbe} for analytical forecasting. Through the integration of these techniques, this research aims to explore a comprehensive methodology for data acquisition and predictive modeling.
 
-\section{Contextual Background:}
+\section{Contextual Background}
 The National Basketball Association (NBA) \cite{NBA} is well known for its worldwide prominence and dedicated fan base. Its enduring popularity has resulted in a multitude of analytical data relating to historic games. This abundance of statistical data, along with a widespread general awareness of the sport and my personal enthusiasm for it, positions historic NBA games an ideal domain for exploring predictive modeling based on data obtained through web scraping.
 
-\section{Motivation:}
+\section{Motivation}
 The incentive for this research is derived from a keen interest in the technical intricacies of web scraping and probabilistic elegance of Monte Carlo simulations. The application of these techniques transcends the domain of sports analytics, with uses in finance \cite{McLeish}, physics \cite{Aderibigbe}, and beyond \cite{Steffen}.
 
-\section{Objectives:}
+\section{Objectives}
 The primary objective of this thesis is two-fold. Initially, to employ web scarping techniques to gather comprehensive historical NBA game data from the early 1990s. Subsequently, to utilize said data to simulate a general probabilistic outcome for selected historic NBA games.
 
 Specifically, the research aims to:
@@ -59,12 +62,112 @@ Specifically, the research aims to:
 \end{itemize}
 Through these objectives, this thesis undertakes to promote a deeper understanding of web scraping and predictive modeling within sports analytical forecasting.
 
+
 \chapter{Methodology}
 \section{Web Scraping Techniques}
 \section{Monte Carlo Simulation}
-\section{Utilized technologies}
+
+
+\chapter{Utilized technologies}
+
 
 \chapter{Requirements}
+
+\section{Requirements List}
+The system shall be constructed to uniquely fulfill both the requirements of a computer science thesis, and the domain of data acquisition and simulation based projections. It should therefore result in an intuitive end-user experience, leveraging the web scraping and Monte Carlo simulation methodologies explored in this thesis.
+
+The client interface should allow users to interact with the business logic\footnote{The term refers to the collection of algorithms responsible for allocating and processing data through communication with the database in order to serve the user interface, while maintaining its independence from both. For further information, please see \cite{Booch}.}, access the database through built-in functions, and utilize web scraping and Monte Carlo methodologies. The Use Case diagram depicted below outlines the basic functionality described by the Functional (see table {\ref{table-funct-req}}) and Non-Functional Requirements (see table {\ref{table-non-funct-req}}) outlined in this chapter.
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=8cm]{img/usecase}
+	\caption{Use Case Diagram}
+	\label{img-usecase}
+\end{figure}
+
+
+\subsection{Functional Requirements}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|>{\raggedright\arraybackslash}p{10cm}|}
+		\hline
+		\textbf{ID} & \textbf{Name} & \textbf{Description} \\ 
+		\hline
+		R1	& Database & The system must allow users to select either the default database or utilize their own, based on a URI connection string. \\ 
+		\hline
+		R2	& Game Parameters & It should provide users with a method to set the season, home- and away team. \\ 
+		\hline
+		R3	& Epochs & The system must enable users to specify the number of epochs for the Monte Carlo simulation. \\ 
+		\hline
+		R4	& Game Data & Historic game data should be displayed based on these settings for user review. \\ 
+		\hline
+		R5	& Select Game & Users must be able to select an exact game to simulate from the displayed list of historic games. \\ 
+		\hline
+		R6	& Missing Game & The system must recognize if the selected historic game is not in the database. \\ 
+		\hline
+		R7	& Scrape Method & It should provide users with options for scraping the missing data trough different web scraping methods. \\ 
+		\hline
+		R8	& Proxies & Scraping options should include the ability to use proxies. \\ 
+		\hline
+		R9	& Proxy List & Users should have the ability to utilize their own proxy lists. \\ 
+		\hline
+		R10	& Forced Scrape & The system must allow users the option to scrape game data even when it is deemed unnecessary by the algorithm. \\ 
+		\hline
+		R11	& Validation & The system must ensure that data is not duplicated in the database. \\ 
+		\hline
+		R12	& Simulation & The system must execute Monte Carlo simulations based on the selected game parameters. \\ 
+		\hline
+		R13	& Graphs & It should visualize simulation results with graphs, including a probability density graph and a violin graph. \\ 
+		\hline
+		R14	& Metrics & The system must return basic metrics such as the number of wins for each team and the mode of scores. \\ 
+		\hline
+		R15	& Comparison & Users should be able to compare simulation results with original game data. \\ 
+		\hline
+	\end{tabular}
+	\caption{List of Functional Requirements}
+	\label{table-funct-req}
+\end{table}
+
+\subsection{Non-Functional Requirements}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|>{\raggedright\arraybackslash}p{10cm}|}
+		\hline
+		\textbf{ID} & \textbf{Name} & \textbf{Description} \\
+		\hline
+		NR1 & Anonymity & The system must take steps to attempt anonymity throughout the web scraping process. \\
+		\hline
+		NR2 & Validation & It should validate user input parameters, throwing errors when incorrectly set. \\
+		\hline
+		NR3 & Errors & Users should be notified of errors during the application's operation. \\
+		\hline
+		NR4 & Logging & It must utilize a logging system to allow for easier debugging. \\
+		\hline
+		NR5 & Intuitive & The system must have an easy-to-use and intuitive interface. \\
+		\hline
+		NR6 & Requests & The client side of the system must communicate with the host using HTTP to attain services provided by the business logic. \\
+		\hline
+		NR7 & Testing & It should undergo thorough testing and validation to ensure accuracy, reliability, and robustness. \\
+		\hline
+		NR8 & Regulation & The system must comply with relevant legal and regulatory requirements. \\
+		\hline
+	\end{tabular}
+	\caption{List of Non-Functional Requirements}
+	\label{table-non-funct-req}
+\end{table}
+
+
+\subsection{Use Cases}
+\begin{itemize}
+	\item \textbf{Game Selection}: The user selects parameters such as the desired season, home- and away team, to initialize game selection, then chooses the desired match from the returned table. 
+	\item \textbf{Validation}: After accidentally setting a team to play against themselves, the user receives an error message alerting them of the mistake.
+	\item \textbf{Scraping}: Following the game selection process, the system determines the game data is not in the database, then proceeds to utilize web scraping techniques to gather the data from online sources. 
+	\item \textbf{Simulation}: A user parameterizes the number of epochs for the Monte Carlo simulation and initializes game selection. The system utilizes the acquired historical data to run simulations, generating probabilistic outcomes for the historic NBA game.
+	\item \textbf{Comparison}: Users compare the results of the Monte Carlo simulation with the original game data, assessing the accuracy of the model. The system further provides probability density- and violin graphs to further facilitate result analysis.
+	\item \textbf{Error Handling}: When the user tries to initialize game selection, the database is down. The host service returns an error, notifying the user of the access issue. The user escalates the error, and upon its resolution normal system operations resume.
+\end{itemize}
+
+
 
 \chapter{Architecture}
 
@@ -174,6 +277,10 @@ English.
 NNT: 2022BORD0210.
 tel-03891393.
 
+\bibitem{Booch}
+\textsc{Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Jim Conallen, Kelli A. Houston},
+\emph{Object-Oriented Analysis and Design with Applications}, 
+Massachusetts, USA, Addison-Wesley, 2007.
 
 
 \bibitem{}
