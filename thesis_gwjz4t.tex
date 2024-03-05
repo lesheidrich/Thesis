@@ -76,11 +76,11 @@ Through these objectives, this thesis undertakes to promote a deeper understandi
 \section{Requirements List}
 The system shall be constructed to uniquely fulfill both the requirements of a computer science thesis, and the domain of data acquisition and simulation based projections. It should therefore result in an intuitive end-user experience, leveraging the web scraping and Monte Carlo simulation methodologies explored in this thesis.
 
-The client interface should allow users to interact with the business logic\footnote{The term refers to the collection of algorithms responsible for allocating and processing data through communication with the database in order to serve the user interface, while maintaining its independence from both. For further information, please see \cite{Booch}.}, access the database through built-in functions, and utilize web scraping and Monte Carlo methodologies. The Use Case diagram depicted below outlines the basic functionality described by the Functional (see table {\ref{table-funct-req}}) and Non-Functional Requirements (see table {\ref{table-non-funct-req}}) outlined in this chapter.
+The client interface should allow users to interact with the business logic\footnote{The term refers to the collection of algorithms responsible for allocating and processing data through communication with the database in order to serve the user interface, while maintaining its independence from both. For further information, please see \cite{Booch}.}, thereby accessing the database through built-in functions. It should also allow for the utilization of web scraping and Monte Carlo methodologies. The Use Case diagram depicted below outlines the basic functionality described by the Functional - (see table {\ref{table-funct-req}}), Non-Functional - (see table {\ref{table-non-funct-req}}), and Platform Requirements (see table {\ref{table-platform-req}}) outlined in this chapter.
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=8cm]{img/usecase}
+	\includegraphics[width=7cm]{img/usecase}
 	\caption{Use Case Diagram}
 	\label{img-usecase}
 \end{figure}
@@ -145,15 +145,41 @@ The client interface should allow users to interact with the business logic\foot
 		\hline
 		NR5 & Intuitive & The system must have an easy-to-use and intuitive interface. \\
 		\hline
-		NR6 & Requests & The client side of the system must communicate with the host using HTTP to attain services provided by the business logic. \\
+		NR6 & Requests & The client side of the system must communicate with the server-side logic using HTTP to attain services as a responses. \\
 		\hline
-		NR7 & Testing & It should undergo thorough testing and validation to ensure accuracy, reliability, and robustness. \\
+		NR7 & SQL & The server-side logic should interact with the database using SQL queries. \\
 		\hline
-		NR8 & Regulation & The system must comply with relevant legal and regulatory requirements. \\
+		NR8 & Database & The system must be able to utilize separate MySQL database servers. \\
+		\hline
+		NR9 & Testing & It should undergo thorough testing and validation to ensure accuracy, reliability, and robustness. \\
+		\hline
+		NR10 & Regulation & The system must comply with relevant legal and regulatory requirements. \\
 		\hline
 	\end{tabular}
 	\caption{List of Non-Functional Requirements}
 	\label{table-non-funct-req}
+\end{table}
+
+\subsection{Platform Requirements}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|>{\raggedright\arraybackslash}p{10cm}|}
+		\hline
+		\textbf{ID} & \textbf{Component} & \textbf{Requirement} \\
+		\hline
+		PR1 & Client & Application should be compatible with Windows 10 (or later) operating systems. \\
+		\hline
+		PR2 & Client & Operating system is required to have .Net Framework 4.0.3 (or later). \\
+		\hline
+		PR3 & Host & Server environment must be capable of running a Python application with a Flask framework. \\
+		\hline
+		PR4 & Requirements & A full list of back end application requirements are available at: \url{https://github.com/lesheidrich/WebScraping_and_MCSim/blob/master/requirements.txt}. \\
+		\hline
+		PR5 & Database & The database server must be either XAMPP or MySQL compatible. \\
+		\hline
+	\end{tabular}
+	\caption{List of Platform Requirements}
+	\label{table-platform-req}
 \end{table}
 
 
@@ -169,7 +195,9 @@ The client interface should allow users to interact with the business logic\foot
 
 
 
+
 \chapter{Architecture}
+
 
 \chapter{Implementation}
 

@@ -11,30 +11,31 @@
 \contentsline {section}{\numberline {4.1}Requirements List}{9}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Functional Requirements}{10}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Non-Functional Requirements}{11}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Use Cases}{11}{subsection.4.1.3}%
-\contentsline {chapter}{\numberline {5}Architecture}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Implementation}{14}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Testing and Validation}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Unit Testing}{15}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Integration Testing}{15}{section.7.2}%
-\contentsline {section}{\numberline {7.3}System Testing}{15}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Performance Evaluation}{15}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Results and Discussion}{16}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Analysis of Web Scraping Results}{16}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Evaluation of Monte Carlo Simulations}{16}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Comparison with Existing Methods}{16}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Conclusion}{17}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Summary of Findings}{17}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Contributions to Knowledge}{17}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Limitations and Future Work}{17}{section.9.3}%
-\contentsline {chapter}{\numberline {10}}{18}{chapter.10}%
-\contentsline {section}{\numberline {10.1}}{18}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}}{18}{subsection.10.1.1}%
-\contentsline {chapter}{\numberline {11}Chapter title}{19}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Section title}{19}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Subsection title}{19}{subsection.11.1.1}%
-\contentsline {chapter}{\numberline {12}Appendices}{20}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Code Samples}{20}{section.12.1}%
-\contentsline {section}{\numberline {12.2}GUI Mockups}{20}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Test Cases}{20}{section.12.3}%
-\contentsline {chapter}{Bibliography}{21}{chapter*.3}%
+\contentsline {subsection}{\numberline {4.1.3}Platform Requirements}{12}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Use Cases}{12}{subsection.4.1.4}%
+\contentsline {chapter}{\numberline {5}Architecture}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Implementation}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Testing and Validation}{16}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Unit Testing}{16}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Integration Testing}{16}{section.7.2}%
+\contentsline {section}{\numberline {7.3}System Testing}{16}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Performance Evaluation}{16}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Results and Discussion}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Analysis of Web Scraping Results}{17}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Evaluation of Monte Carlo Simulations}{17}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Comparison with Existing Methods}{17}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Conclusion}{18}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Summary of Findings}{18}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Contributions to Knowledge}{18}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Limitations and Future Work}{18}{section.9.3}%
+\contentsline {chapter}{\numberline {10}}{19}{chapter.10}%
+\contentsline {section}{\numberline {10.1}}{19}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}}{19}{subsection.10.1.1}%
+\contentsline {chapter}{\numberline {11}Chapter title}{20}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Section title}{20}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Subsection title}{20}{subsection.11.1.1}%
+\contentsline {chapter}{\numberline {12}Appendices}{21}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Code Samples}{21}{section.12.1}%
+\contentsline {section}{\numberline {12.2}GUI Mockups}{21}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Test Cases}{21}{section.12.3}%
+\contentsline {chapter}{Bibliography}{22}{chapter*.3}%

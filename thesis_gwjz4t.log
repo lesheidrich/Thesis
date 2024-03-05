@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  5 MAR 2024 00:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  5 MAR 2024 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,7 +450,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<eszterhazy-logo-en.pdf, id=165, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-en.pdf, id=169, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-en.pdf Graphic file (type pdf)
 <use eszterhazy-logo-en.pdf>
 Package pdftex.def Info: eszterhazy-logo-en.pdf  used on input line 26.
@@ -496,11 +496,11 @@ Chapter 3.
 
 ]
 Chapter 4.
-<img/usecase.png, id=270, 478.78876pt x 443.6575pt>
+<img/usecase.png, id=276, 485.815pt x 443.6575pt>
 File: img/usecase.png Graphic file (type png)
 <use img/usecase.png>
 Package pdftex.def Info: img/usecase.png  used on input line 83.
-(pdftex.def)             Requested size: 227.62204pt x 210.92227pt.
+(pdftex.def)             Requested size: 199.16928pt x 181.88043pt.
 [9
 
 
@@ -508,99 +508,104 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.89 \subsection
-                {Functional Requirements} <./img/usecase.png>] [10
+l.130 
+       <./img/usecase.png>] [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.158 
-      ] [11
+l.162 
+      ]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+76.
+ (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [11
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.167 	\item \textbf
-                    {Error Handling}: When the user tries to initialize game...
-] [12]
+l.184 
+      ] [12
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.194 \end{itemize}
+                   ] [13]
 Chapter 5.
-[13
-
-]
-Chapter 6.
 [14
 
 ]
-Chapter 7.
+Chapter 6.
 [15
 
 ]
-Chapter 8.
+Chapter 7.
 [16
 
 ]
-Chapter 9.
+Chapter 8.
 [17
 
 ]
-Chapter 10.
+Chapter 9.
 [18
 
 ]
-Chapter 11.
+Chapter 10.
 [19
 
 ]
-Chapter 12.
+Chapter 11.
 [20
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-41.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Chapter 12.
+[21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 240--242
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 268--270
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[21
+[22
 
-] [22] (./thesis_gwjz4t.aux)
+] [23] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
-(rerunfilecheck)             Checksum: 9379FDE9E0C8649D3C1E269195B857BD;6201.
+(rerunfilecheck)             Checksum: 4E845F55C8260519199B6EF9C0BE4D72;6404.
  ) 
 Here is how much of TeX's memory you used:
- 11122 strings out of 474116
- 177252 string characters out of 5747718
+ 11127 strings out of 474116
+ 177322 string characters out of 5747718
  1940190 words of memory out of 5000000
- 33179 multiletter control sequences out of 15000+600000
+ 33181 multiletter control sequences out of 15000+600000
  628678 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,93p,737b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,93p,835b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
@@ -608,10 +613,10 @@ r12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/
 2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/font
 s/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (22 pages, 279263 bytes).
+Output written on thesis_gwjz4t.pdf (23 pages, 283148 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 376 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
