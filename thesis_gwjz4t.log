@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  5 MAR 2024 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  6 MAR 2024 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,63 +534,91 @@ as been already used, duplicate ignored
 l.194 \end{itemize}
                    ] [13]
 Chapter 5.
+<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=313, 1179.40625
+pt x 1035.87pt>
+File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
+type png)
+<use img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>
+Package pdftex.def Info: img/sequence/monte_carlo/monte_carlo_sequence_cerulean
+.png  used on input line 204.
+(pdftex.def)             Requested size: 441.01773pt x 387.34387pt.
+<img/sequence/scraping/scraping_caerilian.png, id=314, 957.5775pt x 591.20876pt
+>
+File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
+<use img/sequence/scraping/scraping_caerilian.png>
+Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
+input line 211.
+(pdftex.def)             Requested size: 374.86775pt x 231.44553pt.
 [14
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.228 
+       <./img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.230 \chapter
+              {Implementation} <./img/sequence/scraping/scraping_caerilian.png>
 ]
 Chapter 6.
-[15
-
-]
-Chapter 7.
 [16
 
 ]
-Chapter 8.
+Chapter 7.
 [17
 
 ]
-Chapter 9.
+Chapter 8.
 [18
 
 ]
-Chapter 10.
+Chapter 9.
 [19
 
 ]
-Chapter 11.
+Chapter 10.
 [20
 
 ]
-Chapter 12.
+Chapter 11.
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Chapter 12.
+[22
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 268--270
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 296--298
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[22
+[23
 
-] [23] (./thesis_gwjz4t.aux)
+] [24] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -599,10 +627,10 @@ Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
 (rerunfilecheck)             Checksum: 4E845F55C8260519199B6EF9C0BE4D72;6404.
  ) 
 Here is how much of TeX's memory you used:
- 11127 strings out of 474116
- 177322 string characters out of 5747718
+ 11154 strings out of 474116
+ 178648 string characters out of 5747718
  1940190 words of memory out of 5000000
- 33181 multiletter control sequences out of 15000+600000
+ 33205 multiletter control sequences out of 15000+600000
  628678 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,835b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -613,10 +641,10 @@ r12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/
 2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/font
 s/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (23 pages, 283140 bytes).
+Output written on thesis_gwjz4t.pdf (24 pages, 417744 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
 
