@@ -3,7 +3,6 @@
 \usepackage[english]{babel}
 
 
-
 \usepackage{amsthm, url, array, float, graphicx}
 
 \newtheorem{theorem}{Theorem}[chapter]
@@ -195,15 +194,60 @@ The client interface should allow users to interact with the business logic\foot
 
 
 
-
 \chapter{Architecture}
 
+\section{Design Concepts}
+At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
+
+This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (GOF) are a group of four writers, all computer science professionals and entrepreneurs. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the applications data. It can connect directly to the Model, and operates in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
+
+As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service encompasses the previously discussed Model, Controller and all other components of the application.
+
+
+\section{Components}
+Following the MVC design pattern's component structure, the application's presentation logic is allocated to the \emph{view} package. The database and simple business logic allowing for record management is stored in the \emph{model}. Acting as an intermediary between the two, the \emph{controller} package orchestrates the flow of information along with its processing. The \emph{webscraper} and \emph{simulator} packages also tie into the \emph{controller}, offering web scraping, and Monte Carlo simulation logic respectively, while further decoupling the application's components and allowing for better organization and maintainability through separation of concerns \footnote{Separation of concerns (SoC) is a software development design principle promoting segregation of source code elements by functionality in order to improve readability, organization and modification \cite{Reade}.}.
+
+The application is organized in a manner, that all components embody system packages allowing improved readability and usability. The following subsections discuss each package's purpose and functionality.
+
+
+
+
+
+\subsection{\emph{view}}
+o	Purpose
+o	Functionality
+o	Interaction
+
+\subsection{\emph{controller}}
+
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/component/component_controller}
+	\caption{Component UML Diagram}
+	\label{img-controller-component}
+\end{figure}
+
+
+\subsection{\emph{model}}
+maybe do component or sequence diagram
+
+\subsection{\emph{simulation}}
 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/sequence/monte_carlo/monte_carlo_sequence_cerulean}
 	\caption{Monte Carlo Simulation Sequence Diagram}
 	\label{img-monte-carlo-sequence}
+\end{figure}
+
+\subsection{\emph{webscraper}}
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/component/component_webscraper}
+	\caption{\emph{webscraper} UML Component Diagram}
+	\label{img-webscraper-component}
 \end{figure}
 
 \begin{figure}[th!]
@@ -213,18 +257,23 @@ The client interface should allow users to interact with the business logic\foot
 	\label{img-scraping-sequence}
 \end{figure}
 
+\subsection{\emph{log}}
 
-•	Begin with MVC description as that’s what project implements
-•	Discuss how its got other components like the scraper and monte carlo and logger, etc so there’s shit outside the mvc that are also components of this
-•	It’s a 3 layer thin client
-•	Break down components into m v c and components within that
-o	Purpose
-o	Functionality
-o	Interaction
-•	Component diagram - 1
-•	Sequence diagram - /component
-•	Class diagram – 1 major- then detailed per component
-•	Technologies and frameworks
+\subsection{\emph{test}}
+component contains all back-end unit and integration testing. test suite features python and linter. it features live and mock tests for functions, modules and components. test module is duscussed in detail in the testing chapter **Link to chapter here
+
+
+\section{Technologies and Frameworks}
+winform
+restsharp
+restapi
+flask
+
+
+
+
+
+
 
 
 \chapter{Implementation}
@@ -338,6 +387,31 @@ tel-03891393.
 \emph{Object-Oriented Analysis and Design with Applications}, 
 Massachusetts, USA, Addison-Wesley, 2007.
 
+\bibitem{Fowler}
+\textsc{Martin Fowler, David Rice, Matthew Foemmel, Edward Hieatt, Robert Mee, Randy Stafford},
+\emph{Patterns of Enterprise Application Architecture},
+USA, Addison-Wesley Professional, 2002.
+
+\bibitem{GOF}
+\textsc{Eric Freeman, Elisabeth Freeman, Bert Bates, Kathy Sierra},
+\emph{Head First Design Patterns},
+O'Reilly, 2004.
+
+\bibitem{GOF2}
+\textsc{Spring Framework Guru},
+\emph{National Basketball Association}, 2024, 
+\url{https://springframework.guru/gang-of-four-design-patterns/}, [Retrieved: 5 March 2024]
+
+\bibitem{Kulliyyah}
+\textsc{Abdul Rahman bin Ahlan, Murni bt Mahmud, Yusri bin Arshad},
+\emph{Conceptual Architecture Design and Configuration of Thin Client System For Schools in Malaysia: A Pilot Project}, 
+Department of Information System, Kulliyyah of Information and Communication Technology,
+Kuala Lumpur, Malaysia, 2010.
+
+\bibitem{Reade}
+\textsc{Chris Reade},
+\emph{Elements of Functional Programming}, 
+Boston, USA, Addison-Wesley Longman, 1989.
 
 \bibitem{}
 \textsc{},
