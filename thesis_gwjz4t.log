@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -553,7 +553,7 @@ File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
 type png)
 <use img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>
 Package pdftex.def Info: img/sequence/monte_carlo/monte_carlo_sequence_cerulean
-.png  used on input line 263.
+.png  used on input line 261.
 (pdftex.def)             Requested size: 441.01773pt x 387.34387pt.
  [16]
 
@@ -564,42 +564,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.272 \paragraph
+l.270 \paragraph
                 {Functionality:}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.272 \paragraph
+l.270 \paragraph
                 {Functionality:} <./img/component/component_simulation.png> <./
-img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>]
-<img/component/component_webscraper.png, id=515, 1178.4025pt x 884.30376pt>
-File: img/component/component_webscraper.png Graphic file (type png)
-<use img/component/component_webscraper.png>
-Package pdftex.def Info: img/component/component_webscraper.png  used on input 
-line 300.
-(pdftex.def)             Requested size: 308.71106pt x 231.6677pt.
-<img/sequence/scraping/scraping_caerilian.png, id=516, 957.5775pt x 591.20876pt
+img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [18]
+<img/sequence/scraping/scraping_caerilian.png, id=530, 957.5775pt x 591.20876pt
 >
 File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
 <use img/sequence/scraping/scraping_caerilian.png>
 Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
-input line 307.
-(pdftex.def)             Requested size: 374.86775pt x 231.44553pt.
- [18] [19
+input line 292.
+(pdftex.def)             Requested size: 396.91325pt x 245.04936pt.
+<img/component/component_webscraper.png, id=531, 1178.4025pt x 884.30376pt>
+File: img/component/component_webscraper.png Graphic file (type png)
+<use img/component/component_webscraper.png>
+Package pdftex.def Info: img/component/component_webscraper.png  used on input 
+line 298.
+(pdftex.def)             Requested size: 308.71106pt x 231.6677pt.
+ [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 \subsection
+l.319 \subsection
                  {Python}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 \subsection
-                 {Python} <./img/component/component_webscraper.png> <./img/seq
-uence/scraping/scraping_caerilian.png>] [20]
+l.319 \subsection
+                 {Python} <./img/sequence/scraping/scraping_caerilian.png> <./i
+mg/component/component_webscraper.png>] [20]
 Chapter 5.
 [21
 
@@ -628,25 +628,25 @@ Chapter 11.
 [27
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 409--411
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 400--402
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
@@ -654,7 +654,7 @@ applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
 [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 486--489
+Underfull \hbox (badness 10000) in paragraph at lines 477--480
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
@@ -687,10 +687,10 @@ pe1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12
 3/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on thesis_gwjz4t.pdf (29 pages, 687509 bytes).
+Output written on thesis_gwjz4t.pdf (29 pages, 688699 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 605 compressed objects within 7 object streams
+ 674 PDF objects out of 1000 (max. 8388607)
+ 607 compressed objects within 7 object streams
  154 named destinations out of 1000 (max. 500000)
  592 words of extra memory for PDF output out of 10000 (max. 10000000)
 

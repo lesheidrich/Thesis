@@ -256,8 +256,6 @@ The \emph{simulator} relies on the \emph{model}'s NBA team enum during operation
 	\caption{\emph{simulation} UML Component Diagram}
 	\label{img-simulation-component}
 \end{figure}
-
-
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/sequence/monte_carlo/monte_carlo_sequence_cerulean}
@@ -274,39 +272,32 @@ The test package constitutes a wide spectrum of tests focusing on the back-end o
 \paragraph{Interaction:}
 Each unit test interacts with their respective components on the back-end. Integration tests interact with multiple packages following their functionality, in their attempt to check full system compatibility.
 
-
 \subsection{\emph{view}}
 \paragraph{Purpose:}
 To allow for user interaction with the system through communication with the host along with its application logic and data.
-
 \paragraph{Functionality:}
 The view package operates as a thin client, taking user input through a graphic user interface (GUI) \cite{Wiki-GUI}. User data is cached on the client side for the sake of user convenience, decreasing the input required to achieve functionality. Host responses, along with operational errors are displayed for user viewing. Errors are not logged on the client side of the application.
-
 \paragraph{Interaction:}
 The component interacts with the user and the host module of the \emph{controller} package.
 
-
 \subsection{\emph{webscraper}}
 \paragraph{Purpose:}
-
-
+The package completes data gathering services from the amalgamation of preset websites and parameters representing selected NBA games, in order to supply historic statistical game data for the application.
 \paragraph{Functionality:}
-
-
+The acquisition process extracts data from a combination of preset URLs, set to match parameterized game data originating from the user. It includes functionality to interact with each URL in a manner defined by the user's chosen scraping method. Collected information is preprocessed and transformed before being committed to memory in a preset reusable format, easily accessed by the \emph{controller} as it looks to the \emph{webscraper} to acquire new information. Web scraping requests are generally not repeated, as the system is built to house already accessed data, thereby minimizing dependency on online sources to bare necessity. The component's sequence diagram (see \ref{img-scraping-sequence}) illustrates the process during runtime.
 \paragraph{Interaction:}
-
+The \emph{webscraper} package primarily communicates with the \emph{controller} in order to receive data acquisition requests and parameters. Its preprocessed results are also returned to the \emph{controller}. The package's component diagram (see \ref{img-webscraper-component}) illustrates the \emph{webscraper}'s interactions. Logging is utilized throughout the process.
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{img/sequence/scraping/scraping_caerilian}
+	\caption{Web Scraping UML Sequence Diagram}
+	\label{img-scraping-sequence}
+\end{figure}
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/component/component_webscraper}
 	\caption{\emph{webscraper} UML Component Diagram}
 	\label{img-webscraper-component}
-\end{figure}
-
-\begin{figure}[th!]
-	\centering
-	\includegraphics[width=0.85\linewidth]{img/sequence/scraping/scraping_caerilian}
-	\caption{Web Scraping UML Sequence Diagram}
-	\label{img-scraping-sequence}
 \end{figure}
 
 

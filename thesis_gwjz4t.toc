@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {4.2.7}\emph {webscraper}}{18}{subsection.4.2.7}%
 \contentsline {paragraph}{Purpose:}{18}{section*.21}%
 \contentsline {paragraph}{Functionality:}{18}{section*.22}%
-\contentsline {paragraph}{Interaction:}{18}{figure.4.5}%
+\contentsline {paragraph}{Interaction:}{19}{section*.23}%
 \contentsline {section}{\numberline {4.3}Technologies and Frameworks}{20}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{20}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{20}{subsection.4.3.2}%
