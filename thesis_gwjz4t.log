@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,149 +517,165 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.196 \chapter
+l.195 \chapter
               {Architecture}]
 Chapter 4.
 [13
 
 ]
-Overfull \hbox (2.15634pt too wide) in paragraph at lines 226--227
+Overfull \hbox (2.15634pt too wide) in paragraph at lines 210--211
  []\T1/lmr/bx/n/12 Purpose:[] \T1/lmr/m/n/12 The pack-age is re-spon-si-ble for
  pro-cess-ing com-po-nent in-ter-ac-tion, and serves
  []
 
-[14]
-<img/component/component_controller.png, id=479, 1316.92pt x 876.27374pt>
+<img/component/component_controller.png, id=464, 1316.92pt x 876.27374pt>
 File: img/component/component_controller.png Graphic file (type png)
 <use img/component/component_controller.png>
 Package pdftex.def Info: img/component/component_controller.png  used on input 
-line 240.
+line 221.
 (pdftex.def)             Requested size: 441.01773pt x 293.44989pt.
- [15
+[14] [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.252 
+l.239 
        <./img/component/component_controller.png>]
-<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=493, 1179.40625
+<img/component/component_simulation.png, id=493, 775.89874pt x 495.8525pt>
+File: img/component/component_simulation.png Graphic file (type png)
+<use img/component/component_simulation.png>
+Package pdftex.def Info: img/component/component_simulation.png  used on input 
+line 255.
+(pdftex.def)             Requested size: 308.71106pt x 197.2858pt.
+<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=494, 1179.40625
 pt x 1035.87pt>
 File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
 type png)
 <use img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>
 Package pdftex.def Info: img/sequence/monte_carlo/monte_carlo_sequence_cerulean
-.png  used on input line 267.
+.png  used on input line 263.
 (pdftex.def)             Requested size: 441.01773pt x 387.34387pt.
-<img/component/component_webscraper.png, id=494, 1178.4025pt x 884.30376pt>
-File: img/component/component_webscraper.png Graphic file (type png)
-<use img/component/component_webscraper.png>
-Package pdftex.def Info: img/component/component_webscraper.png  used on input 
-line 283.
-(pdftex.def)             Requested size: 308.71106pt x 231.6677pt.
-<img/sequence/scraping/scraping_caerilian.png, id=495, 957.5775pt x 591.20876pt
->
-File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
-<use img/sequence/scraping/scraping_caerilian.png>
-Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
-input line 290.
-(pdftex.def)             Requested size: 374.86775pt x 231.44553pt.
- [16] [17
+ [16]
+
+LaTeX Warning: Text page 17 contains only floats.
+
+[17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.331 \subsection
-                 {Python} <./img/sequence/monte_carlo/monte_carlo_sequence_ceru
-lean.png>] [18
+l.272 \paragraph
+                {Functionality:}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.331 \subsection
-                 {Python}
+l.272 \paragraph
+                {Functionality:} <./img/component/component_simulation.png> <./
+img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>]
+<img/component/component_webscraper.png, id=515, 1178.4025pt x 884.30376pt>
+File: img/component/component_webscraper.png Graphic file (type png)
+<use img/component/component_webscraper.png>
+Package pdftex.def Info: img/component/component_webscraper.png  used on input 
+line 300.
+(pdftex.def)             Requested size: 308.71106pt x 231.6677pt.
+<img/sequence/scraping/scraping_caerilian.png, id=516, 957.5775pt x 591.20876pt
+>
+File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
+<use img/sequence/scraping/scraping_caerilian.png>
+Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
+input line 307.
+(pdftex.def)             Requested size: 374.86775pt x 231.44553pt.
+ [18] [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.331 \subsection
+l.328 \subsection
+                 {Python}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.328 \subsection
                  {Python} <./img/component/component_webscraper.png> <./img/seq
-uence/scraping/scraping_caerilian.png>] [19]
+uence/scraping/scraping_caerilian.png>] [20]
 Chapter 5.
-[20
-
-]
-Chapter 6.
 [21
 
 ]
-Chapter 7.
+Chapter 6.
 [22
 
 ]
-Chapter 8.
+Chapter 7.
 [23
 
 ]
-Chapter 9.
+Chapter 8.
 [24
 
 ]
-Chapter 10.
+Chapter 9.
 [25
 
 ]
-Chapter 11.
+Chapter 10.
 [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Chapter 11.
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 411--413
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 409--411
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[27
+[28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 488--491
+Underfull \hbox (badness 10000) in paragraph at lines 486--489
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
-[28] (./thesis_gwjz4t.aux)
+[29] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
-(rerunfilecheck)             Checksum: 2E3BA1B5184BBBB9820A6C74A760C900;10075.
+(rerunfilecheck)             Checksum: 126FA79A917C303A5CD1F8A93D3D231A;10075.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 254 ({)
+### simple group (level 1) entered at line 242 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11279 strings out of 474116
- 181055 string characters out of 5747718
- 1941190 words of memory out of 5000000
- 33264 multiletter control sequences out of 15000+600000
+ 11294 strings out of 474116
+ 181592 string characters out of 5747718
+ 1940190 words of memory out of 5000000
+ 33277 multiletter control sequences out of 15000+600000
  632949 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,944b,663s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -671,10 +687,10 @@ pe1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12
 3/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on thesis_gwjz4t.pdf (28 pages, 641614 bytes).
+Output written on thesis_gwjz4t.pdf (29 pages, 687509 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 598 compressed objects within 6 object streams
- 152 named destinations out of 1000 (max. 500000)
- 587 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 672 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
+ 154 named destinations out of 1000 (max. 500000)
+ 592 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -180,7 +180,6 @@ The client interface should allow users to interact with the business logic\foot
 	\label{table-platform-req}
 \end{table}
 
-
 \subsection{Use Cases}
 \begin{itemize}
 	\item \textbf{Game Selection}: The user selects parameters such as the desired season, home- and away team, to initialize game selection, then chooses the desired match from the returned table. 
@@ -194,7 +193,6 @@ The client interface should allow users to interact with the business logic\foot
 
 
 \chapter{Architecture}
-
 \section{Design Concepts}
 At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
 
@@ -202,11 +200,79 @@ This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (
 
 As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service, operating as the back-end, encompasses the previously discussed Model, Controller and all other components of the application.
 
-
 \section{Components}
 Following the MVC design pattern's component structure, the application's presentation logic is allocated to the \emph{view} package. The database and simple business logic allowing for record management is stored in the \emph{model}. Acting as an intermediary between the two, the \emph{controller} package orchestrates the flow of information along with its processing. The \emph{webscraper} and \emph{simulator} packages also tie into the \emph{controller}, offering web scraping, and Monte Carlo simulation logic respectively, while further decoupling the application's components and allowing for better organization and maintainability through separation of concerns \footnote{Separation of concerns (SoC) is a software development design principle promoting segregation of source code elements by functionality in order to improve readability, organization and modification \cite{Reade}.}.
 
 The application is organized in a manner, that all components embody system packages allowing improved readability and usability. The following subsections discuss each package's purpose and functionality.
+
+\subsection{\emph{controller}}
+\paragraph{Purpose:}
+The package is responsible for processing component interaction, and serves as the core logic of the system.
+\paragraph{Functionality:}
+Serving as the system's host, the \emph{controller} is responsible for handling user prompts sent by the client in order to formulate an appropriate response. In order to fulfill this function it utilizes its connection to each component of the application, accessing their functionality as needed.
+
+One of its responsibilities is accumulating data through the application of various web scraping methods, which are stored for future use. It's web scraper control functionality enables it to utilize the \emph{webscraper} package to appropriate preset website data into memory, then reallocate it to the database using a combination of its own control processes along with the business logic of the \emph{model} package. The web scraping sequence diagram illustrates the process (see {\ref{img-scraping-sequence}}).
+
+When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The simulator returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see {\ref{img-monte-carlo-sequence}}).
+\paragraph{Interaction:}
+In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system. The package's component diagram provides a high level overview of basic component interaction (see{\ref{img-controller-component}}).
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{img/component/component_controller}
+	\caption{\emph{controller} UML Component Diagram}
+	\label{img-controller-component}
+\end{figure}
+
+\subsection{\emph{log}}
+\paragraph{Purpose:}
+The component provides logging functionality for back-end operations.
+\paragraph{Functionality:}
+The \emph{log} package contains logic allowing components to access system logs to document runtime errors and operations, useful for debugging potential issues. Log management functionality is also provided by the package, ensuring proper settings, size limitations and functionality.
+\paragraph{Interaction:}
+The \emph{log} interacts with the \emph{controller} and \emph{webscraper} packages.
+
+\subsection{\emph{model}}
+\paragraph{Purpose:}
+The package ensures successful data management services within the application, through the storage and manipulation of data records and structures. 
+\paragraph{Functionality:}
+The business logic enables system interaction with the database, encapsulating data access and administration services. Data security is enforced by minimizing vulnerabilities and prevents data corruption trough validation logic. The \emph{model} services the system through the \emph{controller} package's data manipulation and retrieval components.
+
+The package also contains the NBA team enums \footnote{In their capacity as a distinct object type, enumerations (enums) offer value binding across a group of encapsulated constants tied together through enumeration. Each value can act as a key identifier during instantiation, making enums a powerful structure for housing validated data \cite{enum}.} employed by the back-end logic. These ensure data validation and encapsulate all occurrences of team names in the system and its dataset, streamlining their application throughout processes.
+\paragraph{Interaction:}
+The primary business logic elements of the \emph{model} communicate exclusively with the \emph{controller}, enhancing system modularity (see {\ref{img-controller-component}). Due to their earlier described functionality, NBA team enums are also widely employed throughout the \emph{simulation} package. 
+
+\subsection{\emph{simulation}}
+\paragraph{Purpose:}
+The package's primary objective encompasses the repetitive simulation of a basketball game between selected teams at a specific point in time, with the end goal of returning the outcomes as graphical representations, comparable with the original historic game's outcome.
+\paragraph{Functionality:}
+The core functionality of the application revolves around implementing Monte Carlo simulations over a preset range of epochs to determine the probabilistic outcome of a historic NBA game. 
+
+The \emph{simulator} package receives the relevant compiled data from the \emph{controller}, initializing the creation of the simulation. Upon successful completion of the simulation, probability density and violin graphs are returned to the \emph{controller} along with minimal game statistic like total win percentage and mode of scores reached per team. A detailed description of the process is illustrated in the Monte Carlo simulation's sequence diagram (see {\ref{img-monte-carlo-sequence}}).
+\paragraph{Interaction:}
+The \emph{simulator} relies on the \emph{model}'s NBA team enum during operation, along with the \emph{controller} for providing the necessary historic game data for simulation's successful operations. It further communicates with the \emph{controller} in its capacity as the host. The \emph{simulation} component diagram offers an overview of component interaction (see \ref{img-simulation-component}).
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/component/component_simulation}
+	\caption{\emph{simulation} UML Component Diagram}
+	\label{img-simulation-component}
+\end{figure}
+
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{img/sequence/monte_carlo/monte_carlo_sequence_cerulean}
+	\caption{Monte Carlo Simulation UML Sequence Diagram}
+	\label{img-monte-carlo-sequence}
+\end{figure}
+
+
+\subsection{\emph{test}}
+\paragraph{Purpose:}
+The component is responsible for providing comprehensive back-end testing services.
+\paragraph{Functionality:}
+The test package constitutes a wide spectrum of tests focusing on the back-end of the system. It provides full-scale uni tests organized by module. Integration testing and linting is also included. The Testing and Validation chapter (see \ref{ch-testing}) contains a detailed breakdown of the package's functionality and implementation.
+\paragraph{Interaction:}
+Each unit test interacts with their respective components on the back-end. Integration tests interact with multiple packages following their functionality, in their attempt to check full system compatibility.
 
 
 \subsection{\emph{view}}
@@ -219,55 +285,6 @@ The view package operates as a thin client, taking user input through a graphic 
 \paragraph{Interaction:}
 The component interacts with the user and the host module of the \emph{controller} package.
 
-
-
-\subsection{\emph{controller}}
-\paragraph{Purpose:}
-The package is responsible for processing component interaction, and serves as the core logic of the system.
-
-\paragraph{Functionality:}
-Serving as the system's host, the \emph{controller} is responsible for handling user prompts sent by the client in order to formulate an appropriate response. In order to fulfill this function it utilizes its connection to each component of the application, accessing their functionality as needed.
-
-One of its responsibilities is accumulating data through the application of various web scraping methods, which are stored for future use. It's web scraper control functionality enables it to utilize the \emph{webscraper} package to appropriate preset website data into memory, then reallocate it to the database using a combination of its own control processes along with the business logic of the \emph{model} package. The web scraping sequence diagram illustrates the process (see {\ref{img-scraping-sequence}}).
-
-When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The simulator returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see {\ref{img-monte-carlo-sequence}}).
-
-\paragraph{Interaction:}
-In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system. The package's component diagram provides a high level overview of basic component interaction (see{\ref{img-controller-component}}).
-
-\begin{figure}[th!]
-	\centering
-	\includegraphics[width=1\linewidth]{img/component/component_controller}
-	\caption{\emph{controller} UML Component Diagram}
-	\label{img-controller-component}
-\end{figure}
-
-\subsection{\emph{model}}
-\paragraph{Purpose:}
-The package ensures successful data management services within the application, through the storage and manipulation of data records and structures. 
-
-\paragraph{Functionality:}
-The business logic enables system interaction with the database, encapsulating data access and administration services. Data security is enforced by minimizing vulnerabilities and prevents data corruption trough validation logic. The \emph{model} services the system through the \emph{controller} package's data manipulation and retrieval components.
-The package also contains the NBA team enums \footnote{In their capacity as a distinct object type, enumerations (enums) offer value binding across a group of encapsulated constants tied together through enumeration. Each value can act as a key identifier during instantiation, making enums a powerful structure for housing validated data \cite{enum}.} employed by the back-end logic. These ensure data validation and encapsulate all occurrences of team names in the system and its dataset, streamlining their application throughout processes.
-
-\paragraph{Interaction:}
-The primary business logic elements of the \emph{model} communicate exclusively with the \emph{controller}, enhancing system modularity (see {\ref{img-controller-component}). Due to their earlier described functionality, NBA team enums are also widely employed throughout the \emph{simulation} package. 
-
-\subsection{\emph{simulation}}
-\paragraph{Purpose:}
-
-
-\paragraph{Functionality:}
-
-
-\paragraph{Interaction:}
-
-\begin{figure}[th!]
-	\centering
-	\includegraphics[width=1\linewidth]{img/sequence/monte_carlo/monte_carlo_sequence_cerulean}
-	\caption{Monte Carlo Simulation UML Sequence Diagram}
-	\label{img-monte-carlo-sequence}
-\end{figure}
 
 \subsection{\emph{webscraper}}
 \paragraph{Purpose:}
@@ -291,26 +308,6 @@ The primary business logic elements of the \emph{model} communicate exclusively 
 	\caption{Web Scraping UML Sequence Diagram}
 	\label{img-scraping-sequence}
 \end{figure}
-
-\subsection{\emph{log}}
-\paragraph{Purpose:}
-
-
-\paragraph{Functionality:}
-
-
-\paragraph{Interaction:}
-
-\subsection{\emph{test}}
-\paragraph{Purpose:}
-
-
-\paragraph{Functionality:}
-
-
-\paragraph{Interaction:}
-
-component contains all back-end unit and integration testing. test suite features python and linter. it features live and mock tests for functions, modules and components. test module is duscussed in detail in the testing chapter **Link to chapter here
 
 
 \section{Technologies and Frameworks}
@@ -344,7 +341,8 @@ discuss firefox, chrome and undetectedchrome drivers
 
 \chapter{Implementation}
 
-\chapter{Testing and Validation}
+\chapter{Testing and Validation} \label{ch-testing}
+
 \section{Unit Testing}
 \section{Integration Testing}
 \section{System Testing}

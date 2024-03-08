@@ -15,13 +15,13 @@
 \contentsline {chapter}{\numberline {4}Architecture}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Design Concepts}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Components}{14}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}\emph {view}}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}\emph {controller}}{14}{subsection.4.2.1}%
 \contentsline {paragraph}{Purpose:}{14}{section*.3}%
 \contentsline {paragraph}{Functionality:}{14}{section*.4}%
 \contentsline {paragraph}{Interaction:}{14}{section*.5}%
-\contentsline {subsection}{\numberline {4.2.2}\emph {controller}}{14}{subsection.4.2.2}%
-\contentsline {paragraph}{Purpose:}{14}{section*.6}%
-\contentsline {paragraph}{Functionality:}{14}{section*.7}%
+\contentsline {subsection}{\numberline {4.2.2}\emph {log}}{15}{subsection.4.2.2}%
+\contentsline {paragraph}{Purpose:}{15}{section*.6}%
+\contentsline {paragraph}{Functionality:}{15}{section*.7}%
 \contentsline {paragraph}{Interaction:}{15}{section*.8}%
 \contentsline {subsection}{\numberline {4.2.3}\emph {model}}{15}{subsection.4.2.3}%
 \contentsline {paragraph}{Purpose:}{15}{section*.9}%
@@ -30,60 +30,60 @@
 \contentsline {subsection}{\numberline {4.2.4}\emph {simulation}}{16}{subsection.4.2.4}%
 \contentsline {paragraph}{Purpose:}{16}{section*.12}%
 \contentsline {paragraph}{Functionality:}{16}{section*.13}%
-\contentsline {paragraph}{Interaction:}{16}{figure.4.2}%
-\contentsline {subsection}{\numberline {4.2.5}\emph {webscraper}}{16}{subsection.4.2.5}%
-\contentsline {paragraph}{Purpose:}{16}{section*.15}%
-\contentsline {paragraph}{Functionality:}{16}{section*.16}%
-\contentsline {paragraph}{Interaction:}{16}{figure.4.4}%
-\contentsline {subsection}{\numberline {4.2.6}\emph {log}}{16}{subsection.4.2.6}%
-\contentsline {paragraph}{Purpose:}{16}{section*.18}%
-\contentsline {paragraph}{Functionality:}{16}{section*.19}%
-\contentsline {paragraph}{Interaction:}{16}{section*.20}%
-\contentsline {subsection}{\numberline {4.2.7}\emph {test}}{17}{subsection.4.2.7}%
-\contentsline {paragraph}{Purpose:}{17}{section*.21}%
-\contentsline {paragraph}{Functionality:}{17}{section*.22}%
-\contentsline {paragraph}{Interaction:}{17}{section*.23}%
-\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{19}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{19}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{19}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Flask}{19}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{19}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}MySQL}{19}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Numpy}{19}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}Pandas}{19}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Pylint}{19}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Requests}{19}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}RestSharp}{19}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}REST api}{19}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}Selenium}{19}{subsection.4.3.12}%
-\contentsline {subsection}{\numberline {4.3.13}Python}{19}{subsection.4.3.13}%
-\contentsline {subsection}{\numberline {4.3.14}C sharp}{19}{subsection.4.3.14}%
-\contentsline {subsection}{\numberline {4.3.15}.Net}{19}{subsection.4.3.15}%
-\contentsline {subsection}{\numberline {4.3.16}XAMPP}{19}{subsection.4.3.16}%
-\contentsline {subsection}{\numberline {4.3.17}White}{19}{subsection.4.3.17}%
-\contentsline {subsection}{\numberline {4.3.18}WinForm}{19}{subsection.4.3.18}%
-\contentsline {chapter}{\numberline {5}Implementation}{20}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Testing and Validation}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{21}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{21}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Evaluation}{21}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{22}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{22}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{22}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{22}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusion}{23}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Summary of Findings}{23}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{23}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Limitations and Future Work}{23}{section.8.3}%
-\contentsline {chapter}{\numberline {9}}{24}{chapter.9}%
-\contentsline {section}{\numberline {9.1}}{24}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}}{24}{subsection.9.1.1}%
-\contentsline {chapter}{\numberline {10}Chapter title}{25}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Section title}{25}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Subsection title}{25}{subsection.10.1.1}%
-\contentsline {chapter}{\numberline {11}Appendices}{26}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Code Samples}{26}{section.11.1}%
-\contentsline {section}{\numberline {11.2}GUI Mockups}{26}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Test Cases}{26}{section.11.3}%
-\contentsline {chapter}{Bibliography}{27}{chapter*.24}%
+\contentsline {paragraph}{Interaction:}{16}{section*.14}%
+\contentsline {subsection}{\numberline {4.2.5}\emph {test}}{18}{subsection.4.2.5}%
+\contentsline {paragraph}{Purpose:}{18}{section*.15}%
+\contentsline {paragraph}{Functionality:}{18}{section*.16}%
+\contentsline {paragraph}{Interaction:}{18}{section*.17}%
+\contentsline {subsection}{\numberline {4.2.6}\emph {view}}{18}{subsection.4.2.6}%
+\contentsline {paragraph}{Purpose:}{18}{section*.18}%
+\contentsline {paragraph}{Functionality:}{18}{section*.19}%
+\contentsline {paragraph}{Interaction:}{18}{section*.20}%
+\contentsline {subsection}{\numberline {4.2.7}\emph {webscraper}}{18}{subsection.4.2.7}%
+\contentsline {paragraph}{Purpose:}{18}{section*.21}%
+\contentsline {paragraph}{Functionality:}{18}{section*.22}%
+\contentsline {paragraph}{Interaction:}{18}{figure.4.5}%
+\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{20}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Flask}{20}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{20}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}MySQL}{20}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Numpy}{20}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Pandas}{20}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Pylint}{20}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Requests}{20}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}RestSharp}{20}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}REST api}{20}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.12}Selenium}{20}{subsection.4.3.12}%
+\contentsline {subsection}{\numberline {4.3.13}Python}{20}{subsection.4.3.13}%
+\contentsline {subsection}{\numberline {4.3.14}C sharp}{20}{subsection.4.3.14}%
+\contentsline {subsection}{\numberline {4.3.15}.Net}{20}{subsection.4.3.15}%
+\contentsline {subsection}{\numberline {4.3.16}XAMPP}{20}{subsection.4.3.16}%
+\contentsline {subsection}{\numberline {4.3.17}White}{20}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.18}WinForm}{20}{subsection.4.3.18}%
+\contentsline {chapter}{\numberline {5}Implementation}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Testing and Validation}{22}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{22}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{22}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{22}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Evaluation}{22}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{23}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{23}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{23}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{24}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Summary of Findings}{24}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{24}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Limitations and Future Work}{24}{section.8.3}%
+\contentsline {chapter}{\numberline {9}}{25}{chapter.9}%
+\contentsline {section}{\numberline {9.1}}{25}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}}{25}{subsection.9.1.1}%
+\contentsline {chapter}{\numberline {10}Chapter title}{26}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Section title}{26}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Subsection title}{26}{subsection.10.1.1}%
+\contentsline {chapter}{\numberline {11}Appendices}{27}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Code Samples}{27}{section.11.1}%
+\contentsline {section}{\numberline {11.2}GUI Mockups}{27}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Test Cases}{27}{section.11.3}%
+\contentsline {chapter}{Bibliography}{28}{chapter*.24}%
