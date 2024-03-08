@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 02:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  8 MAR 2024 02:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -614,25 +614,25 @@ Chapter 11.
 [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 413--415
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 414--416
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
@@ -662,7 +662,7 @@ lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/f
 onts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm
 /lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (28 pages, 637259 bytes).
+Output written on thesis_gwjz4t.pdf (28 pages, 637339 bytes).
 PDF statistics:
  648 PDF objects out of 1000 (max. 8388607)
  585 compressed objects within 6 object streams

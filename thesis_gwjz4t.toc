@@ -43,19 +43,19 @@
 \contentsline {paragraph}{Purpose:}{18}{section*.21}%
 \contentsline {paragraph}{Functionality:}{18}{section*.22}%
 \contentsline {paragraph}{Interaction:}{18}{section*.23}%
-\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{19}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{19}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{19}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Flask}{19}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{19}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}MySQL}{19}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Numpy}{19}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}Pandas}{19}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Pylint}{19}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Requests}{19}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}RestSharp}{19}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}REST api}{19}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}Selenium}{19}{subsection.4.3.12}%
+\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{18}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Flask}{18}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{18}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}MySQL}{18}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Numpy}{18}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Pandas}{18}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Pylint}{18}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Requests}{18}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}RestSharp}{18}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}REST api}{18}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.12}Selenium}{18}{subsection.4.3.12}%
 \contentsline {subsection}{\numberline {4.3.13}Python}{19}{subsection.4.3.13}%
 \contentsline {subsection}{\numberline {4.3.14}C sharp}{19}{subsection.4.3.14}%
 \contentsline {subsection}{\numberline {4.3.15}.Net}{19}{subsection.4.3.15}%
