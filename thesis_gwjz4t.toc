@@ -33,34 +33,35 @@
 \contentsline {paragraph}{Interaction:}{16}{figure.4.2}%
 \contentsline {subsection}{\numberline {4.2.5}\emph {webscraper}}{16}{subsection.4.2.5}%
 \contentsline {paragraph}{Purpose:}{16}{section*.15}%
-\contentsline {paragraph}{Functionality:}{17}{section*.16}%
-\contentsline {paragraph}{Interaction:}{17}{figure.4.4}%
-\contentsline {subsection}{\numberline {4.2.6}\emph {log}}{17}{subsection.4.2.6}%
-\contentsline {paragraph}{Purpose:}{17}{section*.18}%
-\contentsline {paragraph}{Functionality:}{18}{section*.19}%
-\contentsline {paragraph}{Interaction:}{18}{section*.20}%
-\contentsline {subsection}{\numberline {4.2.7}\emph {test}}{18}{subsection.4.2.7}%
-\contentsline {paragraph}{Purpose:}{18}{section*.21}%
-\contentsline {paragraph}{Functionality:}{18}{section*.22}%
-\contentsline {paragraph}{Interaction:}{18}{section*.23}%
-\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{18}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{18}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{18}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Flask}{18}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{18}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}MySQL}{18}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Numpy}{18}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}Pandas}{18}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Pylint}{18}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Requests}{18}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}RestSharp}{18}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}REST api}{18}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}Selenium}{18}{subsection.4.3.12}%
+\contentsline {paragraph}{Functionality:}{16}{section*.16}%
+\contentsline {paragraph}{Interaction:}{16}{figure.4.4}%
+\contentsline {subsection}{\numberline {4.2.6}\emph {log}}{16}{subsection.4.2.6}%
+\contentsline {paragraph}{Purpose:}{16}{section*.18}%
+\contentsline {paragraph}{Functionality:}{16}{section*.19}%
+\contentsline {paragraph}{Interaction:}{16}{section*.20}%
+\contentsline {subsection}{\numberline {4.2.7}\emph {test}}{17}{subsection.4.2.7}%
+\contentsline {paragraph}{Purpose:}{17}{section*.21}%
+\contentsline {paragraph}{Functionality:}{17}{section*.22}%
+\contentsline {paragraph}{Interaction:}{17}{section*.23}%
+\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Flask}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Matplotlib}{19}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}MySQL}{19}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Numpy}{19}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Pandas}{19}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Pylint}{19}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Requests}{19}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}RestSharp}{19}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}REST api}{19}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.12}Selenium}{19}{subsection.4.3.12}%
 \contentsline {subsection}{\numberline {4.3.13}Python}{19}{subsection.4.3.13}%
 \contentsline {subsection}{\numberline {4.3.14}C sharp}{19}{subsection.4.3.14}%
 \contentsline {subsection}{\numberline {4.3.15}.Net}{19}{subsection.4.3.15}%
 \contentsline {subsection}{\numberline {4.3.16}XAMPP}{19}{subsection.4.3.16}%
-\contentsline {subsection}{\numberline {4.3.17}WinForm}{19}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.17}White}{19}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.18}WinForm}{19}{subsection.4.3.18}%
 \contentsline {chapter}{\numberline {5}Implementation}{20}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Testing and Validation}{21}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Unit Testing}{21}{section.6.1}%

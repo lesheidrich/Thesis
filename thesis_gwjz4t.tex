@@ -200,7 +200,7 @@ At its core, the application relies heavily on a three principal layer \cite[p.~
 
 This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (GOF) are a group of four writers, all computer science professionals and entrepreneurs. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the application's data. It is capable of connecting directly to the model, while operating in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
 
-As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service encompasses the previously discussed Model, Controller and all other components of the application.
+As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service, operating as the back-end, encompasses the previously discussed Model, Controller and all other components of the application.
 
 
 \section{Components}
@@ -232,30 +232,26 @@ One of its responsibilities is accumulating data through the application of vari
 
 When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The simulator returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see {\ref{img-monte-carlo-sequence}}).
 
-The \emph{controller's} basic interactions throughout it's operation are depicted in the package's component diagram (see{\ref{img-controller-component}}).
+\paragraph{Interaction:}
+In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system. The package's component diagram provides a high level overview of basic component interaction (see{\ref{img-controller-component}}).
 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/component/component_controller}
-	\caption{Component UML Diagram}
+	\caption{\emph{controller} UML Component Diagram}
 	\label{img-controller-component}
 \end{figure}
 
-\paragraph{Interaction:}
-In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system.
-
-
-
-
 \subsection{\emph{model}}
 \paragraph{Purpose:}
-
+The package ensures successful data management services within the application, through the storage and manipulation of data records and structures. 
 
 \paragraph{Functionality:}
-
+The business logic enables system interaction with the database, encapsulating data access and administration services. Data security is enforced by minimizing vulnerabilities and prevents data corruption trough validation logic. The \emph{model} services the system through the \emph{controller} package's data manipulation and retrieval components.
+The package also contains the NBA team enums \footnote{In their capacity as a distinct object type, enumerations (enums) offer value binding across a group of encapsulated constants tied together through enumeration. Each value can act as a key identifier during instantiation, making enums a powerful structure for housing validated data \cite{enum}.} employed by the back-end logic. These ensure data validation and encapsulate all occurrences of team names in the system and its dataset, streamlining their application throughout processes.
 
 \paragraph{Interaction:}
-maybe do component or sequence diagram
+The primary business logic elements of the \emph{model} communicate exclusively with the \emph{controller}, enhancing system modularity (see {\ref{img-controller-component}). Due to their earlier described functionality, NBA team enums are also widely employed throughout the \emph{simulation} package. 
 
 \subsection{\emph{simulation}}
 \paragraph{Purpose:}
@@ -336,6 +332,7 @@ discuss firefox, chrome and undetectedchrome drivers
 \subsection{C sharp}
 \subsection{.Net}
 \subsection{XAMPP}
+\subsection{White}
 \subsection{WinForm}
 
 
@@ -486,6 +483,11 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \textsc{Wikipedia},
 \emph{Graphical user interface}, 2024,
 \url{https://en.wikipedia.org/wiki/Graphical_user_interface} [Retreived: 5 March 2024]
+
+\bibitem{enum}
+\textsc{Microsoft Learn},
+\emph{Enumeration types (C\# reference)}, Bill Wagner, 2023,
+\url{https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum} [Retreived: 6 March 2024]
 
 \bibitem{}
 \textsc{},
