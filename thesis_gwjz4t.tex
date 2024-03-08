@@ -29,10 +29,10 @@
 \section*{Acknowledgments}
 \thispagestyle{empty} 
 I would like to express my gratitude to Dr.~Eric Grono and Mr.~Garrett Weinzierl for their mentorship and support throughout my journey into the domain of Monte Carlo simulation and analytical forecasting. Their expertise, patience, and guidance have not only paved the way for new avenues of exploration but have also instilled within me an appreciation for the intersection of computer science and predictive modeling.
-\newline\newline
-\noindent Their influence has played an instrumental role in shaping my academic and professional trajectory. I am indebted to them for their impact on my endeavors.
-\newline\newline
-\noindent Thank you both for your generosity in sharing your time and knowledge, and your patience in addressing my myriad of questions throughout my studies. 
+
+Their influence has played an instrumental role in shaping my academic and professional trajectory. I am indebted to them for their impact on my endeavors.
+
+Thank you both for your generosity in sharing your time and knowledge, and your patience in addressing my myriad of questions throughout my studies. 
 
 
 \tableofcontents
@@ -67,7 +67,6 @@ Through these objectives, this thesis undertakes to promote a deeper understandi
 \section{Monte Carlo Simulation}
 
 
-\chapter{Utilized technologies}
 
 
 \chapter{Requirements}
@@ -172,7 +171,7 @@ The client interface should allow users to interact with the business logic\foot
 		\hline
 		PR3 & Host & Server environment must be capable of running a Python application with a Flask framework. \\
 		\hline
-		PR4 & Requirements & A full list of back-end application requirements is available at: \url{https://github.com/lesheidrich/WebScraping_and_MCSim/blob/master/requirements.txt}. \\
+		PR4 & Requirements & Back-end application requirements are available at: \url{https://github.com/lesheidrich/WebScraping_and_MCSim/blob/master/requirements.txt}. \\
 		\hline
 		PR5 & Database & The database server must be compatible with either XAMPP or MySQL. \\
 		\hline
@@ -199,7 +198,7 @@ The client interface should allow users to interact with the business logic\foot
 \section{Design Concepts}
 At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
 
-This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (GOF) are a group of four writers, all computer science professionals and entrepreneurs. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the applications data. It can connect directly to the Model, and operates in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
+This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (GOF) are a group of four writers, all computer science professionals and entrepreneurs. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the application's data. It is capable of connecting directly to the model, while operating in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
 
 As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service encompasses the previously discussed Model, Controller and all other components of the application.
 
@@ -210,38 +209,78 @@ Following the MVC design pattern's component structure, the application's presen
 The application is organized in a manner, that all components embody system packages allowing improved readability and usability. The following subsections discuss each package's purpose and functionality.
 
 
-
-
-
 \subsection{\emph{view}}
-o	Purpose
-o	Functionality
-o	Interaction
+\paragraph{Purpose:}
+To allow for user interaction with the system through communication with the host along with its application logic and data.
+
+\paragraph{Functionality:}
+The view package operates as a thin client, taking user input through a graphic user interface (GUI) \cite{Wiki-GUI}. User data is cached on the client side for the sake of user convenience, decreasing the input required to achieve functionality. Host responses, along with operational errors are displayed for user viewing. Errors are not logged on the client side of the application.
+
+\paragraph{Interaction:}
+The component interacts with the user and the host module of the \emph{controller} package.
+
+
 
 \subsection{\emph{controller}}
+\paragraph{Purpose:}
+The package is responsible for processing component interaction, and serves as the core logic of the system.
 
+\paragraph{Functionality:}
+Serving as the system's host, the \emph{controller} is responsible for handling user prompts sent by the client in order to formulate an appropriate response. In order to fulfill this function it utilizes its connection to each component of the application, accessing their functionality as needed.
+
+One of its responsibilities is accumulating data through the application of various web scraping methods, which are stored for future use. It's web scraper control functionality enables it to utilize the \emph{webscraper} package to appropriate preset website data into memory, then reallocate it to the database using a combination of its own control processes along with the business logic of the \emph{model} package. The web scraping sequence diagram illustrates the process (see {\ref{img-scraping-sequence}}).
+
+When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The simulator returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see {\ref{img-monte-carlo-sequence}}).
+
+The \emph{controller's} basic interactions throughout it's operation are depicted in the package's component diagram (see{\ref{img-controller-component}}).
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{img/component/component_controller}
+	\includegraphics[width=1\linewidth]{img/component/component_controller}
 	\caption{Component UML Diagram}
 	\label{img-controller-component}
 \end{figure}
 
+\paragraph{Interaction:}
+In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system.
+
+
+
 
 \subsection{\emph{model}}
+\paragraph{Purpose:}
+
+
+\paragraph{Functionality:}
+
+
+\paragraph{Interaction:}
 maybe do component or sequence diagram
 
 \subsection{\emph{simulation}}
+\paragraph{Purpose:}
+
+
+\paragraph{Functionality:}
+
+
+\paragraph{Interaction:}
 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/sequence/monte_carlo/monte_carlo_sequence_cerulean}
-	\caption{Monte Carlo Simulation Sequence Diagram}
+	\caption{Monte Carlo Simulation UML Sequence Diagram}
 	\label{img-monte-carlo-sequence}
 \end{figure}
 
 \subsection{\emph{webscraper}}
+\paragraph{Purpose:}
+
+
+\paragraph{Functionality:}
+
+
+\paragraph{Interaction:}
 
 \begin{figure}[th!]
 	\centering
@@ -253,21 +292,50 @@ maybe do component or sequence diagram
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.85\linewidth]{img/sequence/scraping/scraping_caerilian}
-	\caption{Web Scraping Sequence Diagram}
+	\caption{Web Scraping UML Sequence Diagram}
 	\label{img-scraping-sequence}
 \end{figure}
 
 \subsection{\emph{log}}
+\paragraph{Purpose:}
+
+
+\paragraph{Functionality:}
+
+
+\paragraph{Interaction:}
 
 \subsection{\emph{test}}
+\paragraph{Purpose:}
+
+
+\paragraph{Functionality:}
+
+
+\paragraph{Interaction:}
+
 component contains all back-end unit and integration testing. test suite features python and linter. it features live and mock tests for functions, modules and components. test module is duscussed in detail in the testing chapter **Link to chapter here
 
 
 \section{Technologies and Frameworks}
-winform
-restsharp
-restapi
-flask
+
+\subsection{Beautiful Soup 4}
+\subsection{Fake User Agent}
+\subsection{Flask}
+\subsection{Matplotlib}
+\subsection{MySQL}
+\subsection{Numpy}
+\subsection{Pandas}
+\subsection{Pylint}
+\subsection{Requests}
+\subsection{RestSharp}
+\subsection{REST api}
+\subsection{Selenium}
+\subsection{Python}
+\subsection{C sharp}
+\subsection{.Net}
+\subsection{XAMPP}
+\subsection{WinForm}
 
 
 
@@ -413,9 +481,14 @@ Kuala Lumpur, Malaysia, 2010.
 \emph{Elements of Functional Programming}, 
 Boston, USA, Addison-Wesley Longman, 1989.
 
+\bibitem{Wiki-GUI}
+\textsc{Wikipedia},
+\emph{Graphical user interface}, 2024,
+\url{https://en.wikipedia.org/wiki/Graphical_user_interface} [Retreived: 5 March 2024]
+
 \bibitem{}
 \textsc{},
-\emph{}, 
+\emph{},
 
 \bibitem{Knuth}
 \textsc{Donald Ervin Knuth}: 
