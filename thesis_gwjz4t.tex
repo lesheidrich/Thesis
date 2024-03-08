@@ -304,8 +304,22 @@ The \emph{webscraper} package primarily communicates with the \emph{controller} 
 \section{Technologies and Frameworks}
 
 \subsection{Beautiful Soup 4}
+Beautiful Soup \cite{bs4} is a popular python package, designed to extracts data from HTML 
+  \footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.}
+and XML 
+  \footnote{Extensible Markup Language (XML) is a markup language for data transfer and storage.
+  Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.}
+documents sourced from the web. By leveraging attributes unique to the selected markup language, it facilitates tag and text content based parsing in order to precisely identify and extract the desired data. Developed for web scarping purposes, it is often used alongside packages responsible for making content requests to websites. 
+
 \subsection{Fake User Agent}
+Throughout the extraction of data from websites it is crucial to consider the exchange of information between the client making the request, and the website's host server responding to the request (see subsection \ref{sub-http} for information on HTTP requests). During this process, the host receives client information in the header, allowing it to discern information about the requesting client, like its operating system and browser type \cite{req-head}.
+
+Operations requiring repeated content requests to a single host, such as web scraping, can therefore be identified as outside the scope of regular usage requirements provided by the website. This in turn may lead to limitations of service, disrupting web scraping-based system operations.
+
+Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} \cite{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool.
+
 \subsection{Flask}
+\subsection{HTTP} \label{sub-http}
 \subsection{Matplotlib}
 \subsection{MySQL}
 \subsection{Numpy}
@@ -471,16 +485,53 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \bibitem{Wiki-GUI}
 \textsc{Wikipedia},
 \emph{Graphical user interface}, 2024,
-\url{https://en.wikipedia.org/wiki/Graphical_user_interface} [Retreived: 5 March 2024]
+\url{https://en.wikipedia.org/wiki/Graphical_user_interface}, [Retreived: 5 March 2024]
 
 \bibitem{enum}
 \textsc{Microsoft Learn},
 \emph{Enumeration types (C\# reference)}, Bill Wagner, 2023,
 \url{https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum} [Retreived: 6 March 2024]
 
+\bibitem{mdn-html}
+\textsc{MDN Web Docs},
+\emph{HTML: HyperText Markup Language}, 2024,
+\url{https://developer.mozilla.org/en-US/docs/Web/HTML}, [Retrieved: 6 March 2024]
+
+\bibitem{bs4}
+\textsc{Beautiful Soup 4.12.0 documentation}, 
+\emph{Beautiful Soup Documentation}, 2004-2023 Leonard Richardson,
+\url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}, [Retrieved: 6 March 2024]
+
+\bibitem{mdn-xml}
+\textsc{MDN Web Docs}, 
+\emph{XML: Extensible Markup Language}, 2024,
+\url{https://developer.mozilla.org/en-US/docs/Web/XML}, [Retrieved: 6 March 2024]
+
+\bibitem{mdn-http}
+\textsc{MDN Web Docs}, 
+\emph{HTTP}, 2024
+\url{https://developer.mozilla.org/en-US/docs/Web/HTTP}, [Retrieved: 6 March 2024]
+
+\bibitem{fake-useragent}
+\textsc{PyPI Python Package Index},
+\emph{fake-useragent}, 2023,
+\url{https://pypi.org/project/fake-useragent/#description}, [Retrieved: 6 March 2024]
+
+\bibitem{req-head}
+\textsc{MDN Web Docs}, 
+\emph{HTTP headers}, 2024
+\url{https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers}, [Retrieved: 6 March 2024]
+
 \bibitem{}
 \textsc{},
 \emph{},
+\url{}, [Retrieved: ]
+
+\bibitem{}
+\textsc{},
+\emph{},
+\url{}, [Retrieved: ]
+
 
 \bibitem{Knuth}
 \textsc{Donald Ervin Knuth}: 
