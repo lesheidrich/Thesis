@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  9 MAR 2024 13:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  9 MAR 2024 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,12 +351,6 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = `thesis_gwjz4t.aux'.
 
@@ -624,131 +618,119 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.313 
        <./img/sequence/scraping/scraping_caerilian.png> <./img/component/compon
-ent_webscraper.png>] [19] [20] [21]
+ent_webscraper.png>] [19] [20] [21] [22]
 Chapter 5.
-[22
-
-]
-Chapter 6.
 [23
 
 ]
-Chapter 7.
+Chapter 6.
 [24
 
 ]
-Chapter 8.
+Chapter 7.
 [25
 
 ]
-Chapter 9.
+Chapter 8.
 [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Chapter 9.
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 431--433
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 435--437
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[27
+[28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 508--511
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 518--521
+Underfull \hbox (badness 3375) in paragraph at lines 522--525
 []\T1/lmr/m/sc/12 Beautiful Soup 4.12.0 doc-u-men-ta-tion\T1/lmr/m/n/12 , \T1/l
 mr/m/it/12 Beau-ti-ful Soup Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 518--521
+Underfull \hbox (badness 5077) in paragraph at lines 522--525
 \T1/lmr/m/it/12 tion\T1/lmr/m/n/12 , 2004-2023 Leonard Richard-son, []$\T1/lmtt
 /m/n/12 https : / / www . crummy . com / software /
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 523--526
+Underfull \hbox (badness 1675) in paragraph at lines 527--530
 []\T1/lmr/m/sc/12 MDN Web Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XML: Ex-ten-si-b
 le Markup Lan-guage\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / /
  []
 
-[28]
-Underfull \hbox (badness 2538) in paragraph at lines 553--556
+[29]
+Underfull \hbox (badness 2538) in paragraph at lines 557--560
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 HTTPS\T1/lmr/m/n/12
  , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / HTTPS$[]\
 T1/lmr/m/n/12 , [Re-
  []
 
-[29
+[30
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
 een already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.618 \end{document}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
-een already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.618 \end{document}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
-een already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.618 \end{document}
+l.622 \end{document}
                     ] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -766,10 +748,10 @@ Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
 ### simple group (level 1) entered at line 242 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11306 strings out of 474116
- 181711 string characters out of 5747718
+ 11311 strings out of 474116
+ 181762 string characters out of 5747718
  1940190 words of memory out of 5000000
- 33282 multiletter control sequences out of 15000+600000
+ 33284 multiletter control sequences out of 15000+600000
  632949 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,944b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -781,10 +763,10 @@ pe1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12
 3/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on thesis_gwjz4t.pdf (29 pages, 702485 bytes).
+Output written on thesis_gwjz4t.pdf (30 pages, 704369 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 630 compressed objects within 7 object streams
- 161 named destinations out of 1000 (max. 500000)
+ 706 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 164 named destinations out of 1000 (max. 500000)
  552 words of extra memory for PDF output out of 10000 (max. 10000000)
 

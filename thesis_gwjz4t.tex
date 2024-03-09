@@ -319,7 +319,11 @@ Operations requiring repeated content requests to a single host, such as web scr
 Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} \cite{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool.
 
 \subsection{Flask}
+Flask is a Python based web framework created to facilitate the development of web applications. The framework is known for its versatility, and aims to provide a minimalistic and flexible approach in comparison with other web application frameworks \cite{docs-flask}. 
 
+Developers can choose their server platforms and environments, as Flask's WSGI (Web Server Gateway Interface) specifications enable it to integrate with a multitude of web servers, such as Apache and Nginx \cite{flask}.
+
+Flask also contains a built-in development server, which provides application testing and debugging features. It also supports other extensions and libraries, granting integration capabilities to developers to handle session management or database connectivity. The framework focuses on the provision of necessary tools instead of enforcing constraints, thereby making Flask a popular web framework.
 
 \subsection{HTTP} \label{sub-http}
 Hypertext Transfer Protocol (HTTP) \cite{mdn-http,wiki-http} is a method of communication employed to facilitate data exchange between servers hosting web-based resources, and clients such as web browsers or web-applications.
@@ -554,15 +558,15 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{HTTPS}, 2024,
 \url{https://en.wikipedia.org/wiki/HTTPS}, [Retrieved: 7 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved: ]
+\bibitem{flask}
+\textsc{Pallets Projects},
+\emph{Flask}, 
+\url{https://flask.palletsprojects.com/en/3.0.x/}, [Retrieved: 7 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved: ]
+\bibitem{docs-flask}
+\textsc{Read the Docs},
+\emph{Flask}, 2024,
+\url{https://readthedocs.org/projects/flask/}, [Retrieved: 7 March 2024]
 
 \bibitem{}
 \textsc{},
