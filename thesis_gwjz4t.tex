@@ -311,28 +311,34 @@ and XML
   Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.}
 documents sourced from the web. By leveraging attributes unique to the selected markup language, it facilitates tag and text content based parsing in order to precisely identify and extract the desired data. Developed for web scarping purposes, it is often used alongside packages responsible for making content requests to websites. 
 
+This was also the case in this project. Beautiful Soup was a great asset during the allocation and extraction of acquired web contents, which could then be passed on for further formatting and storage.
+
 \subsection{Fake User Agent}
 Throughout the extraction of data from websites it is crucial to consider the exchange of information between the client making the request, and the website's host server responding to the request. During this process, the host receives client information in the header, allowing it to discern information about the requesting client, like its operating system and browser type (see subsection \ref{sub-http} for information on HTTP requests and their headers).
 
 Operations requiring repeated content requests to a single host, such as web scraping, can therefore be identified as outside the scope of regular usage requirements provided by the website. This in turn may lead to limitations of service, disrupting web scraping-based system operations.
 
-Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} \cite{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool.
+Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests \cite{fake-useragent}. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool.
+
+The package was employed in the project for this ability to generate random user agents at runtime, thereby contributing to the application's anonymity while web scraping.
 
 \subsection{Flask}
 Flask is a Python based web framework created to facilitate the development of web applications. The framework is known for its versatility, and aims to provide a minimalistic and flexible approach in comparison with other web application frameworks \cite{docs-flask}. 
 
 Developers can choose their server platforms and environments, as Flask's WSGI (Web Server Gateway Interface) specifications enable it to integrate with a multitude of web servers, such as Apache and Nginx \cite{flask}.
 
-Flask also contains a built-in development server, which provides application testing and debugging features. It also supports other extensions and libraries, granting integration capabilities to developers to handle session management or database connectivity. The framework focuses on the provision of necessary tools instead of enforcing constraints, thereby making Flask a popular web framework.
+Flask also contains a built-in development server, which provides application testing and debugging features. It also supports other extensions and libraries, granting integration capabilities to developers to handle session management or database connectivity. The framework focuses on the provision of necessary tools instead of enforcing constraints, thereby making Flask a popular web framework \cite{flask}.
+
+The framework was employed in the application due in part to its ease-of-use and flexibility. The host required a lightweight solution compatible with Python. A robust strict framework such as Django would have hindered the timely development of the project, and Flask's accessibility made it a great candidate.   
 
 \subsection{HTTP} \label{sub-http}
-Hypertext Transfer Protocol (HTTP) \cite{mdn-http,wiki-http} is a method of communication employed to facilitate data exchange between servers hosting web-based resources, and clients such as web browsers or web-applications.
+Hypertext Transfer Protocol (HTTP) is a method of communication employed to facilitate data exchange between servers hosting web-based resources, and clients such as web browsers or web-applications \cite{mdn-http}.
 
 HTTP is unidirectional, operating on a request-response basis. When the client, such as a web browser requests services in the form of online content from a server, it does so through an HTTP request. The server processes the request, and sends an appropriate HTTP response. Data can be transmitted in multiple formats. Common examples include JSON 
  \footnote{JavaScript Object Notation (JSON) is a popular lightweigth data structure which utilizes key-value pair functionality. Due to it's simplicity and compatibility with many programming languages it is a common choice for online information exchange \cite{mdn-json}.}
-, HTML, and XML.
+, HTML, and XML \cite{wiki-http}.
 
-The client's request contains information such as the request line, message body, and headers \cite{req-head}. The request line contains the destination resource, the message body stores parameters used by request methods, and the headers contain information about the client's choice of operating system and web browser. The response is comprised of a status code, headers and message body, which houses the requested data.
+The client's request contains information such as the request line, message body, and headers \cite{req-head}. The request line contains the destination resource, the message body stores parameters used by request methods, and the headers contain information about the client's choice of operating system and web browser. The response is comprised of a status code, headers and message body, which houses the requested data \cite{wiki-http}.
 
 HTTP offers methods which can apply parameterized actions to the selected resource. Some examples include:
 \begin{itemize}
@@ -354,16 +360,24 @@ Status codes are utilized to indicate the outcome of processes initiated by the 
 Due to security concerns, a more secure version of HTTP Secure (HTTPS) \cite{wiki-https} was created. It employs encryption mechanisms to ensure transaction security, thereby thwarting potential eavesdropping and tampering attempts. 
 
 \subsection{Matplotlib}
+Matplotlib is an extensive community-maintained Python library utilized in the creation of static, animated, and interactive visualizations \cite{matplotlib}. Matplotlib offers a wide range of functionalities, making it a versatile tool for data visualization tasks. It's Pyplot module allows for the creation of customizable and embeddable graphs and diagrams.
+
+Ultimately the plotting capabilities of the package's Pyplot module led to its utilization in the system.
+
 \subsection{MySQL}
-\subsection{Numpy}
+MySQL is a free open source relational database management system (RDBMS). It is widely used due to it's speed, reliability and scalability. Structured Query Language (SQL) is utilized to communicate with the database for data management and user access modifications. \cite{wiki-mysql}
+
+The decision to use MySQL as the application's database management system was reached due to several factors. The application required a relational model for easier storage of acquired statistical data, which in turn allowed easier processing upon extraction from the database. Its reliability and complementary open source nature, coupled with its widespread adoption and accessibility solidified the decision to utilize it in the application.
+
 \subsection{Pandas}
 \subsection{Pylint}
+\subsection{Python} \label{sub-python}
 \subsection{Requests}
 \subsection{RestSharp}
 \subsection{REST api}
 \subsection{Selenium}
 discuss firefox, chrome and undetectedchrome drivers
-\subsection{Python}
+
 \subsection{C sharp}
 \subsection{.Net}
 \subsection{XAMPP}
@@ -568,15 +582,15 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{Flask}, 2024,
 \url{https://readthedocs.org/projects/flask/}, [Retrieved: 7 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved: ]
+\bibitem{matplotlib}
+\textsc{Matplotlib}, 
+\emph{Matplotlib: Visualization with Python}, 2023,
+\url{https://matplotlib.org/}, [Retrieved: 7 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved: ]
+\bibitem{wiki-mysql}
+\textsc{Wikipedia},
+\emph{MySQL}, 2024,
+\url{https://en.wikipedia.org/wiki/MySQL}, [Retrieved: 7 March 2024]
 
 \bibitem{}
 \textsc{},

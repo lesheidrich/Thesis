@@ -50,19 +50,18 @@
 \contentsline {subsection}{\numberline {4.3.4}HTTP}{20}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Matplotlib}{21}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}MySQL}{21}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}Numpy}{21}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Pandas}{21}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Pylint}{21}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}Requests}{21}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}RestSharp}{21}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}REST api}{21}{subsection.4.3.12}%
-\contentsline {subsection}{\numberline {4.3.13}Selenium}{21}{subsection.4.3.13}%
-\contentsline {subsection}{\numberline {4.3.14}Python}{22}{subsection.4.3.14}%
-\contentsline {subsection}{\numberline {4.3.15}C sharp}{22}{subsection.4.3.15}%
-\contentsline {subsection}{\numberline {4.3.16}.Net}{22}{subsection.4.3.16}%
-\contentsline {subsection}{\numberline {4.3.17}XAMPP}{22}{subsection.4.3.17}%
-\contentsline {subsection}{\numberline {4.3.18}White}{22}{subsection.4.3.18}%
-\contentsline {subsection}{\numberline {4.3.19}WinForm}{22}{subsection.4.3.19}%
+\contentsline {subsection}{\numberline {4.3.7}Pandas}{22}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Pylint}{22}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Python}{22}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}Requests}{22}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}RestSharp}{22}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.12}REST api}{22}{subsection.4.3.12}%
+\contentsline {subsection}{\numberline {4.3.13}Selenium}{22}{subsection.4.3.13}%
+\contentsline {subsection}{\numberline {4.3.14}C sharp}{22}{subsection.4.3.14}%
+\contentsline {subsection}{\numberline {4.3.15}.Net}{22}{subsection.4.3.15}%
+\contentsline {subsection}{\numberline {4.3.16}XAMPP}{22}{subsection.4.3.16}%
+\contentsline {subsection}{\numberline {4.3.17}White}{22}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.18}WinForm}{22}{subsection.4.3.18}%
 \contentsline {chapter}{\numberline {5}Implementation}{23}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Testing and Validation}{24}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Unit Testing}{24}{section.6.1}%
