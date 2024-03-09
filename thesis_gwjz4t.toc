@@ -1,53 +1,53 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Contextual Background}{6}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Motivation}{7}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objectives}{7}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Methodology}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Web Scraping Techniques}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Monte Carlo Simulation}{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Requirements}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Requirements List}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Functional Requirements}{10}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Non-Functional Requirements}{11}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Platform Requirements}{12}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Use Cases}{12}{subsection.3.1.4}%
-\contentsline {chapter}{\numberline {4}Architecture}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Design Concepts}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Components}{14}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}\emph {controller}}{14}{subsection.4.2.1}%
-\contentsline {paragraph}{Purpose:}{14}{section*.3}%
-\contentsline {paragraph}{Functionality:}{14}{section*.4}%
-\contentsline {paragraph}{Interaction:}{14}{section*.5}%
-\contentsline {subsection}{\numberline {4.2.2}\emph {log}}{15}{subsection.4.2.2}%
-\contentsline {paragraph}{Purpose:}{15}{section*.6}%
-\contentsline {paragraph}{Functionality:}{15}{section*.7}%
-\contentsline {paragraph}{Interaction:}{15}{section*.8}%
-\contentsline {subsection}{\numberline {4.2.3}\emph {model}}{15}{subsection.4.2.3}%
-\contentsline {paragraph}{Purpose:}{15}{section*.9}%
-\contentsline {paragraph}{Functionality:}{16}{section*.10}%
-\contentsline {paragraph}{Interaction:}{16}{section*.11}%
-\contentsline {subsection}{\numberline {4.2.4}\emph {simulation}}{16}{subsection.4.2.4}%
-\contentsline {paragraph}{Purpose:}{16}{section*.12}%
-\contentsline {paragraph}{Functionality:}{16}{section*.13}%
-\contentsline {paragraph}{Interaction:}{16}{section*.14}%
-\contentsline {subsection}{\numberline {4.2.5}\emph {test}}{18}{subsection.4.2.5}%
-\contentsline {paragraph}{Purpose:}{18}{section*.15}%
-\contentsline {paragraph}{Functionality:}{18}{section*.16}%
-\contentsline {paragraph}{Interaction:}{18}{section*.17}%
-\contentsline {subsection}{\numberline {4.2.6}\emph {view}}{18}{subsection.4.2.6}%
-\contentsline {paragraph}{Purpose:}{18}{section*.18}%
-\contentsline {paragraph}{Functionality:}{18}{section*.19}%
-\contentsline {paragraph}{Interaction:}{18}{section*.20}%
-\contentsline {subsection}{\numberline {4.2.7}\emph {webscraper}}{18}{subsection.4.2.7}%
-\contentsline {paragraph}{Purpose:}{18}{section*.21}%
-\contentsline {paragraph}{Functionality:}{18}{section*.22}%
-\contentsline {paragraph}{Interaction:}{19}{section*.23}%
-\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{20}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{20}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{20}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Flask}{21}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}HTTP}{21}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contextual Background}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivation}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectives}{6}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Methodology}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Web Scraping Techniques}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Monte Carlo Simulation}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Requirements}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requirements List}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Functional Requirements}{9}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Non-Functional Requirements}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Platform Requirements}{11}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Use Cases}{11}{subsection.3.1.4}%
+\contentsline {chapter}{\numberline {4}Architecture}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Concepts}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Components}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}\emph {controller}}{13}{subsection.4.2.1}%
+\contentsline {paragraph}{Purpose:}{13}{section*.3}%
+\contentsline {paragraph}{Functionality:}{13}{section*.4}%
+\contentsline {paragraph}{Interaction:}{13}{section*.5}%
+\contentsline {subsection}{\numberline {4.2.2}\emph {log}}{14}{subsection.4.2.2}%
+\contentsline {paragraph}{Purpose:}{14}{section*.6}%
+\contentsline {paragraph}{Functionality:}{14}{section*.7}%
+\contentsline {paragraph}{Interaction:}{14}{section*.8}%
+\contentsline {subsection}{\numberline {4.2.3}\emph {model}}{14}{subsection.4.2.3}%
+\contentsline {paragraph}{Purpose:}{14}{section*.9}%
+\contentsline {paragraph}{Functionality:}{15}{section*.10}%
+\contentsline {paragraph}{Interaction:}{15}{section*.11}%
+\contentsline {subsection}{\numberline {4.2.4}\emph {simulation}}{15}{subsection.4.2.4}%
+\contentsline {paragraph}{Purpose:}{15}{section*.12}%
+\contentsline {paragraph}{Functionality:}{15}{section*.13}%
+\contentsline {paragraph}{Interaction:}{15}{section*.14}%
+\contentsline {subsection}{\numberline {4.2.5}\emph {test}}{17}{subsection.4.2.5}%
+\contentsline {paragraph}{Purpose:}{17}{section*.15}%
+\contentsline {paragraph}{Functionality:}{17}{section*.16}%
+\contentsline {paragraph}{Interaction:}{17}{section*.17}%
+\contentsline {subsection}{\numberline {4.2.6}\emph {view}}{17}{subsection.4.2.6}%
+\contentsline {paragraph}{Purpose:}{17}{section*.18}%
+\contentsline {paragraph}{Functionality:}{17}{section*.19}%
+\contentsline {paragraph}{Interaction:}{17}{section*.20}%
+\contentsline {subsection}{\numberline {4.2.7}\emph {webscraper}}{17}{subsection.4.2.7}%
+\contentsline {paragraph}{Purpose:}{17}{section*.21}%
+\contentsline {paragraph}{Functionality:}{17}{section*.22}%
+\contentsline {paragraph}{Interaction:}{18}{section*.23}%
+\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Flask}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}HTTP}{19}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Matplotlib}{21}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}MySQL}{21}{subsection.4.3.6}%
 \contentsline {subsection}{\numberline {4.3.7}Numpy}{21}{subsection.4.3.7}%
@@ -77,14 +77,8 @@
 \contentsline {section}{\numberline {8.1}Summary of Findings}{25}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Contributions to Knowledge}{25}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Limitations and Future Work}{25}{section.8.3}%
-\contentsline {chapter}{\numberline {9}}{26}{chapter.9}%
-\contentsline {section}{\numberline {9.1}}{26}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}}{26}{subsection.9.1.1}%
-\contentsline {chapter}{\numberline {10}Chapter title}{27}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Section title}{27}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Subsection title}{27}{subsection.10.1.1}%
-\contentsline {chapter}{\numberline {11}Appendices}{28}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Code Samples}{28}{section.11.1}%
-\contentsline {section}{\numberline {11.2}GUI Mockups}{28}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Test Cases}{28}{section.11.3}%
-\contentsline {chapter}{Bibliography}{29}{chapter*.24}%
+\contentsline {chapter}{\numberline {9}Appendices}{26}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Code Samples}{26}{section.9.1}%
+\contentsline {section}{\numberline {9.2}GUI Mockups}{26}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Test Cases}{26}{section.9.3}%
+\contentsline {chapter}{Bibliography}{27}{chapter*.24}%
