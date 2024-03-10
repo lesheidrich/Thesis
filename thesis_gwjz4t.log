@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  10 MAR 2024 13:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  10 MAR 2024 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -332,7 +332,29 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box55
 )
-(./thesis_gwjz4t.aux)
+(./thesis_gwjz4t.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `thesis_gwjz4t.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -450,7 +472,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<eszterhazy-logo-en.pdf, id=254, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-en.pdf, id=250, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-en.pdf Graphic file (type pdf)
 <use eszterhazy-logo-en.pdf>
 Package pdftex.def Info: eszterhazy-logo-en.pdf  used on input line 25.
@@ -482,7 +504,7 @@ Chapter 2.
 
 ]
 Chapter 3.
-<img/usecase.png, id=379, 485.815pt x 443.6575pt>
+<img/usecase.png, id=374, 485.815pt x 443.6575pt>
 File: img/usecase.png Graphic file (type png)
 <use img/usecase.png>
 Package pdftex.def Info: img/usecase.png  used on input line 81.
@@ -528,7 +550,7 @@ Overfull \hbox (2.15634pt too wide) in paragraph at lines 210--211
  pro-cess-ing com-po-nent in-ter-ac-tion, and serves
  []
 
-<img/component/component_controller.png, id=429, 1316.92pt x 876.27374pt>
+<img/component/component_controller.png, id=424, 1316.92pt x 876.27374pt>
 File: img/component/component_controller.png Graphic file (type png)
 <use img/component/component_controller.png>
 Package pdftex.def Info: img/component/component_controller.png  used on input 
@@ -541,13 +563,13 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.239 
        <./img/component/component_controller.png>]
-<img/component/component_simulation.png, id=458, 775.89874pt x 495.8525pt>
+<img/component/component_simulation.png, id=453, 775.89874pt x 495.8525pt>
 File: img/component/component_simulation.png Graphic file (type png)
 <use img/component/component_simulation.png>
 Package pdftex.def Info: img/component/component_simulation.png  used on input 
 line 255.
 (pdftex.def)             Requested size: 308.71106pt x 197.2858pt.
-<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=459, 1179.40625
+<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=454, 1179.40625
 pt x 1035.87pt>
 File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
 type png)
@@ -573,14 +595,14 @@ has been already used, duplicate ignored
 l.270 \paragraph
                 {Functionality:} <./img/component/component_simulation.png> <./
 img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [17]
-<img/sequence/scraping/scraping_caerilian.png, id=496, 957.5775pt x 591.20876pt
+<img/sequence/scraping/scraping_caerilian.png, id=491, 957.5775pt x 591.20876pt
 >
 File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
 <use img/sequence/scraping/scraping_caerilian.png>
 Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
 input line 292.
 (pdftex.def)             Requested size: 396.91325pt x 245.04936pt.
-<img/component/component_webscraper.png, id=497, 1178.4025pt x 884.30376pt>
+<img/component/component_webscraper.png, id=492, 1178.4025pt x 884.30376pt>
 File: img/component/component_webscraper.png Graphic file (type png)
 <use img/component/component_webscraper.png>
 Package pdftex.def Info: img/component/component_webscraper.png  used on input 
@@ -620,25 +642,25 @@ Chapter 9.
 [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 453--455
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 462--464
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
@@ -646,55 +668,107 @@ applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
 [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 530--533
+Underfull \hbox (badness 10000) in paragraph at lines 539--542
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 540--543
+Underfull \hbox (badness 3375) in paragraph at lines 549--552
 []\T1/lmr/m/sc/12 Beautiful Soup 4.12.0 doc-u-men-ta-tion\T1/lmr/m/n/12 , \T1/l
 mr/m/it/12 Beau-ti-ful Soup Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 540--543
+Underfull \hbox (badness 5077) in paragraph at lines 549--552
 \T1/lmr/m/it/12 tion\T1/lmr/m/n/12 , 2004-2023 Leonard Richard-son, []$\T1/lmtt
 /m/n/12 https : / / www . crummy . com / software /
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 545--548
+Underfull \hbox (badness 1675) in paragraph at lines 554--557
 []\T1/lmr/m/sc/12 MDN Web Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XML: Ex-ten-si-b
 le Markup Lan-guage\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / /
  []
 
 [30]
-Underfull \hbox (badness 6978) in paragraph at lines 590--593
+Underfull \hbox (badness 6978) in paragraph at lines 599--602
 []\T1/lmr/m/sc/12 Matplotlib\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Mat-plotlib: Vi-su
 -al-iza-tion with Python\T1/lmr/m/n/12 , 2023, []$\T1/lmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 600--603
+Underfull \hbox (badness 6141) in paragraph at lines 609--612
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 pan-das (soft-ware)
 \T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wi
 ki /
  []
 
-[31] (./thesis_gwjz4t.aux)
+
+Underfull \hbox (badness 3872) in paragraph at lines 619--622
+[]\T1/lmr/m/sc/12 Read the Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Re-quests: HTTP
+ for Hu-mans\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / requests .
+ []
+
+[31
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.673 
+      ] [32
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.686 \end{document}
+                    ] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
-(rerunfilecheck)             Checksum: BA426CD06712C308A0C63D14082F05C1;9344.
+(rerunfilecheck)             Checksum: D00753E48EAA41E8264D9E3FE08AC87D;9213.
  ) 
 Here is how much of TeX's memory you used:
- 11318 strings out of 474116
- 181831 string characters out of 5747718
- 1940190 words of memory out of 5000000
- 33287 multiletter control sequences out of 15000+600000
+ 11323 strings out of 474116
+ 181859 string characters out of 5747718
+ 1941190 words of memory out of 5000000
+ 33289 multiletter control sequences out of 15000+600000
  632949 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,944b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -705,10 +779,10 @@ lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/f
 onts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm
 /lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (31 pages, 709541 bytes).
+Output written on thesis_gwjz4t.pdf (32 pages, 712228 bytes).
 PDF statistics:
- 716 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 168 named destinations out of 1000 (max. 500000)
- 544 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 735 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
