@@ -46,7 +46,7 @@
 \contentsline {section}{\numberline {4.3}Technologies and Frameworks}{19}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Beautiful Soup 4}{19}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Fake User Agent}{19}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Flask}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Flask}{20}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}HTTP}{20}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Matplotlib}{21}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}MySQL}{21}{subsection.4.3.6}%
@@ -57,27 +57,27 @@
 \contentsline {subsection}{\numberline {4.3.11}RestSharp}{22}{subsection.4.3.11}%
 \contentsline {subsection}{\numberline {4.3.12}REST api}{22}{subsection.4.3.12}%
 \contentsline {subsection}{\numberline {4.3.13}Selenium}{22}{subsection.4.3.13}%
-\contentsline {subsection}{\numberline {4.3.14}C sharp}{22}{subsection.4.3.14}%
-\contentsline {subsection}{\numberline {4.3.15}.Net}{22}{subsection.4.3.15}%
-\contentsline {subsection}{\numberline {4.3.16}XAMPP}{22}{subsection.4.3.16}%
-\contentsline {subsection}{\numberline {4.3.17}White}{22}{subsection.4.3.17}%
-\contentsline {subsection}{\numberline {4.3.18}WinForm}{22}{subsection.4.3.18}%
-\contentsline {chapter}{\numberline {5}Implementation}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Testing and Validation}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{24}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Evaluation}{24}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{25}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{25}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{25}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{25}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusion}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Summary of Findings}{26}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{26}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Limitations and Future Work}{26}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Appendices}{27}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Code Samples}{27}{section.9.1}%
-\contentsline {section}{\numberline {9.2}GUI Mockups}{27}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Test Cases}{27}{section.9.3}%
-\contentsline {chapter}{Bibliography}{28}{chapter*.24}%
+\contentsline {subsection}{\numberline {4.3.14}C sharp}{23}{subsection.4.3.14}%
+\contentsline {subsection}{\numberline {4.3.15}.Net}{23}{subsection.4.3.15}%
+\contentsline {subsection}{\numberline {4.3.16}XAMPP}{23}{subsection.4.3.16}%
+\contentsline {subsection}{\numberline {4.3.17}White}{23}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.18}WinForm}{23}{subsection.4.3.18}%
+\contentsline {chapter}{\numberline {5}Implementation}{24}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Testing and Validation}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{25}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{25}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Evaluation}{25}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{26}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{26}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{26}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{26}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{27}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Summary of Findings}{27}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{27}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Limitations and Future Work}{27}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Appendices}{28}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Code Samples}{28}{section.9.1}%
+\contentsline {section}{\numberline {9.2}GUI Mockups}{28}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Test Cases}{28}{section.9.3}%
+\contentsline {chapter}{Bibliography}{29}{chapter*.24}%
