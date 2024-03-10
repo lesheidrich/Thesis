@@ -54,13 +54,12 @@
 \contentsline {subsection}{\numberline {4.3.8}Python}{22}{subsection.4.3.8}%
 \contentsline {subsection}{\numberline {4.3.9}Requests}{22}{subsection.4.3.9}%
 \contentsline {subsection}{\numberline {4.3.10}RestSharp}{23}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}REST api}{23}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.11}REST API}{23}{subsection.4.3.11}%
 \contentsline {subsection}{\numberline {4.3.12}Selenium}{23}{subsection.4.3.12}%
-\contentsline {subsection}{\numberline {4.3.13}C sharp}{23}{subsection.4.3.13}%
-\contentsline {subsection}{\numberline {4.3.14}.Net}{23}{subsection.4.3.14}%
-\contentsline {subsection}{\numberline {4.3.15}XAMPP}{23}{subsection.4.3.15}%
-\contentsline {subsection}{\numberline {4.3.16}White}{23}{subsection.4.3.16}%
-\contentsline {subsection}{\numberline {4.3.17}WinForm}{23}{subsection.4.3.17}%
+\contentsline {subsection}{\numberline {4.3.13}.Net}{23}{subsection.4.3.13}%
+\contentsline {subsection}{\numberline {4.3.14}XAMPP}{23}{subsection.4.3.14}%
+\contentsline {subsection}{\numberline {4.3.15}White}{23}{subsection.4.3.15}%
+\contentsline {subsection}{\numberline {4.3.16}WinForm}{23}{subsection.4.3.16}%
 \contentsline {chapter}{\numberline {5}Implementation}{24}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Testing and Validation}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Unit Testing}{25}{section.6.1}%

@@ -387,11 +387,15 @@ RestSharp is a tool utilized in .Net development, offering synchronous and async
 
 The package is utilized on the client side of the application, due to these capabilities. Its GET and POST methods handle interactions with the host's API. Response JSONs are deserialized to access response content.
 
-\subsection{REST api}
+\subsection{REST API}
+Representational State Transfer (REST) refers to a set of principles acting as guidelines in the development of APIs for web services. These stipulate the use of HTTP as a communication protocol, however data encoding is left up to the developer, with options including JSON, HTML, and XML. Requests should be independent, not relying on each-other's success. Caching of data is acceptable, along with the sending of executable code to the client where needed. REST further requires a standard method of sending data and a layered organizational approach. \cite{redhat-rest}
+
+In the application, REST is utilized to facilitate communication between the client and host. HTTP requests are sent to the host in order to receive responses in the form of JSON.  
+
 \subsection{Selenium}
 discuss firefox, chrome and undetectedchrome drivers
 
-\subsection{C sharp}
+
 \subsection{.Net}
 \subsection{XAMPP}
 \subsection{White}
@@ -625,10 +629,10 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{Recommended usage}, Peter Breen, 2023,
 \url{https://restsharp.dev/intro.html}, [Retrieved 8 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
+\bibitem{redhat-rest}
+\textsc{Red Hat},
+\emph{What is a REST API?}, 2020, 
+\url{https://www.redhat.com/en/topics/api/what-is-a-rest-api}, [Retrieved 8 March 2024]
 
 \bibitem{}
 \textsc{},
