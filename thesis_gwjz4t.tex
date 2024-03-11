@@ -303,6 +303,11 @@ The \emph{webscraper} package primarily communicates with the \emph{controller} 
 
 \section{Technologies and Frameworks}
 
+\subsection{.NET}
+The .NET framework was built by Microsoft for developing Windows-based applications. Today, with the integration of cross-platform and open source frameworks, the .NET Core supports multiple operating systems and is also open source. It supports multiple programming languages, including C\#. \cite{.net}
+
+The view component of the application is based on the .Net framework and written in C\#, due to its ability to model a range of services. It's WinForms (see \ref{winform}) framework and RestSharp package allow for fast and secure development, as well as a seamless user exprience.
+
 \subsection{Beautiful Soup 4}
 Beautiful Soup \cite{bs4} is a popular python package, designed to extracts data from HTML 
   \footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.}
@@ -382,45 +387,66 @@ The programming language was utilized for the back-end due to its extensive comp
 \subsection{Requests}
 The Python requests library is a simple package allowing for communication through HTTP requests. \cite{req} It is utilized in the application for making requests to specified websites in order to retrieve their HTML content in the response. Requests allows for parameterized customization of proxies, timeout settings, and request methods, many of which are utilized in the web scraping process. 
 
-\subsection{RestSharp}
-RestSharp is a tool utilized in .Net development, offering synchronous and asynchronous communication to remote resources using HTTP. It allows for easier managing of diverse request and response types while interacting with APIs by handling serialization and deserialization of message bodies to JSON and XML. \cite{restsharp}
-
-The package is utilized on the client side of the application, due to these capabilities. Its GET and POST methods handle interactions with the host's API. Response JSONs are deserialized to access response content.
-
 \subsection{REST API}
 Representational State Transfer (REST) refers to a set of principles acting as guidelines in the development of APIs for web services. These stipulate the use of HTTP as a communication protocol, however data encoding is left up to the developer, with options including JSON, HTML, and XML. Requests should be independent, not relying on each-other's success. Caching of data is acceptable, along with the sending of executable code to the client where needed. REST further requires a standard method of sending data and a layered organizational approach. \cite{redhat-rest}
 
 In the application, REST is utilized to facilitate communication between the client and host. HTTP requests are sent to the host in order to receive responses in the form of JSON.  
 
+\subsection{RestSharp}
+RestSharp is a tool utilized in .NET development, offering synchronous and asynchronous communication to remote resources using HTTP. It allows for easier managing of diverse request and response types while interacting with APIs by handling serialization and deserialization of message bodies to JSON and XML. \cite{restsharp}
+
+The package is utilized on the client side of the application, due to these capabilities. Its GET and POST methods handle interactions with the host's API. Response JSONs are deserialized to access response content.
+
 \subsection{Selenium}
-discuss firefox, chrome and undetectedchrome drivers
+Selenium is an open source test automation tool created for web applications. It enables developers to single out and interact with user interface (UI) elements thereby simulating user interaction. Selenium's WebDriver tool allows for the utilization of web browsers to interact with online sources, enabling programmatic clicking of buttons, mouse movements, and traversing web pages. Selenium supports multiple programming languages, including Python. \cite{selenium}
 
+While driver instantiation already allows for the use of well known browsers, such as Mozilla's Firefox and Google's Chrome, the open source community has further contributed packages such as Undetected ChromeDriver. This Python library aims to provide the same driver functionality, while attempting to be less detectable by the host server. \cite{udc}
 
-\subsection{.Net}
+This project utilizes Python's Selenium package for web scraping purposes. Instantiating the driver allows for content retrieval in a less detectable, albeit slower manner.
+
+\subsection{TestStack.White}
+White is a test automation framework used to test Windows desktop applications. It is based on the .NET framework and does not require the use of scripting languages. Test code can be written in any .NET supported language. \cite{docs-white}
+
+The framework is implemented in the project for UI automation testing purposes. The client's WinForms-based desktop application is tested for returning appropriate responses and basic functionality for quality assurance purposes.
+
+\subsection{WinForms} \label{winform}
+Windows Forms (WinForms) is a .NET graphical user interface (GUI) framework for building desktop applications. It provides developers with controls for dragging and dropping elements to rapidly create interactive user interfaces. \cite{winforms}
+
+The application's client interface is built with WinForms in the C\# programming language. WinForms allowed for timely and precise development process, creating a visually appealing Windows desktop application.
+
 \subsection{XAMPP}
-\subsection{White}
-\subsection{WinForm}
+Cross platform Apache MariaDB PHP Pearl (XAMPP) is a complementary open source web server solution stack meant for development environment utilization. Originally developed by Apache Friends, the application is widely used for testing and development purposes. It's available for multiple operating systems and makes the conversion process to a live server seamless, as it utilizes the same tech stack utilized by most production environments. \cite{wiki-xampp}
 
+MariaDB, the open source database server used by XAMPP, is a fork of the the original MySQL. It was created with the intention that the project remain free and open source. \cite{mariaDB} As a fork of MySQL, it shares a high level of compatibility with it, and has been included in the project for this purpose. While XAMPP employs MariaDB, the project's business logic utilizes MySQL related code and Python libraries. This compatibility allows the application to access both MySQL servers and XAMPP's MariaDB-based service.
 
-
-
-
+XAMPP is utilized as a development environment in the project, housing the application's built in database. It was chosen for its robust functionality and online user interface, which made testing during the creation and implementation of the model a more user-friendly experience. 
 
 
 
 \chapter{Implementation}
+In keeping with the structural approach of the previous chapter, the project's implementation will be presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application.
+
+implementation approach
+actual code
+design patterns and standards
+challenges along the way
+scalability
+
+
 
 \chapter{Testing and Validation} \label{ch-testing}
 
 \section{Unit Testing}
 \section{Integration Testing}
 \section{System Testing}
+with white
 \section{Performance Evaluation}
 
 \chapter{Results and Discussion}
 \section{Analysis of Web Scraping Results}
 \section{Evaluation of Monte Carlo Simulations}
 \section{Comparison with Existing Methods}
+common to use scrapy. selenium is not preferred in general due to lack of speed. undetected chrome needs to be looked at further
 
 \chapter{Conclusion}
 \section{Summary of Findings}
@@ -634,42 +660,45 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{What is a REST API?}, 2020, 
 \url{https://www.redhat.com/en/topics/api/what-is-a-rest-api}, [Retrieved 8 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
+\bibitem{selenium}
+\textsc{Harvard Scholar},
+\emph{Selenium Documentation Release 1.0}, 2012, 
+\url{https://scholar.harvard.edu/files/tcheng2/files/selenium_documentation_0.pdf}, [Retrieved 8 March 2024]
+
+\bibitem{udc}
+\textsc{Github},
+\emph{undetected-chromedriver}, 2024, 
+\url{https://github.com/ultrafunkamsterdam/undetected-chromedriver}, [Retrieved 8 March 2024]
+
+\bibitem{.net}
+\textsc{Microsoft Learn},
+\emph{Introduction to NET}, 2024, 
+\url{https://learn.microsoft.com/en-us/dotnet/core/introduction}, [Retrieved 8 March 2024]
+
+\bibitem{wiki-xampp}
+\textsc{Wikipedia},
+\emph{XAMPP}, 2024,
+\url{https://en.wikipedia.org/wiki/XAMPP}, [Retrieved 8 March 2024]
+
+\bibitem{docs-white}
+\textsc{Read the Docs},
+\emph{TestStack.White},
+\url{https://teststackwhite.readthedocs.io/en/latest/}, [Retrieved 8 March 2024]
+
+\bibitem{winforms}
+\textsc{Microsoft Learn},
+\emph{Desktop Guide (Windows Forms .NET)}, 2023,
+\url{https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/?view=netdesktop-8.0}, [Retrieved 8 March 2024]
+
+\bibitem{mariaDB}
+\textsc{MariaDB Foundation},
+\emph{About MariaDB Server},
+\url{https://mariadb.org/about/}, [Retrieved 9 March 2024]
 
 \bibitem{}
 \textsc{},
 \emph{},
 \url{}, [Retrieved 8 March 2024]
-
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
-
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
-
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
-
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
-
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 8 March 2024]
-
-
 
 \bibitem{Knuth}
 \textsc{Donald Ervin Knuth}: 
@@ -686,5 +715,8 @@ tools:
 - chat.openai.com
 - stackoverflow.com
 - google scholar
+
+ADD:
+- installation
 
 \end{document}
