@@ -3,7 +3,7 @@
 \usepackage[english]{babel}
 
 
-\usepackage{amsthm, url, array, float, graphicx}
+\usepackage{amsthm, url, array, float, graphicx, listings, xcolor}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \theoremstyle{definition}
@@ -11,6 +11,30 @@
 
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+
+\definecolor{custompurple}{RGB}{170,60,170}
+\renewcommand{\lstlistingname}{Code Extract}
+\lstset{
+	language=Python,
+	basicstyle=\color{white}\ttfamily\footnotesize,   % Set text color to white
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	backgroundcolor=\color{black!80},   % Set background color to black
+	commentstyle=\color{black!50},    
+	keywordstyle=[1]\color{orange},    % Set keyword color to orange
+	keywordstyle=[2]\color{custompurple},    % Set secondary keyword color to purple
+	stringstyle=\color{green!75!black},       % Set string color to green
+	breaklines=true,
+	showstringspaces=false,
+	frame=tb,
+	framexleftmargin=5mm,
+	rulecolor=\color{white},     % Set frame color to white
+	xleftmargin=10mm,             
+	xrightmargin=10mm,              
+	morekeywords=[1]{if,else,for,while,import,from,class,def,return,try,except,finally,raise,global,nonlocal,lambda,assert,with,yield,async,await},
+	morekeywords=[2]{self,\_\_init\_\_},   % Add more keywords (escape underscores)
+}
 
 
 \institute{Institute of Mathematics and Informatics}
@@ -192,7 +216,7 @@ The client interface should allow users to interact with the business logic\foot
 
 
 
-\chapter{Architecture}
+\chapter{Architecture} \label{ch-architecture}
 \section{Design Concepts}
 At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
 
@@ -422,16 +446,67 @@ MariaDB, the open source database server used by XAMPP, is a fork of the the ori
 XAMPP is utilized as a development environment in the project, housing the application's built in database. It was chosen for its robust functionality and online user interface, which made testing during the creation and implementation of the model a more user-friendly experience. 
 
 
-
 \chapter{Implementation}
-In keeping with the structural approach of the previous chapter, the project's implementation will be presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application.
+In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application.
+
+\section{\emph{controller}}
+The package is responsible for the implementation of three high level functionalities: the API host service, web scraping, and constructing \emph{TeamBuilder} NBA team instances for the simulator. Each of these controls manage a designated section of the back-end logic's operations. 
+
+As discussed in the Architecture chapter (see \ref{ch-architecture}), the \emph{Host} amalgamates final operations of both web scraping -, and Monte Carlo simulation services. Web scraping operations are coordinated by the \emph{controller}'s \emph{ScrapeControl} class, while NBA team instantiation is handled by the \emph{TeamBuilder}. Team instances are provided for the \emph{simulator} package, which in turn services the \emph{Host}. The following sub-sections presents each functionality in detail.
+
+\subsection{Host Service}
+The \emph{host\_service.py} module houses the \emph{Host} class containing the Flask server handling requests pertaining to the functionality provided by the above described \emph{webscraper} and \emph{simulator} packages. Server instances handle these requests through the following endpoints and their respective class methods:
+\begin{itemize}
+	\item \textbf{/monte\_carlo/game\_data}: Its get\_game\_data() method reads the game schedule from the database based on the provided arguments, returning a JSON of the records to the client.
+	
+	\item \textbf{/monte\_carlo/team\_in\_db}: The get\_teams\_in\_db() method checks if the selected and previous season's data is present in the database for both teams, notifying the client of its findings.
+	
+	\item \textbf{/monte\_carlo/season\_data}: Its get\_season\_data() method initiates a scrape of missing game data. In case of failure, the method re-initiates the process for a second time, logging the attempt. The client is notified of the operation's success or failure via a REST response. In case of failure, the method removes records from the players table, thereby ensuring future checks will see it is still missing from the database.
+	
+	\item \textbf{/monte\_carlo/simulation}: The get\_monte\_carlo\_sim() initiates the parameterized Monte Carlo simulation, returning its results to the client. The JSON contains the probability density plot and violin plots as base64-encoded strings of the plot image files created by matplotlib. Basic game statistics are also included, such as modes of the score arrays, and win percentage. 
+\end{itemize}
+
+Flask instances are initialized with a timeout of 500 seconds, just over 8 min.~allowing adequate time for slightly longer simulations (see line 5 in Code Extract \ref{code-flask-init}). 
+
+Utilizing matplotlib to create graphs during server runtime was challenging at first. When the server instance was running alongside the WinForms GUI, threading conflicts would randomly occur. This was because matplotlib's default back-end GUIs are not guaranteed to be thread-safe, therefore WinForms would occasionally attempt to utilize a resource already allocated to the plotting function. The solution was to set matplotlib to the Anti-Grain Geometry (Agg) plotting library (see line 3 in Code Extract \ref{code-flask-init}), which does not require the use of said resources. \cite{agg}
+
+\lstinputlisting[caption=Flask Instance Initialization, label=code-flask-init]{code/flask-init.pas}
+
+\subsection{Web Scraping Service}
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{img/class/controller_scrapecontrol}
+	\caption{The \emph{controller}'s Web Scraping Services UML Class Diagram}
+	\label{img-controller-scrapecontrol-class}
+\end{figure}
+
+
+\subsection{Team Instantiation}
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{img/class/controller_teambuild}
+	\caption{The \emph{controller}'s TeamBuilder UML Class Diagram}
+	\label{img-controller-teambuilder-class}
+\end{figure}
+
+
+
+These are accessed through a set of REST API-based methods organized into a class. 
+
 
 implementation approach
 actual code
 design patterns and standards
-challenges along the way
+challenges along the way and problems i ran into
+why'd you do it like that
 scalability
 
+
+\section{\emph{log}}
+\section{\emph{model}}
+\section{\emph{simulation}}
+\section{\emph{view}}
+\section{\emph{webscraper}}
 
 
 \chapter{Testing and Validation} \label{ch-testing}
@@ -695,10 +770,15 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{About MariaDB Server},
 \url{https://mariadb.org/about/}, [Retrieved 9 March 2024]
 
+\bibitem{agg}
+\textsc{matplotlib},
+\emph{The builtin backends},
+\url{https://matplotlib.org/stable/users/explain/figure/backends.html}, [Retrieved 10 March 2024]
+
 \bibitem{}
 \textsc{},
 \emph{},
-\url{}, [Retrieved 8 March 2024]
+\url{}, [Retrieved 14 March 2024]
 
 \bibitem{Knuth}
 \textsc{Donald Ervin Knuth}: 

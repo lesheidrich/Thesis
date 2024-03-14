@@ -1,0 +1,83 @@
+@startuml
+
+package "controller" {
+
+    class Host {}
+
+    class ScrapeControl {
+        -dto: DataTransferObject
+        -db_host: Optional[str]
+        -players: list
+        -base: str
+        -season: str
+        -team: str
+        -year: str
+        -urls: dict
+        -in_playoffs: bool
+        -df_depth: None
+        -log: Logger
+        +__init__(proxies_csv: Optional[str], season: str, team: str, check_proxies: bool = False, db_host: Optional[str] = None)
+        +run_all(scrape_method: str): None
+        +run_single(category_type: Literal['team', 'individual', 'player'], scrape_method: str): None
+        +process_player(scrape_method: str, url: str, table_name: str): None
+        +process_individual(scrape_method: str, url: str, table_name: str): None
+        +process_team(scrape_method: str, url: str, table_name: str): None
+        +set_link_tree(): dict
+    }
+
+
+
+    class DataTransferObject {
+        -scraper: ScraperFacade
+        +__init__(proxy_csv: Optional[str] = "proxies_full.csv", check_proxies: bool = False)
+        +data_available(url: str): bool
+        +merged_individual_df(scrape_method_str: str, url_base: str): pd.DataFrame
+        +has_next_page(html_string): bool
+        +new_team_df(scrape_method_str: str, url: str): pd.DataFrame
+        +player_depth_merged_df(df_depth, df_player): None
+        +new_depth_df(scrape_method_str: str, url: str, years: str): pd.DataFrame
+        +new_players_df(scrape_method_str: str, url: str): pd.DataFrame
+        +get_soup(scrape_method: str, url: str): str
+        +scrape_method_validation(scrape_method: str): None
+    }
+
+    class Persist {
+        << static utility class >>
+        +insert(df, table_name: str, preset_headers: Literal["team", "individual", "player"], db_host: Optional[str] = None): None
+        +delete_records(table_name: str, condition: str, db_host: Optional[str] = None): None
+        +get_game_data(home: str, away: str, season: str, db_host: Optional[str] = None): pd.DataFrame
+        +team_in_playoffs(team: str, season: str, db_host: Optional[str] = None): bool
+        +season_in_db(season: str, team: str, db_host: Optional[str] = None): bool
+        +team_in_db(season: str, table_name: str, db_host: Optional[str] = None): bool
+    }
+
+}
+
+package "log" {
+    class Logger {
+    }
+}
+
+package "webscraper" {
+    class ScraperFacade{}
+
+    class RealGMParser{}
+}
+
+package "model" {
+    class MySQLHandler{}
+}
+
+ScrapeControl  *--  DataTransferObject
+ScrapeControl  o-up-  Logger
+ScrapeControl --> Persist
+Host *-left- ScrapeControl
+Host o-up- Logger
+
+DataTransferObject  *--  ScraperFacade
+DataTransferObject --> RealGMParser
+
+Persist --> MySQLHandler
+
+
+@enduml

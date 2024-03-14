@@ -1,0 +1,100 @@
+@startuml
+
+package "controller" {
+
+    class TeamBuilder {
+        -conn: MySQLHandler
+        -team_df: pd.DataFrame
+        -player_df: pd.DataFrame
+        -individual_df: pd.DataFrame
+        -h_or_a: str
+        -roster: Roster
+        +__init__(db_host: Optional[str], season: str, team: Teams, game_date: str, game_type: str, h_or_a: str)
+        +__del__()
+        -disconnect(): None
+        -build_roster(pl_df: pd.DataFrame): None
+        -date_w_individual(team: Teams, game_date: str, game_type: str, high_thresh: float = 0.985, mid_thresh: float = 0.8): pd.DataFrame
+        -get_individual_data(team_short: str, game_date: str, game_type: str): pd.DataFrame
+        -get_team_data(season: str, team: Teams, game_type: str): pd.DataFrame
+        -get_player_data(team_short: str, season: str, game_type: str, h_or_a: str): pd.DataFrame
+        -get_data(condition: str, table_name: str): pd.DataFrame
+        -validate_game_date(season: str, game_date: str): None
+        -validate_roster(): None
+    }
+
+    class Roster {
+        -PF: list<Player>
+        -SF: list<Player>
+        -PG: list<Player>
+        -SG: list<Player>
+        -C: list<Player>
+        +__init__()
+        +__iter__(): Iterator
+        +get_stat_df(): pd.DataFrame
+    }
+
+    class Player {
+        -TOV: float
+        -BLK: float
+        -STL: float
+        -AST: float
+        -REB: float
+        -DRB: float
+        -ORB: float
+        -FTA: float
+        -FTM: float
+        -threePA: float
+        -threePM: float
+        -FGA: float
+        -FGM: float
+        -PTS: float
+        -FGpercent: float
+        -threePpercent: float
+        -FTpercent: float
+        -name: str
+        -GP: int
+        -depth: str
+        -playtime_w: float
+        -totalPpercent: float
+        -adjusted_points: float
+        -player_w: float
+        +__init__(df: pd.DataFrame, player: str, GP: str, depth: str, avg_min: float)
+        -populate_attribs(df: pd.DataFrame): None
+        -calculate_adjusted_points(): float
+        -calulate_totalPpercent(): float
+        -handle_zero_div(num, den): float
+        -calculate_playtime_w(depth: str, avg_min: float, df: pd.DataFrame): float
+    }
+  }
+
+  package "model" {
+    class MySQLHandler {
+    }
+
+    enum Teams {
+        -full_name: str
+        -short_name: str
+        -link_name: str
+        -city_name: str
+        +from_full_name(full_name: str): Teams
+        +from_short_name(short_name: str): Teams
+        +from_link_name(link_name: str): Teams
+        +from_city_name(city_name: str): Teams
+    }
+  }
+
+  package "simulator" {
+    class GameBuilder {}
+}
+
+    Roster "1" o-- "*" Player
+    TeamBuilder --> Player
+    TeamBuilder "1" *-- "1" Roster
+    TeamBuilder --> Teams
+
+    TeamBuilder  *--  MySQLHandler
+
+    TeamBuilder "2" -right-* "1" GameBuilder
+
+
+@enduml
