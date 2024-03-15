@@ -447,7 +447,10 @@ XAMPP is utilized as a development environment in the project, housing the appli
 
 
 \chapter{Implementation}
-In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application.
+In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application. As other components require its presence, the \emph{model} package is introduced first, along with an introduction of the business logic.
+
+\section{\emph{model}}
+discuss database architecture too
 
 \section{\emph{controller}}
 The package is responsible for the implementation of three high level functionalities: the API host service, web scraping, and constructing \emph{TeamBuilder} NBA team instances for the simulator. Each of these controls manage a designated section of the back-end logic's operations. 
@@ -472,7 +475,31 @@ Utilizing matplotlib to create graphs during server runtime was challenging at f
 
 \lstinputlisting[caption=Flask Instance Initialization, label=code-flask-init]{code/flask-init.pas}
 
+
 \subsection{Web Scraping Service}
+The \emph{controller} package's web scraping functionality is encapsulated in two modules: \emph{control\_service} and \emph{dto\_service}. Each module's classes contribute specialized logic to the data gathering process. Together, the modules orchestrate the web scraping process, handle the transformation of data in memory, and manage persistence operations through interactions with the business logic. Figure \ref{img-controller-scrapecontrol-class} illustrates the package's class diagram pertaining to web scraping and data allocation logic.
+
+\paragraph{The \emph{control\_service} module} houses the \emph{ScrapeControl} class. During initialization it:
+\begin{itemize}
+  \item Instantiates a \emph{DataTransferObject} (see section \ref{element-dto}) utilizing the specified proxy settings.
+  
+  \item Creates a dictionary of key-value pairs comprised of the parameterized URLs for each web page it intends to scrape data from.
+  
+  \item Assesses if the team is in the playoffs, storing a boolean from the result of the function call to \emph{Persist.team\_in\_playoffs}.
+  
+  \item Initializes a logger instance, and sets the necessary attributes for further operations.
+\end{itemize}
+
+The class is comprised of basic logic for scraping each table type, stored in the database: player, individual game, and team statistics. These are utilized by two main operating functions: \emph{run\_single} and \emph{run\_all}. This is because the application is designed to allow for simple use through a client interface, but also complex back-end use for a more detailed control of the process as required by analysts. The \emph{run\_all} method completes a full scrape for the chosen team and season, while the \emph{run\_single} method takes parameters allowing for further specification of the table type to acquire and populate (player, individual game, or team statistics).
+
+The dictionary data structure housing the URLs allows for a controlled and detailed iteration, utilizing the assessment of the team's participation in playoffs for the given season set up during the instance's initialization. While iterating over the URLs, the appropriate scrape methods are utilized to attain raw HTML data as text, parse it to a Pandas DataFrame, and finally persist the data to the database. This functionality is further discussed in section \ref{sec-webscraper} titled \emph{webscraper}.
+
+\paragraph{The \emph{dto\_service} module} contains the \emph{DataTransferObject}\label{element-dto} and \emph{Persist} classes. \emph{DataTransferObject} instances facilitate the retrieval of data through \emph{ScraperFacade} instances (see section \ref{sec-webscraper}). Users have the option to choose from a variety of scrape methods, with or without the utilization of proxies. The class further provides logic for handling data sourced from each pre-determined URL, flipping through pages where they are available, and storing them in Pandas DataFrames. 
+
+Beyond utilizing services encapsulated by the \emph{webscraper} package, the class aims to alter and store data in memory for easier processing and better accessibility. Utilizing Pandas DataFrames as a data transfer object \footnote{Data transfer objects (DTO) facilitate data transfer between processes, where the only behavior allowed to the data structure is the storage of data \cite{dto-wiki}.} allows the class to compartmentalize data in structures that are easy to handle, debug, view and transfer to database tables.
+
+With a collection of static utility methods, the \emph{Persist} class is responsible for handling data management operations within the application's database. Trough interaction with the \emph{MySQLHandler}'s business logic, it facilitates the insertion, deletion, and retrieval of data.
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/class/controller_scrapecontrol}
@@ -506,7 +533,7 @@ scalability
 \section{\emph{model}}
 \section{\emph{simulation}}
 \section{\emph{view}}
-\section{\emph{webscraper}}
+\section{\emph{webscraper}} \label{sec-webscraper}
 
 
 \chapter{Testing and Validation} \label{ch-testing}
@@ -774,6 +801,31 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \textsc{matplotlib},
 \emph{The builtin backends},
 \url{https://matplotlib.org/stable/users/explain/figure/backends.html}, [Retrieved 10 March 2024]
+
+\bibitem{dto-wiki}
+\textsc{Wikipedia},
+\emph{Data transfer object}, 2024,
+\url{https://en.wikipedia.org/wiki/Data_transfer_object}, [Retrieved 14 March 2024]
+
+\bibitem{}
+\textsc{},
+\emph{},
+\url{}, [Retrieved 14 March 2024]
+
+\bibitem{}
+\textsc{},
+\emph{},
+\url{}, [Retrieved 14 March 2024]
+
+\bibitem{}
+\textsc{},
+\emph{},
+\url{}, [Retrieved 14 March 2024]
+
+\bibitem{}
+\textsc{},
+\emph{},
+\url{}, [Retrieved 14 March 2024]
 
 \bibitem{}
 \textsc{},

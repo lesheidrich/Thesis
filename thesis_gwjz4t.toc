@@ -61,30 +61,33 @@
 \contentsline {subsection}{\numberline {4.3.15}WinForms}{25}{subsection.4.3.15}%
 \contentsline {subsection}{\numberline {4.3.16}XAMPP}{25}{subsection.4.3.16}%
 \contentsline {chapter}{\numberline {5}Implementation}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\emph {controller}}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Host Service}{27}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Web Scraping Service}{28}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Team Instantiation}{28}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}\emph {log}}{29}{section.5.2}%
-\contentsline {section}{\numberline {5.3}\emph {model}}{29}{section.5.3}%
-\contentsline {section}{\numberline {5.4}\emph {simulation}}{29}{section.5.4}%
-\contentsline {section}{\numberline {5.5}\emph {view}}{29}{section.5.5}%
-\contentsline {section}{\numberline {5.6}\emph {webscraper}}{29}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Testing and Validation}{31}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{31}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{31}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{31}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Evaluation}{31}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{32}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{32}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{32}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{32}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusion}{33}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Summary of Findings}{33}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{33}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Limitations and Future Work}{33}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Appendices}{34}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Code Samples}{34}{section.9.1}%
-\contentsline {section}{\numberline {9.2}GUI Mockups}{34}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Test Cases}{34}{section.9.3}%
-\contentsline {chapter}{Bibliography}{35}{chapter*.24}%
+\contentsline {section}{\numberline {5.1}\emph {model}}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}\emph {controller}}{27}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Host Service}{27}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Web Scraping Service}{29}{subsection.5.2.2}%
+\contentsline {paragraph}{The \emph {control\_service} module}{29}{section*.24}%
+\contentsline {paragraph}{The \emph {dto\_service} module}{29}{section*.25}%
+\contentsline {subsection}{\numberline {5.2.3}Team Instantiation}{30}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}\emph {log}}{31}{section.5.3}%
+\contentsline {section}{\numberline {5.4}\emph {model}}{31}{section.5.4}%
+\contentsline {section}{\numberline {5.5}\emph {simulation}}{31}{section.5.5}%
+\contentsline {section}{\numberline {5.6}\emph {view}}{31}{section.5.6}%
+\contentsline {section}{\numberline {5.7}\emph {webscraper}}{31}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Testing and Validation}{32}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{32}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{32}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{32}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Evaluation}{32}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{33}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{33}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{34}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Summary of Findings}{34}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{34}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Limitations and Future Work}{34}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Appendices}{35}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Code Samples}{35}{section.9.1}%
+\contentsline {section}{\numberline {9.2}GUI Mockups}{35}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Test Cases}{35}{section.9.3}%
+\contentsline {chapter}{Bibliography}{36}{chapter*.26}%
