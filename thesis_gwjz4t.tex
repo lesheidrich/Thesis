@@ -476,7 +476,7 @@ Utilizing matplotlib to create graphs during server runtime was challenging at f
 \lstinputlisting[caption=Flask Instance Initialization, label=code-flask-init]{code/flask-init.pas}
 
 
-\subsection{Web Scraping Service}
+\subsection{Web Scraping}
 The \emph{controller} package's web scraping functionality is encapsulated in two modules: \emph{control\_service} and \emph{dto\_service}. Each module's classes contribute specialized logic to the data gathering process. Together, the modules orchestrate the web scraping process, handle the transformation of data in memory, and manage persistence operations through interactions with the business logic. Figure \ref{img-controller-scrapecontrol-class} illustrates the package's class diagram pertaining to web scraping and data allocation logic.
 
 \paragraph{The \emph{control\_service} module} houses the \emph{ScrapeControl} class. During initialization it:
@@ -509,6 +509,14 @@ With a collection of static utility methods, the \emph{Persist} class is respons
 
 
 \subsection{Team Instantiation}
+The \emph{dto\_sim} module contains three classes responsible for constructing NBA team instances: \emph{TeamBuilder}, \emph{Roster}, and \emph{Player}. Completed team instances are utilized by the \emph{simulator} package's \emph{GameBuilder} class during the construction of individual game simulations. 
+
+- see the graph for details
+- what attribs it has and why
+- how it packs players into roster
+- what player and roster is and how they work
+
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/class/controller_teambuild}
