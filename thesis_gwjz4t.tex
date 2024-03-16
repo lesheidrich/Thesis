@@ -452,6 +452,8 @@ In keeping with the structural approach of the Architecture chapter, the project
 \section{\emph{model}}
 discuss database architecture too
 
+
+
 \section{\emph{controller}}
 The package is responsible for the implementation of three high level functionalities: the API host service, web scraping, and constructing \emph{TeamBuilder} NBA team instances for the simulator. Each of these controls manage a designated section of the back-end logic's operations. 
 
@@ -547,7 +549,9 @@ Each position list houses the \emph{Player} instances assigned to the respective
 	\item \textbf{playtime\_w}:\\
 	A players playtime weight is my arbitrary representation of a weight representing the player's probability to be on the court for any given possession. It utilizes the player's depth in the official roster for the season, and the player's average minutes played during the season divided by the number of minutes per basketball game (48). Second string players probability is then decreased to a quarter of its original value, why third string players are decreased even more, to 2\% of their original playtime. All other players are not considered during the simulation. 
 	
-	This is representative of a players playtime in a real life scenario, where third-string players will generally not see a lot of playtime unless the match itself is a statistical outlier. This can mean either injury, or the team performing so well or so poorly, that novice players can be introduced without detrimentally affecting the outcome of the match.\footnote{To reiterate, this logic comes arbitrarily from my personal views pertaining to the game of basketball and its analytics. There are certainly more appropriate ways of calculating player utilization. However, they are complex in nature and require lengthy study and testing. As this project approaches the subject matter from an introductory computer science perspective at the BSc level, this method's results should be satisfactory.}
+	This is representative of a players playtime in a real life scenario, where third-string players will generally not see a lot of playtime unless the match itself is a statistical outlier. This can mean either injury, or the team performing so well or so poorly, that novice players can be introduced without detrimentally affecting the outcome of the match.
+	
+	This approach is a simplified representation of basketball analytics. More professional methods exist for calculating player utilization, however they are outside the scope of this project as it endeavors to approach the subject matter from a computer science perspective at the BSc level.
 	
 	\item \textbf{totalPpercent}: \\
 	A player's total point percentage is calculated by averaging the percentage of their success rate from free throws, three pointers and field goals.
@@ -581,20 +585,27 @@ The \emph{build\_roster} method constructs \emph{Player} instances from the asse
 \lstinputlisting[caption=Code Snippet of Roster Construction, label=code-build-roster]{code/build-roster.pas}
 The finished \emph{TeamBuilder} instance is then easily utilized by the simulation's \emph{GameBuilder}. The encapsulated data allows for fast access in a logical and intuitive structure.
 
-
- 
-
-
-
-
-
-
-
-
-
-
 \section{\emph{log}}
-\section{\emph{model}}
+The logging system of the application is designed to be flexible, allowing for easy integration into different components of the application. Each component uses the same log, sometimes simultaneously, therefore the logger allows for the creation of access instances. Each is identified separately by module or functionality allowing for easier debugging of runtime errors. 
+
+The \emph{logger} module houses a single \emph{Logger} class, which provides this functionality to the \emph{webscraper} and \emph{controller} packages of the application. Other package functionality is logged by the \emph{controller}. Figure \ref{img-logger-class} depicts the \emph{Logger}'s class diagram. The package also contains the application's logs.
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/class/logger}
+	\caption{Logger UML Class Diagram}
+	\label{img-logger-class}
+\end{figure}
+
+By default \emph{Logger} instances receive a log level of INFO and are referred to the \emph{application\_log.log}, however parameters exist to alter these settings upon initialization. 
+
+Instances complete the initialization process by ensuring the log size has not exceeded the allotted 10 MB threshold. Upon passing this benchmark, truncation is ensured with the next instantiation.
+
+The service allows the application to log messages of varying severity levels through the use of the \emph{info}, \emph{warning}, and \emph{error} methods. Messages logged under the base log level are omitted from the log file. This functionality allows different components to access the log for different purposes, and allow better control of what gets logged during debugging, testing, or runtime.
+
+The logger also supports advanced operations, useful during testing and debugging, such as retrieving log file contents, patterns checking log contents, and managing the file itself.
+
+
 \section{\emph{simulation}}
 \section{\emph{view}}
 \section{\emph{webscraper}} \label{sec-webscraper}

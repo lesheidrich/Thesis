@@ -1,0 +1,33 @@
+@startuml
+
+package "log" {
+class Logger {
+    - log_file: str
+    - encoding: str
+    - log_file_path: str
+    - logger: logging.Logger
+    + __init__(log_level: Literal["INFO", "DEBUG"] = "INFO", name=__name__, log_file: str = 'application_log.log')
+    + _setup_file_handler(log_file: str, log_level) : None
+    + _build_path(file: str) : str
+    + info(message) : None
+    + warning(message) : None
+    + error(message) : None
+    + get_content() : str
+    + check_comment_for_timestamp(comment) : bool
+    + clear_log() : None
+    + truncate_if_too_big(max_size_bytes=10485760) : None
+    + has_open_handlers() : bool
+    + close_log() : None
+    + delete_log() : None
+}
+}
+
+package "controller" {}
+package "webscraper" {}
+package "test" {}
+
+controller o-- Logger
+webscraper o-- Logger
+test o-- Logger
+
+@enduml

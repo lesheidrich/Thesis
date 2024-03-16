@@ -1,0 +1,45 @@
+@startuml
+package "model"{
+class MySQLHandler {
+    - host: str
+    - username: str
+    - password: str
+    - port: int
+    - database: str
+    - connection: Any
+    + __init__(uri: Optional[str])
+    + connect(): None
+    + disconnect(): None
+    + commit_and_close_cur(cur): None
+    + execute_query(query: str, params=None): MySQLCursor
+    + execute_and_commit(query: str, params=None): None
+    + insert_record(table: str, data: dict, columns: str = None): None
+    + read(table: str, selection: Optional[str] = "*", conditions: Optional[str] = None): List
+    + update_record(table: str, data: dict, conditions: str): None
+    + delete_record(table: str, conditions: str): None
+    + season_in_db(season: str, team: str): bool
+    + in_playoffs(team: str, season: str): bool
+    + truncate_table(table_name: str): None
+}
+enum Teams {
+    - full_name: str
+    - short_name: str
+    - link_name: str
+    - city_name: str
+    + from_full_name(full_name: str): Teams
+    + from_short_name(short_name: str): Teams
+    + from_link_name(link_name: str): Teams
+    + from_city_name(city_name: str): Teams
+}
+}
+
+package "controller" {}
+package "simulator" {}
+
+MySQLHandler "1" -down-> "*" Teams : Uses
+MySQLHandler -right-* controller
+simulator -right-> Teams: Uses
+controller -right-> Teams: Uses
+simulator -up- controller
+
+@enduml
