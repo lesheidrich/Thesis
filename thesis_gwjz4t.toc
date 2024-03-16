@@ -43,53 +43,60 @@
 \contentsline {paragraph}{Purpose:}{18}{section*.21}%
 \contentsline {paragraph}{Functionality:}{18}{section*.22}%
 \contentsline {paragraph}{Interaction:}{19}{section*.23}%
-\contentsline {section}{\numberline {4.3}Technologies and Frameworks}{20}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}.NET}{20}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Beautiful Soup 4}{20}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Fake User Agent}{20}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Flask}{21}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}HTTP}{21}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Matplotlib}{23}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}MySQL}{23}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Pandas}{23}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Python}{23}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}Requests}{24}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}REST API}{24}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}RestSharp}{24}{subsection.4.3.12}%
-\contentsline {subsection}{\numberline {4.3.13}Selenium}{24}{subsection.4.3.13}%
-\contentsline {subsection}{\numberline {4.3.14}TestStack.White}{25}{subsection.4.3.14}%
-\contentsline {subsection}{\numberline {4.3.15}WinForms}{25}{subsection.4.3.15}%
-\contentsline {subsection}{\numberline {4.3.16}XAMPP}{25}{subsection.4.3.16}%
-\contentsline {chapter}{\numberline {5}Implementation}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\emph {model}}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}\emph {controller}}{27}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Host Service}{27}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Web Scraping}{29}{subsection.5.2.2}%
-\contentsline {paragraph}{The \emph {control\_service} module}{29}{section*.24}%
-\contentsline {paragraph}{The \emph {dto\_service} module}{30}{section*.25}%
-\contentsline {subsection}{\numberline {5.2.3}Team Instantiation}{30}{subsection.5.2.3}%
-\contentsline {paragraph}{\emph {Roster}}{31}{section*.26}%
-\contentsline {paragraph}{\emph {Player}}{32}{section*.27}%
-\contentsline {paragraph}{\emph {TeamBuilder}}{33}{section*.29}%
-\contentsline {section}{\numberline {5.3}\emph {log}}{34}{section.5.3}%
-\contentsline {section}{\numberline {5.4}\emph {simulation}}{36}{section.5.4}%
-\contentsline {section}{\numberline {5.5}\emph {view}}{36}{section.5.5}%
-\contentsline {section}{\numberline {5.6}\emph {webscraper}}{36}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Testing and Validation}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{37}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{37}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Evaluation}{37}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{38}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{38}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{38}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{38}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusion}{39}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Summary of Findings}{39}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{39}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Limitations and Future Work}{39}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Appendices}{40}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Code Samples}{40}{section.9.1}%
-\contentsline {section}{\numberline {9.2}GUI Mockups}{40}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Test Cases}{40}{section.9.3}%
-\contentsline {chapter}{Bibliography}{41}{chapter*.30}%
+\contentsline {section}{\numberline {4.3}Database Architecture}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Utility Tables}{20}{subsection.4.3.1}%
+\contentsline {paragraph}{\emph {in\_playoffs}:}{20}{section*.24}%
+\contentsline {paragraph}{\emph {schedule}:}{20}{section*.25}%
+\contentsline {subsection}{\numberline {4.3.2}Metrics Tables}{20}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Technologies and Frameworks}{21}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}.NET}{21}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Beautiful Soup 4}{21}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Fake User Agent}{21}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Flask}{22}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}HTTP}{22}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Matplotlib}{24}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}MySQL}{24}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.8}Pandas}{24}{subsection.4.4.8}%
+\contentsline {subsection}{\numberline {4.4.9}Python}{24}{subsection.4.4.9}%
+\contentsline {subsection}{\numberline {4.4.10}Requests}{25}{subsection.4.4.10}%
+\contentsline {subsection}{\numberline {4.4.11}REST API}{25}{subsection.4.4.11}%
+\contentsline {subsection}{\numberline {4.4.12}RestSharp}{25}{subsection.4.4.12}%
+\contentsline {subsection}{\numberline {4.4.13}Selenium}{25}{subsection.4.4.13}%
+\contentsline {subsection}{\numberline {4.4.14}TestStack.White}{26}{subsection.4.4.14}%
+\contentsline {subsection}{\numberline {4.4.15}WinForms}{26}{subsection.4.4.15}%
+\contentsline {subsection}{\numberline {4.4.16}XAMPP}{26}{subsection.4.4.16}%
+\contentsline {chapter}{\numberline {5}Implementation}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}\emph {model}}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}\emph {Teams} Enum}{28}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}\emph {MySQLHandler}}{29}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}\emph {controller}}{29}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Host Service}{30}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Web Scraping}{31}{subsection.5.2.2}%
+\contentsline {paragraph}{The \emph {control\_service} module}{31}{section*.26}%
+\contentsline {paragraph}{The \emph {dto\_service} module}{32}{section*.27}%
+\contentsline {subsection}{\numberline {5.2.3}Team Instantiation}{33}{subsection.5.2.3}%
+\contentsline {paragraph}{\emph {Roster}}{33}{section*.28}%
+\contentsline {paragraph}{\emph {Player}}{34}{section*.29}%
+\contentsline {paragraph}{\emph {TeamBuilder}}{35}{section*.31}%
+\contentsline {section}{\numberline {5.3}\emph {log}}{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}\emph {simulation}}{38}{section.5.4}%
+\contentsline {section}{\numberline {5.5}\emph {view}}{38}{section.5.5}%
+\contentsline {section}{\numberline {5.6}\emph {webscraper}}{38}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Testing and Validation}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{39}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{39}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Evaluation}{39}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{40}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analysis of Web Scraping Results}{40}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Evaluation of Monte Carlo Simulations}{40}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Comparison with Existing Methods}{40}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{41}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Summary of Findings}{41}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Contributions to Knowledge}{41}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Limitations and Future Work}{41}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Appendices}{42}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Code Samples}{42}{section.9.1}%
+\contentsline {section}{\numberline {9.2}GUI Mockups}{42}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Test Cases}{42}{section.9.3}%
+\contentsline {chapter}{Bibliography}{43}{chapter*.32}%

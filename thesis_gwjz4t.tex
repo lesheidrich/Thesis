@@ -324,6 +324,26 @@ The \emph{webscraper} package primarily communicates with the \emph{controller} 
 	\label{img-webscraper-component}
 \end{figure}
 
+\section{Database Architecture}
+The database consists of two main table types: utility tables and tables containing relevant game metrics. The utility tables are static, and assist in the application's game related logic, while metrics tables house data scraped from the web to be utilized in the simulation process. 
+
+\subsection{Utility Tables} 
+\paragraph{\emph{in\_playoffs}:} This is a boolean table pairing each NBA team (columns) to a season of game-play (records). Teams that made the playoffs receive a 1, while teams that failed to make the playoffs in the given season are left NULL.
+
+\paragraph{\emph{schedule}:} The table houses historic NBA game dates and outcomes, along with the game type (regular or playoff game). Records range from the commencement of the 1990-1991 season until the end of the 2022-2023.
+
+\subsection{Metrics Tables}
+There are three types of metrics tables:
+\begin{itemize}
+	\item \textbf{Individual game tables} contain game data for each individual NBA game. Multiple player records are available for each date, with stats portraying the players performance for the single game. Separate tables exist for regular season and playoff games.
+	
+	\item \textbf{Player tables} are unique to each player of each team. They represent the player's averages for the given season. Due to the differences in performance, separate tables exist for home and away games, but also for regular season and playoff games, making a total of four player tables.
+	
+	\item \textbf{Team tables} house averages pertaining to the each team's performance in the given season, therefore each team is unique to each season. Once again, due to the high fluctuation between regular season and playoff metrics, tables are separated into these two categories.
+\end{itemize}
+To ensure all information remains unique, yet no new data is erroneously deemed as a duplicate, all cells of a record are expected to be unique in each table. This constraint ensures data validation, as a player will not be able to appear twice in relation to a game date with all the same metrics, or in the same season. Teams undergo the same validation process, being unique for each season.
+
+Table metrics are presented in more detail during the \ref{sec-simulation} \emph{simulation} and \ref{sec-webscraper} \emph{webscraper} sections of the Implementation chapter.
 
 \section{Technologies and Frameworks}
 
@@ -450,7 +470,28 @@ XAMPP is utilized as a development environment in the project, housing the appli
 In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application. As other components require its presence, the \emph{model} package is introduced first, along with an introduction of the business logic.
 
 \section{\emph{model}}
-discuss database architecture too
+The \emph{model} package contains two classes: \emph{Teams}, and \emph{MySQLHandler}. They represent the business logic, responsible for encapsulation of the database's operations for data manipulation and contain the enum ensuring team names are handled appropriately throughout the application. As figure \ref{img-model-class}'s class diagram shows, the package mainly services the \emph{controller}, with the \emph{simulator} also utilizing team enums for smoother operations.
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/class/model}
+	\caption{\emph{model} UML Class Diagram}
+	\label{img-model-class}
+\end{figure}
+
+\subsection{\emph{Teams} Enum}
+The enumeration class represents each NBA team in the database in all forms of their use throughout the application. These are:
+\begin{itemize}
+	\item \textbf{Full Name}: represents both the city and team name (e.g.: Chicago Bulls).
+	\item \textbf{Short Name}: short form of the team's city (e.g.: CHI).
+	\item \textbf{Link Name}: both the city and team's name along with their unique id number as used in RealGM website URLs (e.g.: Chicago-Bulls/4).
+	\item \textbf{City Name}: only the city the team plays for (e.g.: Chicago).
+\end{itemize} 
+The class contains logic to create enums from each of these name forms, along with the logic for displaying their converted values.
+
+\subsection{\emph{MySQLHandler}}
+
+...
+
 
 
 
@@ -592,7 +633,7 @@ The \emph{logger} module houses a single \emph{Logger} class, which provides thi
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{img/class/logger}
+	\includegraphics[width=0.8\linewidth]{img/class/logger}
 	\caption{Logger UML Class Diagram}
 	\label{img-logger-class}
 \end{figure}
@@ -606,7 +647,7 @@ The service allows the application to log messages of varying severity levels th
 The logger also supports advanced operations, useful during testing and debugging, such as retrieving log file contents, patterns checking log contents, and managing the file itself.
 
 
-\section{\emph{simulation}}
+\section{\emph{simulation}} \label{sec-simulation}
 \section{\emph{view}}
 \section{\emph{webscraper}} \label{sec-webscraper}
 
