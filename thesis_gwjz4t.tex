@@ -3,7 +3,7 @@
 \usepackage[english]{babel}
 
 
-\usepackage{amsthm, url, array, float, graphicx, listings, xcolor}
+\usepackage{amsthm, url, array, float, graphicx, listings, xcolor, mathtools}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \theoremstyle{definition}
@@ -16,7 +16,7 @@
 \renewcommand{\lstlistingname}{Code Extract}
 \lstset{
 	language=Python,
-	basicstyle=\color{white}\ttfamily\footnotesize,   % Set text color to white
+	basicstyle=\color{white}\ttfamily\small,   % Set text color to white
 	numbers=left,
 	numberstyle=\tiny,
 	numbersep=5pt,
@@ -30,8 +30,8 @@
 	frame=tb,
 	framexleftmargin=5mm,
 	rulecolor=\color{white},     % Set frame color to white
-	xleftmargin=10mm,             
-	xrightmargin=10mm,              
+	xleftmargin=5mm,             
+	xrightmargin=0mm,              
 	morekeywords=[1]{if,else,for,while,import,from,class,def,return,try,except,finally,raise,global,nonlocal,lambda,assert,with,yield,async,await},
 	morekeywords=[2]{self,\_\_init\_\_},   % Add more keywords (escape underscores)
 }
@@ -479,6 +479,13 @@ Utilizing matplotlib to create graphs during server runtime was challenging at f
 \subsection{Web Scraping}
 The \emph{controller} package's web scraping functionality is encapsulated in two modules: \emph{control\_service} and \emph{dto\_service}. Each module's classes contribute specialized logic to the data gathering process. Together, the modules orchestrate the web scraping process, handle the transformation of data in memory, and manage persistence operations through interactions with the business logic. Figure \ref{img-controller-scrapecontrol-class} illustrates the package's class diagram pertaining to web scraping and data allocation logic.
 
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{img/class/controller_scrapecontrol}
+	\caption{The \emph{controller}'s Web Scraping Services UML Class Diagram}
+	\label{img-controller-scrapecontrol-class}
+\end{figure}
+
 \paragraph{The \emph{control\_service} module} houses the \emph{ScrapeControl} class. During initialization it:
 \begin{itemize}
   \item Instantiates a \emph{DataTransferObject} (see section \ref{element-dto}) utilizing the specified proxy settings.
@@ -500,22 +507,11 @@ Beyond utilizing services encapsulated by the \emph{webscraper} package, the cla
 
 With a collection of static utility methods, the \emph{Persist} class is responsible for handling data management operations within the application's database. Trough interaction with the \emph{MySQLHandler}'s business logic, it facilitates the insertion, deletion, and retrieval of data.
 
-\begin{figure}[th!]
-	\centering
-	\includegraphics[width=1\linewidth]{img/class/controller_scrapecontrol}
-	\caption{The \emph{controller}'s Web Scraping Services UML Class Diagram}
-	\label{img-controller-scrapecontrol-class}
-\end{figure}
-
 
 \subsection{Team Instantiation}
-The \emph{dto\_sim} module contains three classes responsible for constructing NBA team instances: \emph{TeamBuilder}, \emph{Roster}, and \emph{Player}. Completed team instances are utilized by the \emph{simulator} package's \emph{GameBuilder} class during the construction of individual game simulations. 
+The \emph{dto\_sim} module contains three classes responsible for constructing NBA team instances: \emph{TeamBuilder}, \emph{Roster}, and \emph{Player}. \emph{TeamBuilder} instances create and house all data pertaining to teams participating in the match, with each team (home, and away) being a separate \emph{TeamBuilder} instance. Data is restructured and housed in \emph{Player} instances, which in turn are allocated to the appropriate position in the team's \emph{Roster}.
 
-- see the graph for details
-- what attribs it has and why
-- how it packs players into roster
-- what player and roster is and how they work
-
+Once completed, team instances are utilized by the \emph{simulator} package's \emph{GameBuilder} class in the construction of individual game simulations. Figure \ref{img-controller-teambuilder-class} illustrates the class diagram relevant to the three classes responsible for team instantiation.
 
 \begin{figure}[th!]
 	\centering
@@ -524,7 +520,84 @@ The \emph{dto\_sim} module contains three classes responsible for constructing N
 	\label{img-controller-teambuilder-class}
 \end{figure}
 
+\paragraph{\emph{Roster}} instances are only meant to function as iterable  containers. They are comprised of five empty lists upon initialization, each representing a playable position. These are:
+\begin{itemize}
+	\item PG - Point Guard: coordinates offense.
+	\item SG - Shooting Guard: driving forward and scoring.
+	\item PF - Power Forward: role is a mix between forward a center.
+	\item SF - Small Forward: distance and inside scoring.
+	\item C - Center: under basket game.
+\end{itemize}
+Each position list houses the \emph{Player} instances assigned to the respective position. The \emph{Roster} itself is also iterable.
 
+\paragraph{\emph{Player}} objects store game statistics pertaining to the individual player. Even though I attempted to keep sports analytics to a minimum during the project, the list of attributes grew quite extensive. The majority of the statistics are derived from information already stored in the database. The exceptions are game metrics utilized as weights for decision making by the \emph{simulator}. Highlights of these metrics and the logic responsible for their calculation:
+
+\begin{itemize}
+	\item \textbf{adjusted\_points}: \\
+	Adjusted points are an attempt to numerically categorize a player's true effectiveness via their affect on the team's offense, due to the player's direct contributions through points scored, rebounds, assists, etc. The are multiple approaches for this calculation. This project utilizes the model put forth by Jim Lackritz\footnote{Jim Lackritz is the co-founder of the Sports Business MBA program at San Diego State University's Fowler College \cite{SDSU}.} and Ira Horowitz\footnote{Ira Horowitz is an emeritus professor of statistics at the University of Florida \cite{SDSU}.}, available at the San Diego State University Fowler College Sports Business Program \cite{SDSU}.
+	\begin{equation}
+		\label{eq-adj-pts}
+		\tag{Model 5.1: Lackritz's Adjusted Points Equation}
+		\frac{3 \times \text{Total Points}}{4} + \frac{2.383 \times \text{Assists}}{4} + \frac{0.588 \times \text{Off. Rebounds}}{4} + \frac{0.530 \times \text{Steals}}{4}
+	\end{equation}
+		
+	\item \textbf{player\_w}: \\
+	A player's weight is the metric allowing the Monte Carlo simulation to make random weighted decisions about a players participation in the specified game. It is calculated by averaging the player's adjusted points percentage and playtime weight.
+	
+	\item \textbf{playtime\_w}:\\
+	A players playtime weight is my arbitrary representation of a weight representing the player's probability to be on the court for any given possession. It utilizes the player's depth in the official roster for the season, and the player's average minutes played during the season divided by the number of minutes per basketball game (48). Second string players probability is then decreased to a quarter of its original value, why third string players are decreased even more, to 2\% of their original playtime. All other players are not considered during the simulation. 
+	
+	This is representative of a players playtime in a real life scenario, where third-string players will generally not see a lot of playtime unless the match itself is a statistical outlier. This can mean either injury, or the team performing so well or so poorly, that novice players can be introduced without detrimentally affecting the outcome of the match.\footnote{To reiterate, this logic comes arbitrarily from my personal views pertaining to the game of basketball and its analytics. There are certainly more appropriate ways of calculating player utilization. However, they are complex in nature and require lengthy study and testing. As this project approaches the subject matter from an introductory computer science perspective at the BSc level, this method's results should be satisfactory.}
+	
+	\item \textbf{totalPpercent}: \\
+	A player's total point percentage is calculated by averaging the percentage of their success rate from free throws, three pointers and field goals.
+
+\end{itemize}
+
+
+\paragraph{\emph{TeamBuilder}} instances are initialized, with the following operations:
+\begin{itemize} 
+	\item Validating the game date to ensure it falls within the required season.
+	
+	\item Creation of a Pandas DataFrame for each table category in the database:
+	\begin{itemize}
+		\item Individual games per player for specific game date.		
+		\item Player table of seasonal averages.		
+		\item Team table containing seasonal averages pertaining to the team.
+	\end{itemize}
+	
+	\item The creation, population, and validation of a \emph{Roster} instance.
+	
+	\item Populating the necessary attributes for their functionality.	
+\end{itemize}
+
+It is important to note, that the three initialized DataFrames are filtered specifically to the parameterized data unique to each game. This decreases the demand on memory. Team statistics will therefore only contain one record for the instance's team in the season. Player statistics remain unchanged. The individual games table, however, is restructured, as player instance data is calculated from these.
+
+The team's individual games table consists of one calendar year's data leading up to the game date. Code Extract \ref{code-get-ind-data} illustrates the source code responsible for compiling the DataFrame.
+\lstinputlisting[caption=Initializing Individual Games DataFrame, label=code-get-ind-data]{code/get-ind-data.pas}
+The DataFrame is then modified, repeating records pertaining to the last 2-3 games (those in the 98.5\% time span threshold of the game date) five times. Games falling within the 80\% threshold of the game date are repeated three times, while games in the more distant past only appear once in the re-constructed DataFrame. As all player data is reconstructed from stats in this DataFrame, more recent games will carry a greater weight in the player's performance. This is intended to represent the psychological affect an individual's recent performance has on their current output.
+
+The \emph{build\_roster} method constructs \emph{Player} instances from the assembled DataFrames, populating them in their respective positions in the team's \emph{Roster}. This is done by iterating over each player in the players DataFrame. A boolean test ensures the player is assigned to a position (novice players that don't see playtime are not always assigned to positions). This is a preliminary filter to once again decrease the strain on memory. Second, the logic ensures the player is present in the individual games DataFrame. This ensures the player has seen playtime in the past 365 days. Players that do not meet this criteria are overlooked during the team construction process, as their chances of seeing playtime would be minuscule in reality as well. This further decreases demand on memory and computing time. All players who meet the requirements of the test logic are instantiated utilizing the individual games DataFrame filtered to the player's stats, and additional stats from the player DataFrame. Code Extract \ref{code-build-roster} illustrates the testing and appending functionality of the method.
+\lstinputlisting[caption=Code Snippet of Roster Construction, label=code-build-roster]{code/build-roster.pas}
+The finished \emph{TeamBuilder} instance is then easily utilized by the simulation's \emph{GameBuilder}. The encapsulated data allows for fast access in a logical and intuitive structure.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+\section{\emph{log}}
+\section{\emph{model}}
+\section{\emph{simulation}}
+\section{\emph{view}}
+\section{\emph{webscraper}} \label{sec-webscraper}
 
 These are accessed through a set of REST API-based methods organized into a class. 
 
@@ -535,13 +608,6 @@ design patterns and standards
 challenges along the way and problems i ran into
 why'd you do it like that
 scalability
-
-
-\section{\emph{log}}
-\section{\emph{model}}
-\section{\emph{simulation}}
-\section{\emph{view}}
-\section{\emph{webscraper}} \label{sec-webscraper}
 
 
 \chapter{Testing and Validation} \label{ch-testing}
@@ -815,10 +881,10 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{Data transfer object}, 2024,
 \url{https://en.wikipedia.org/wiki/Data_transfer_object}, [Retrieved 14 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 14 March 2024]
+\bibitem{SDSU}
+\textsc{San Diego State University Fowler College of Business},
+\emph{What is an NBA Players True Offensive Value?}, 2020,
+\url{https://business.sdsu.edu/news/2020/12/what-is-an-nba-players-true-offensive-value}, [Retrieved 15 March 2024]
 
 \bibitem{}
 \textsc{},
