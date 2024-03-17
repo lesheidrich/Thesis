@@ -1,0 +1,73 @@
+@startuml
+
+package "simulator" {
+class GameBuilder {
+    - db_host: Optional[str]
+    - season: str
+    - home_team: Teams
+    - away_team: Teams
+    - game_date: str
+    - game_type: str
+    + __init__(db_host: Optional[str], season: str, home_team: Teams, away_team: Teams, game_date: str, game_type: str)
+    + simulate_stat(players: List[Player], stat: str): bool
+    + shot_attempt(players: List[Player], shooter_w_mult: float = 2): bool
+    + switch_possession(): None
+    + tip_off(): TeamBuilder
+    + in_current_play(oncourt: List[Player], roster: Roster, weight_multiplier: float = 1): List[Player]
+    + on_court(roster: Roster): List[Player]
+    + choose_player(roster_position: List): Player
+}
+
+class GameTools {
+    << Static Utility Methods >>
+    + step(threshold: float): bool
+    + weighted_random_sample(population: List, weights: List, k: int, weight_multiplier: float): List
+}
+
+class Simulation {
+    - game: GameBuilder
+    - home_pts: int
+    - away_pts: int
+    + __init__(db_host: Optional[str], season: str, home_team: Teams, away_team: Teams, game_date: str, game_type: str)
+    + play_game(): None
+    + possession(has_ball: TeamBuilder): None
+    + get_pace(): int
+}
+
+class MonteCarlo {
+    - db_host: Optional[str]
+    - season: str
+    - home_team: Teams
+    - away_team: Teams
+    - game_date: str
+    - game_type: str
+    - epochs: int
+    - home_scores: numpy.array
+    - away_scores: numpy.array
+    + __init__(db_host: Optional[str], season: str, home_team: Teams, away_team: Teams, game_date: str, game_type: str, epochs: int = 10000)
+    + run(): list[str]
+    + run_plt(): None
+    + display_plots(prob_density_plot, violin_plot): None
+    + prob_density(): str
+    + violin_plot(): str
+    + save_2_bytesIO_buffer_string(fig): str
+    + get_stats(): str
+}
+}
+
+enum Teams {}
+
+MonteCarlo *-- Simulation
+Simulation o-- GameBuilder
+Simulation -right-> GameTools: Uses
+GameBuilder -right-> GameTools: Uses
+
+GameBuilder o-- TeamBuilder
+
+MonteCarlo -left-> Teams: Uses
+Simulation -left-> Teams: Uses
+GameBuilder -left-> Teams: Uses
+
+
+@enduml
+

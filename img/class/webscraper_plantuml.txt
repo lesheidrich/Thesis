@@ -1,0 +1,98 @@
+@startuml
+
+
+class RealGMParser {
+    + parse_footnote_unavailable(html_content: str) -> bool
+    + full_name_populate_depth_position(player_name: str, ..., ind, col) -> bool
+    + initial_name_populate_depth_position(player_df: pd.DataFrame, ..., col) -> bool
+    + parse_depth_2_players(df_depth: pd.DataFrame, df_player: pd.DataFrame) -> void
+    + players_df_add_columns(df: pd.DataFrame) -> void
+    + depth_table_2_df(sauce: str, years: str) -> pd.DataFrame
+    + html_table_append_df(sauce: str, df_base: Optional[pd.DataFrame]) -> pd.DataFrame
+    + html_table_2_df(sauce: str) -> pd.DataFrame
+}
+
+abstract class WebDriver {
+    + _setup_options() : Any
+    + _setup_proxy(options: Any, proxy_address: Optional[str] = None) : None
+    + return_content(url: str, proxy_address: Optional[str] = None) : str
+    - _scrape_page_source(driver: Any, url) : str
+    - _return_and_quit(driver: Any, url: str) : str
+}
+
+class FirefoxDriver {
+    + _setup_options() : FirefoxOptions
+    + _setup_proxy(options: Any, proxy_address: Optional[str] = None) : None
+    + return_content(url: str, proxy_address: Optional[str] = None) : str
+}
+
+class ChromeDriver {
+    + _setup_options() : ChromeOptions
+    + _setup_proxy(options: Any, proxy_address: Optional[str] = None) : None
+    + return_content(url: str, proxy_address: Optional[str] = None) : str
+}
+
+class WebDriverFactory {
+    + firefox() : WebDriver
+    + chrome() : WebDriver
+}
+
+class WebKit {
+    << Static Utility Class >>
+    - new_header(): str
+    - random_delay(min_sec: float = 2.8, max_sec: float = 5.6): None
+    - move_mouse_to_element(driver: webdriver, element_xpath: str): None
+    - move_mouse(driver): None
+}
+
+class ProxyKit {
+    - _initialize_proxy_list(proxies_csv: Optional[str], check_proxies: bool): List[str]
+    + __init__(proxies_csv: Optional[str], check_proxies: bool)
+    - _load_proxy_str_to_dict(proxy_str: str): dict
+    - is_valid_proxy(proxy_address: str): bool
+    - is_valid_ip(ip_address: str): bool
+    - proxy_to_dict(proxy: str): dict | None
+    + pop_random_proxy(): str | None
+    + apply_rotating_proxy(function: Callable, url: str, *args, **kwargs): requests.Response | str
+}
+
+class ProxyHandler {
+    - test_url: str
+    - log: Logger
+    - file_path: str
+    - proxies: list
+
+    + __init__(proxies_file: str = "proxies_full.csv")
+    - _build_path(file_name: str): str
+    - load_proxies(): [str]
+    - handle_proxy(proxy_address: str): str
+    + process_proxies(): [str]
+}
+
+class ScraperFacade {
+    - proxy_kit: ProxyKit
+
+    + __init__(proxies_csv: Optional[str], check_proxies: bool = False)
+    + firefox_selenium_scrape(url: str, proxy=None): str
+    + firefox_selenium_proxy_scrape(url: str): str
+    + chrome_selenium_scrape(url: str, proxy=None): str
+    + chrome_selenium_proxy_scrape(url: str): str
+    + requests_scrape(url: str, proxy: str = None, timeout=120): requests.Response
+    + requests_proxy_scrape(url: str, timeout: int = 120): requests.Response
+}
+
+
+WebDriver <|-- FirefoxDriver
+WebDriver <|-- ChromeDriver
+WebDriverFactory -down-> WebDriver
+ScraperFacade --> WebKit: Uses
+ProxyKit --> ProxyHandler: Uses
+WebDriver -right-> WebKit: Uses
+WebDriver o-- ScraperFacade
+ScraperFacade -down-> WebDriverFactory: Uses
+ScraperFacade *-left- ProxyKit
+
+DataTransferObject -down-> RealGMParser
+DataTransferObject -down-> ScraperFacade
+
+@enduml
