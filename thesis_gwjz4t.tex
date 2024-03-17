@@ -479,7 +479,7 @@ The \emph{model} package contains two classes: \emph{Teams}, and \emph{MySQLHand
 \end{figure}
 
 \subsection{\emph{Teams} Enum}
-The enumeration class represents each NBA team in the database in all forms of their use throughout the application. These are:
+The Teams enumeration represents each NBA team in the database in all forms of their use throughout the application. These are:
 \begin{itemize}
 	\item \textbf{Full Name}: represents both the city and team name (e.g.: Chicago Bulls).
 	\item \textbf{Short Name}: short form of the team's city (e.g.: CHI).
@@ -489,11 +489,16 @@ The enumeration class represents each NBA team in the database in all forms of t
 The class contains logic to create enums from each of these name forms, along with the logic for displaying their converted values.
 
 \subsection{\emph{MySQLHandler}}
+The class facilitates communication with a MySQL or MariaDB database, initialized through the parameterized URL string. The connection string is parsed to allocate the correct sub-strings of the parameter to each class attribute (such as host, username, password, and port). Python's \emph{mysql.connector} library (see \cite{mysql.conn} for details) then proceeds to establish a connection to the database, allowing for use of the provided data management methods.
 
-...
+This initialization method allows the application to establish a connection at will with the user's database of choice. 
 
+Data management functionality is customizable and secure, due to cursor parameterization with placeholders for dynamically inserting values into SQL queries. This decreases the likelihood of injection attacks, which would otherwise modify the code with malicious intent, or access unauthorized information \cite{injection-attack}.
 
+Data modification proceeds through a query execution function, which initializes a cursor and attempts to execute the parameterized query string. Changes are rolled back upon encountering potential connection errors. Code Extract \ref{code-exec-query} illustrates the source code of the method. Upon successful completion of the operation, a separate function handles the commit to the database, and closes the cursor.
+\lstinputlisting[caption=Cursor Execution of Query, label=code-exec-query]{code/exec-quer.pas}
 
+While the client side of the application does not require update, delete, and truncate methods, the functionality has been included in the data access layer to enable comprehensive data management from the back-end.
 
 \section{\emph{controller}}
 The package is responsible for the implementation of three high level functionalities: the API host service, web scraping, and constructing \emph{TeamBuilder} NBA team instances for the simulator. Each of these controls manage a designated section of the back-end logic's operations. 
@@ -648,7 +653,11 @@ The logger also supports advanced operations, useful during testing and debuggin
 
 
 \section{\emph{simulation}} \label{sec-simulation}
+
+
 \section{\emph{view}}
+
+
 \section{\emph{webscraper}} \label{sec-webscraper}
 
 These are accessed through a set of REST API-based methods organized into a class. 
@@ -669,6 +678,10 @@ scalability
 \section{System Testing}
 with white
 \section{Performance Evaluation}
+
+\chapter{Manual}
+\section{Installation Guide}
+\section{User Guide}
 
 \chapter{Results and Discussion}
 \section{Analysis of Web Scraping Results}
@@ -938,15 +951,15 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{What is an NBA Players True Offensive Value?}, 2020,
 \url{https://business.sdsu.edu/news/2020/12/what-is-an-nba-players-true-offensive-value}, [Retrieved 15 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 14 March 2024]
+\bibitem{mysql.conn}
+\textsc{MySQL Developer Zone},
+\emph{MySQL Connector/Python Developer Guide}, 2024,
+\url{https://dev.mysql.com/doc/connector-python/en/}, [Retrieved 16 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 14 March 2024]
+\bibitem{injection-attack}
+\textsc{OWASP},
+\emph{SQL Injection},
+\url{https://owasp.org/www-community/attacks/SQL_Injection}, [Retrieved 17 March 2024]
 
 \bibitem{}
 \textsc{},
