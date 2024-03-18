@@ -708,6 +708,23 @@ Both methods create a \emph{Simulation} instance utilized to play one basketball
 \lstinputlisting[caption=Plot Conversion to Base64, label=code-convert]{code/convert.pas}
 
 \section{\emph{view}}
+The package is a WinForms .NET framework application, and it acts as the client side of the system. Users can utilize the Windows-based program to communicate with the back-end's Python host via REST API. C\#'s RestSharp package provides the capability to handle HTTP requests and deserialize the returning responses into the appropriate objects for utilization.
+
+The view is comprised of three windows: \emph{FindGame}, \emph{ScrapePopUp}, and \emph{MonteCarlo}. Each of these handles the communication necessary for their operation. The client operates only as a display, and an interface for the user. All operations are performed by back-end logic, and the results sent to the client as a JSON. Parameters are cached on the client side, decreasing the necessity of taking the same input parameters from the user. This information is also passed on to subsequent windows allowing for a smoother user experience.
+
+The client only allows for simple, minimal client control of the application. Database operations are purposely limited to the back-end logic. The \emph{view} is truly a minimalist use interface intended to display the application's capabilities for the sake of presenting this project.
+
+The \emph{FindGame} window takes initial parameters for setting up the game, such as home and away teams, season, and epoch count. When the \emph{Get Games} button is pressed, it requests all historic games via the \emph{/monte\_carlo/game\_data} resource endpoint, displaying them in a table via DataGridView \cite{dgv}.
+
+The selected row automatically parameterizes the \emph{/monte\_carlo/team\_in\_db} endpoint, which notifies the client of the required data's presence, or lack thereof, in the database. If required, the \emph{ScrapePopUp} window appears, allowing the user to specify their choice of scrape settings to acquire the data with the \emph{/monte\_carlo/season\_data} endpoint. 
+
+If the user wishes, web scraping can be forced, even if the data already exists by pressing the \emph{Forced Scrape} button. In this case all data is scraped again, however as all tables in the database require unique records, the data will only be added to the database if it is truly missing from a table.
+
+The application does not include a VPN, therefore users are encouraged to use a third party service. Proxies are included with the application, and if turned on can provide an additional layer of security, however these are free proxy addresses that have not been thoroughly reviewed. They therefore cannot guarantee anonymity. Furthermore, the use of the built in proxies greatly decreases application speed, as the system will likely need a long time to locate one that is operational, due to the high demand for these services. Users do have the option to provide their own proxy list. If they choose to do so, they must provide it as a CSV table, with the first row being header, first column containing IP addresses, and second row containing port numbers.
+
+Once it is established that the database contains the necessary information (either by means of a successful scrape, or by confirmation from the host), the final window is activated. This \emph{MonteCarlo} window receives all previous parameters from the previous windows upon initialization, and commences the simulation without the need for user interaction via the \emph{/monte\_carlo/simulation} endpoint, displaying both graphs along with original and simulated game data for the user.
+
+Message boxes notify the user of any potential errors throughout the application process, giving brief descriptions. All errors are logged on the server-side of the application allowing for further debugging.
 
 
 \section{\emph{webscraper}} \label{sec-webscraper}
@@ -1026,10 +1043,10 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{Glossary},
 \url{https://www.basketball-reference.com/about/glossary.html}, [Retrieved 18 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 14 March 2024]
+\bibitem{dgv}
+\textsc{Microsoft Learn},
+\emph{DataGridView Class},
+\url{https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview?view=windowsdesktop-8.0}, [Retrieved 18 March 2024]
 
 \bibitem{Knuth}
 \textsc{Donald Ervin Knuth}: 

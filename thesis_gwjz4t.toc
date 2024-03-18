@@ -87,25 +87,25 @@
 \contentsline {subsection}{\numberline {5.4.3}\emph {Simulation}}{42}{subsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.4.4}\emph {MonteCarlo}}{42}{subsection.5.4.4}%
 \contentsline {section}{\numberline {5.5}\emph {view}}{43}{section.5.5}%
-\contentsline {section}{\numberline {5.6}\emph {webscraper}}{43}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Testing and Validation}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{44}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{44}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{44}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Performance Evaluation}{44}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Manual}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Installation Guide}{45}{section.7.1}%
-\contentsline {section}{\numberline {7.2}User Guide}{45}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Results and Discussion}{46}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Analysis of Web Scraping Results}{46}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Evaluation of Monte Carlo Simulations}{46}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Comparison with Existing Methods}{46}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Conclusion}{47}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Summary of Findings}{47}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Contributions to Knowledge}{47}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Limitations and Future Work}{47}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Appendices}{48}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Code Samples}{48}{section.10.1}%
-\contentsline {section}{\numberline {10.2}GUI Mockups}{48}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Test Cases}{48}{section.10.3}%
-\contentsline {chapter}{Bibliography}{49}{chapter*.34}%
+\contentsline {section}{\numberline {5.6}\emph {webscraper}}{44}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Testing and Validation}{46}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{46}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{46}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{46}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Performance Evaluation}{46}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Manual}{47}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Installation Guide}{47}{section.7.1}%
+\contentsline {section}{\numberline {7.2}User Guide}{47}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Results and Discussion}{48}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Analysis of Web Scraping Results}{48}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Evaluation of Monte Carlo Simulations}{48}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Comparison with Existing Methods}{48}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Conclusion}{49}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Summary of Findings}{49}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Contributions to Knowledge}{49}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Limitations and Future Work}{49}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Appendices}{50}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Code Samples}{50}{section.10.1}%
+\contentsline {section}{\numberline {10.2}GUI Mockups}{50}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Test Cases}{50}{section.10.3}%
+\contentsline {chapter}{Bibliography}{51}{chapter*.34}%
