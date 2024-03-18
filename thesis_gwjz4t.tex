@@ -653,6 +653,10 @@ The logger also supports advanced operations, useful during testing and debuggin
 
 
 \section{\emph{simulation}} \label{sec-simulation}
+The package is responsible for setting up and running the Monte Carlo simulation, returning its findings for the parameterized epochs to the \emph{controller} package's host service. The package consists of four classes: \emph{GameBuilder}, \emph{Simulation}, \emph{MonteCarlo}, and the \emph{GameTools} static utility class.
+
+The package's simulation constructor classes, the \emph{GameBuilder} and \emph{Simulation} classes, both utilize the static utility methods the \emph{GameTools} class in their logic. The enum service provided by the \emph{model} package is also used throughout the \emph{simulator} package, as depicted in Figure \ref{img-simulator-class} displaying the \emph{simulator}'s class diagram.
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/class/simulator}
@@ -660,6 +664,48 @@ The logger also supports advanced operations, useful during testing and debuggin
 	\label{img-simulator-class}
 \end{figure}
 
+\subsection{\emph{GameTools}}
+The class contains static methods that provide non-deterministic results for the simulation process. This is done by introducing randomness through thresholds and weights in decision making. These methods are static for convenience upon use.
+
+\paragraph{The Step Method:} This method makes decisions based on one parameterized metric, returning a boolean value of success or failure. A random float is generated between 0 and 1, and if it does not exceed the threshold (which is a float with the same boundaries) then the method returns a successful attempt. The threshold is utilized as an upper boundary, because higher statistical averages would otherwise lead to a smaller chance of success, requiring the negation of the results. Code Extract \ref{code-step} illustrates the method.
+\lstinputlisting[caption=Step Method, label=code-step]{code/step.pas}
+
+\paragraph{Player Sampling:} This method randomly selects players from a parameterized pool of options, applying weights to the decision making process. The effect of the weights on the selection process can be increased through the weight multiplier (which exponentiates the value) parameter. The required sample size is represented by k. Code Extract \ref{code-rand-sample} illustrates the method.
+\lstinputlisting[caption=Weighted Random Player Sampoling Method, label=code-rand-sample]{code/rand-sample.pas}
+
+
+\subsection{\emph{GameBuilder}}
+The class utilizes \emph{TeamBuilder} instances to create the home and away teams parameterized during initialization. Its methods are focused on performing game related interactions, which assist the \emph{Simulation} class in completing the Monte Carlo simulation. 
+
+Proceeding in chronological order relating to game-flow, the \emph{tip\_off} method simulates a tip off, deciding which team gets to attack first. The method selects the strongest rebounder (the player with the highest amount of offensive and defensive rebounds) from each team, then adds a home-court advantage of half the rebound delta between the home and away player's score. It then utilizes the \emph{GameTools}' step method to determine if the home team won the tip off. The team instance with possession of the ball is returned, and starts the flow of the game by filling the \emph{has\_ball} attribute.
+
+Each possession randomly samples the players on the court, however not all players on the court participate in active game-play at all times. Therefore, the players on court are once again randomly sampled to decide which of them will actively participate in that single possession. The player sampling method is utilized to make these random selections. Each player's playtime\_w attribute serves as their respective weight in determining their likelihood of court time and active play time once on court. A combination of the \emph{on\_court}, \emph{choose\_player}, and \emph{in\_current\_play} methods provide this functionality.
+
+The \emph{simualte\_stat} and \emph{shot\_attempt} methods randomly decide if their respective events come to pass by utilizing the step method. The first is meant to simulate metrics such as turn overs (when a player looses the ball for any reason), among other, and allows for further development of the simulation through its utilization on additional metrics to improve results. 
+
+The \emph{shot\_attempt} method is specifically meant to deal with scoring attempts. It first decides who, of the players actively participating in the play will attempt to score the point. Then their shot metrics are reviewed to decide what type of shot they will attempt (3 point or regular 2 point). Code Extract \ref{shot-attempt} shows the method.
+\lstinputlisting[caption=Weighted Random Player Sampoling Method, label=code-shot-attempt]{code/shot-attempt.pas}
+
+Finally, the \emph{switch\_possession} method awards the ball to the opposing team, allowing them an offensive attempt in turn. Further functionality is added to the simulation through the utilization of these methods by the \emph{Simulation} class.
+
+
+\subsection{\emph{Simulation}}
+The class constructs a simulation instance which will play a single basketball game. The parameters and data reconstruct a specific historical match. Upon initialization, the class utilizes the \emph{GameBuilder} class to construct the game scenario, before proceeding with the simulation and returning the final score.
+
+The pace\footnote{In a basketball game, the pace metric indicates the average or expected amount of possessions the team will have during the expected 48 minutes of play \cite{pace}.} of the game is determined by the combination of each teams relevant metric, providing the required number of possession iterations to conclude the match.
+
+\textbf{The \emph{possession} method} applies the relevant logic encapsulated by the \emph{GameBuilder} instance to the parameterized \emph{TeamBuilder} object. After deciding which players are on court, and which of these are actively involved in play, the possibility of a turnover is reviewed. If the ball is turned over, the opposing team continues with their possession, otherwise a shot attempt is made. If the shot is unsuccessful, the rebound metrics are simulated to determine if the offensive team will attack again (this does not count as a new possession in the iteration), otherwise the ball is turned over to the opposing team. 
+
+After the allotted number of iterations have concluded, the simulation can present the home and away scores representing the outcome of the single match.
+
+\subsection{\emph{MonteCarlo}}
+Monte Carlo simulation instances are initialized with parameters specifying a database connection, relevant game data, which then populates the necessary attributes required for operations, and the desired number of epochs.
+
+The class provides two separate run methods, allowing for both client and back-end utilization. Client-based use is constructed specifically for the purpose of presenting this project for academic review, and is therefore limited by a connection time which consequently limits the amount of epochs. Back-end use is meant for higher epoch counts, placing less demand on the system. This is utilized to test the application's results with higher epoch counts, and determine how realistic the outcomes are.
+
+Both methods create a \emph{Simulation} instance utilized to play one basketball game per epoch iteration. Results are tracked and returned as matplotlib plots, one probability density, and one violin. The back-end method \emph{run\_plt} displays the plots upon completion of the simulation, while the \emph{run} method, intended for client use, returns a list of the plots as strings, along with the basic statistics of the simulation such as the team's win percentage per the total number of epochs and the mode of their results. Code Extract \ref{code-convert} illustrates how the method utilized to convert matplotlib graphs to base64.
+
+\lstinputlisting[caption=Plot Conversion to Base64, label=code-convert]{code/convert.pas}
 
 \section{\emph{view}}
 
@@ -975,10 +1021,10 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \emph{SQL Injection},
 \url{https://owasp.org/www-community/attacks/SQL_Injection}, [Retrieved 17 March 2024]
 
-\bibitem{}
-\textsc{},
-\emph{},
-\url{}, [Retrieved 14 March 2024]
+\bibitem{pace}
+\textsc{Basketball Reference},
+\emph{Glossary},
+\url{https://www.basketball-reference.com/about/glossary.html}, [Retrieved 18 March 2024]
 
 \bibitem{}
 \textsc{},
