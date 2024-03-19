@@ -865,9 +865,73 @@ Due to the expanse of data utilized during operations, this approach became high
 	\item The client application found in /view should be downloaded to, and run from the client system. /view/NBA\_Sim\_View/bin/Debug/NBA\_Sim\_View.exe will commence the client application.
 \end{enumerate}
 
-
-
 \section{User Guide}
+Users are greeted with the FindGames Window (see Figure \ref{img-findgames}), where they can initialize the simulation parameters by:
+\begin{itemize}
+	\item Choosing either the default database, or providing their own
+	\item Setting the epoch count.
+	\item Selecting Home and Away teams, and season.
+\end{itemize} 
+
+
+
+\begin{figure}[h]
+	\begin{minipage}{0.69\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/user-guide/FindGame}
+		\caption{The FindGames Window}
+		\label{img-findgames}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.28\textwidth}
+		\textbf{FindGames Window} \\ \\
+		After pressing the \emph{Get Games} button, a table appears, where all the parameterized games for the season are listed. After selecting the row of the desired game in the table, users can proceed by pressing the \emph{Simulate} button.
+	\end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\begin{minipage}{0.6\textwidth}
+		\textbf{ScrapePopUp Window} \\ \\
+		If the game metrics are not yet in the database, or if the user selected the \emph{Forced Scrape} button, the ScrapePopUp Window appears (see Figure \ref{img-scrapepopup}), which allows the selection of a web scraping method. The top of the window shows the team that is missing from the database. Users can utilize their own proxy list by pressing the \emph{Custom Proxy List} button, and opt to pre-check them by clicking on \emph{Check Proxies} as well. Clicking \emph{Scrape} initializes the process, which automatically opens the next window once complete.
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.27\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/user-guide/ScrapePopUp} 
+		\caption{The ScrapePopUp Window}
+		\label{img-scrapepopup}
+	\end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\begin{minipage}{0.69\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/user-guide/MonteCarlo}
+		\caption{The Monte Carlo Simulation Results Window}
+		\label{img-montecarlo}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.28\textwidth}
+		\textbf{MonteCarlo Window} \\ \\
+		Once all the necessary data is available, the system proceeds with the simulation. The user will need to wait at the previous window until this process is complete. Wait times are determined by the epoch count given in the first window. 
+		Historical game results can be seen in the top right corner (see Figure \ref{img-montecarlo}). 
+	\end{minipage}
+\end{figure}
+
+
+The top left corner shows the percentage of games won by each team and the mode of their results. Both the probability density (left) and violin plots (right) are based on the final outcomes of the game per each epoch, displaying the frequency of each outcomes occurrence. Home scores are shown in yellow, away are blue.
+
+Users can navigate back to the initial FindGames window at any time by pressing the home button on the top right-hand side, and initiate a new simulation by changing the parameters.
+
+
+
+
+
+
 
 \chapter{Results and Discussion}
 \section{Performance Evaluation}
