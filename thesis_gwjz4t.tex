@@ -728,9 +728,9 @@ Message boxes notify the user of any potential errors throughout the application
 
 
 \section{\emph{webscraper}} \label{sec-webscraper}
-The \emph{webscraper} package provides a variety of web scraping services, which are utilized and operated by the \emph{controller}. It provides both data acquisition and data parsing services through its \emph{ScraperFacade} and \emph{RealGMParser} classes. The facade class directly or transitively connected to all other classes in the package. The \emph{RealGMParser} and \emph{ProxyHandler} class also make use of the \emph{Logger}. Figure \ref{img-webscraper-class} illustrates the package's class diagram.
+The \emph{webscraper} package provides a variety of web scraping services, which are utilized and operated by the \emph{controller}. It provides both data acquisition and data parsing services through its \emph{ScraperFacade} and \emph{RealGMParser} classes. The facade class connects either directly or transitively to all other classes in the package. The \emph{RealGMParser} and \emph{ProxyHandler} class also make use of the \emph{Logger}. Figure \ref{img-webscraper-class} illustrates the package's class diagram.
 
-This chapter section reviews the \emph{webscraper}'s implementation broken down by functionality in order to give an overview of how they work together with the facade class that represents the package's functionality.
+This section reviews the \emph{webscraper}'s implementation broken down by functionality in order to give an overview of how they work together with the facade class that represents the package's functionality.
 
 \subsection{Utility Classes}
 The \emph{WebKit} class is a collection of static methods that are generally used by scrape services throughout the package. They attempt to mimic human use and introduce randomness to decrease the chance of being blocked by the service provider. Services include:
@@ -749,22 +749,24 @@ The \emph{ProxyKit} offers proxy services to chosen web scraping methodologies i
 \subsection{Selenium WebDrivers}
 The Selenium service uses an abstract WebDriver acting as a base class, defining common virtual and regular methods for all implementing child classes. Each child class operates a separate browser technology, offering the same functionality. Methods pertaining to WebDriver setup are virtual, allowing each WebDriver instance to implement its browser specific setup options, providing, among other things, proxy functionality for later use. Regular methods provide web scraping capabilities and quit the driver.
 
-The \emph{WebDriverFactory} is a factory class with static methods responsible for creating instances of the sub-classes, such as FirefoxDrivers and ChromeDrivers.
+The \emph{WebDriverFactory} is a factory class with static methods responsible for creating instances of the sub-classes, such as FirefoxDrivers and ChromeDrivers. This method is based on the Factory Method described in the GOF book Head First Design Patterns \cite[p.~134]{GOF}, and Abstract Factory Pattern \cite[p.~156]{GOF} which allows utilizing systems to decide which sub-class they want to create. The static factory methods allow further decoupling, by allocating sub-class instantiation to a separate static factory instead of utilizing the WebDriver for this task.
 
 The code contains the setup for Undetected ChromeDriver, however it is not implemented (it's commented out), as the library has caused several bugs during testing, including issues with the numpy library and failing to delete instances after use. The code segments remain in the project because they are an interesting addition that merit further study and testing.
 
-
-
 \subsection{The Facade}
+The \emph{ScraperFacade} utilizes the Facade Design Pattern from the GOF's Head First Design Patterns, wherein a complex component architecture provides a single class which encompasses the package's functionality, and is consequently able to act as an access point for all utilizing services within the application \cite[p.~264]{GOF}. 
+
+The facade therefore provides full data acquisition services to the \emph{controller}. It accesses the factory method to create Selenium driver instances, or creates HTTP content requests with Python's Requests library. Services provided by the \emph{WebKit} are automatically included in both. It also provides the necessary access methods to utilize proxies during web scraping.
 
 \subsection{Parsing Service}
+The \emph{RealGMParser} is treated as a standalone component within the package. The class consists of static utility methods, built for parsing and handling content acquired form the RealGM website's URLs. The class makes use of the BeautifulSoup4 and Pandas Python libraries to parse the scraped data into DataFrames.
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/class/webscraper}
 	\caption{\emph{webscraper} UML Class Diagram}
 	\label{img-webscraper-class}
 \end{figure}
-
 
 
 \chapter{Testing and Validation} \label{ch-testing}
