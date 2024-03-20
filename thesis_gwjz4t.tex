@@ -3,7 +3,7 @@
 \usepackage[english]{babel}
 
 
-\usepackage{amsthm, url, array, float, graphicx, listings, xcolor, mathtools}
+\usepackage{amsthm, url, array, float, graphicx, listings, xcolor, mathtools, multirow}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \theoremstyle{definition}
@@ -942,18 +942,101 @@ The measured scraping process spanning all teams for fifteen seasons contained t
 	\item A random wait time ranging from two to seven seconds was introduced after each requests.
 	\item In case of failure, a backup scrape was implemented with Selenium's Firefox WebDriver.
 \end{itemize}
-The web scraping process ran 
+The web scraping process ran for over twelve hours. During the process, HTTP requests made with the Requests library failed four times. All scrape attempts executed with Selenium's Firefox were successful.
 
+In comparison with other scraping technologies, the applied method of a quick HTTP request followed by browser imitation in case of potential issues show promise. It combines the speed and effectiveness of the Requests library, while still providing the higher success probability of a Selenium based scrape as a backup. This also ensures timely execution, as using Selenium on its own would drastically increase processing time. Requests based web scraping attempts only approached the two minute cutoff in case of connection errors, while Selenium based scrapes generally performed around the three minute mark.
 
+This approach is not novel, the combination has been discussed over multiple research papers, forums and blogs. Ajay Bale et al give a thorough evaluation of the web scraping methods in their 2022 paper titled \emph{Web Scraping Approaches and their Performance on Modern Websites} \cite{bale}.
+
+Parsing the results with a combination of BeautifulSoup4 and Pandas into DataFrames gave a high level of control to the application's methods, allowed for fast development, and easier debugging.
 
 \section{Monte Carlo Simulation}
-common to use scrapy. selenium is not preferred in general due to lack of speed. undetected chrome needs to be looked at further
+I dove into the Monte Carlo simulation with modest expectations. Initially, the methodology was included in the application as a means of familiarizing myself with its intricacies, thereby laying the groundwork for potential future projects utilizing it.
+
+Aware of my limitations in understanding the complexities of basketball metrics, along with how individual statistical markers affect each-other, I expected limitations pertaining to the simulation's outcome. Furthermore, the time required to thoroughly research and assemble a proper database containing all the necessary data to make realistic predictions would take longer than the time allotted for researching, building and writing this thesis.
+
+The basketball game's simulation process is also missing details, such as fouls and injuries. Delving deeper into the simulation would have necessitated an exponential increase in sports-related research and would have required specific metrics, which were unavailable. To give an example, free online statistics measure personal fouls per player, but it is much harder to find the proportion of offensive to defensive fouls, and each introduce new intricacies to the game flow.
+
+Consequently, my expectations towards the simulation remained tempered. I assumed a high probability of randomness for outcomes, which would only resemble history to a minor degree. To my surprise, in many cases the predicted outcome matched the range of the historic game's outcomes. Simulation scores always resembled a higher percentage of historic game scores, however this was to be expected as shot attempts were calculated with the inclusion of free throw percentages. As free throws have a much higher rate of success than field goals, this is completely understandable. Results would usually become less correct when historic game scores were close, within a 5 point range. Table \ref{tab-sim-games} highlights a few of the simulated games and their results, broken down into an epoch range of one, five, and ten thousand.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Date} & \textbf{Home} & \textbf{Away} & \textbf{Actual} & \textbf{Epochs} & \textbf{Win \%} & \textbf{Mode} \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+		\multirow{3}{*}{1992-01-11} & \multirow{3}{*}{Chicago} & \multirow{3}{*}{Miami} & \multirow{3}{*}{108 - 99} & 1000 & 71\% & 118 - 110 \\
+		&  &  &  & 5000 & 69\% & 118 - 106 \\
+		&  &  &  & 10000 & 71\% & 116 - 107 \\
+		\hline
+	\end{tabular}
+	\caption{Monte Carlo Simulation Results}
+	\label{tab-sim-games}
+\end{table}
+
+
+
+\begin{figure}[th!]
+	\begin{minipage}{0.38\textwidth}
+		Table \ref{tab-sim-games} gives a good general sense of potential game outcomes, however by plotting each epoch, additional insights can be gained. Both the probability density and violin graphs visible in Figures \ref{img-results-1000}, \ref{img-results-5000}, and \ref{img-results-10000} (simulating one, five, and ten thousand epochs) illustrate the frequency of each score's occurrence, which shows the range of all likely outcomes instead of focusing only on the most probable score values. This has the added benefit of displaying potential trends that fall short of the mode's value.
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/results/chi_mia_1000}
+		\caption{Simulation Results per 1000 Epochs}
+		\label{img-results-1000}
+	\end{minipage}
+\end{figure}
+
+As seen in Figures \ref{img-results-1000}, \ref{img-results-5000}, and \ref{img-results-10000}, an increase in epoch count leads to the convergence of score values around the mode of all scores, and consequently decreases the occurrence of other high frequency score occurrences. Model testing, therefore, does not surpass the ten thousand epoch mark, as further increases would be unlikely to yield better results. 
+
+
+\begin{figure}[H]
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/results/chi_mia_5000}
+		\caption{Simulation Results per 5000 Epochs}
+		\label{img-results-5000}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/results/chi_mia_10000}
+		\caption{Simulation Results per 10000 Epochs}
+		\label{img-results-10000}
+	\end{minipage}
+\end{figure}
+
+Overall the Monte Carlo simulation surpassed my expectations, performing quite admirably despite the inherent limitations. It is interesting to note that the model's lightweight build not only didn't decrease performance as expected, but also decreased the required amount of epochs to realize an acceptable outcome. As seen in the above images, sometimes even one thousand epochs result in a successful simulation. While this model is rudimentary in comparison to Monte Carlo simulation capabilities, it helped gain insight and lay the foundations for future research and refined my understanding of simulation methodologies.
 
 
 
 \chapter{Conclusion}
-\section{Summary of Findings}
-
 \section{Limitations and Future Work}
 
 \section{Conclusion}
@@ -1233,6 +1316,18 @@ Boston, USA, Addison-Wesley Longman, 1989.
 \textsc{Python},
 \emph{unittest — Unit testing framework},
 \url{https://docs.python.org/3/library/unittest.html}, [Retrieved 19 March 2024]
+
+\bibitem{bale}
+\textsc{Ajay Sudhir Bale, Naveen Ghorpade, S.~Kamalesh, Rohith S., Rohith R., Rohan B.~S.~},
+\emph{Web Scraping Approaches and their Performance on Modern Websites},
+Third International Conference on Electronics and Sustainable Communication Systems (ICESC 2022),
+Coimbatore, India, September 2022,
+DOI: \href{https://doi.org/10.1109/ICESC54411.2022.9885689}{10.1109/ICESC54411.2022.9885689}
+
+\bibitem{scrapy}
+\textsc{Scrapy},
+\emph{Scrapy 2.11 documentation}, 2024, 
+\url{https://docs.scrapy.org/en/latest/}, [Retrieved 20 March 2024]
 
 \end{thebibliography}
 
