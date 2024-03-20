@@ -928,12 +928,25 @@ The top left corner shows the percentage of games won by each team and the mode 
 Users can navigate back to the initial FindGames window at any time by pressing the home button on the top right-hand side, and initiate a new simulation by changing the parameters.
 
 
-\chapter{Results and Discussion}
-\section{Performance Evaluation}
+\chapter{Results}
 
-\section{Analysis of Web Scraping Results}
-\section{Evaluation of Monte Carlo Simulations}
-\section{Comparison with Existing Methods}
+\section{Web Scraping}
+The web scraping functionality of the project was concluded with a high success rate. This was in part due to the relaxed security on the server side of the RealGM website. Even though the site's robots.txt disallows scraping of all tabular data, even simple HTTP content requests have been successful at attaining a response.
+
+The measured scraping process spanning all teams for fifteen seasons contained the following features:
+\begin{itemize}
+	\item Alternating random request headers with the \emph{fake\_useragent} library.
+	\item Request timeout of two minutes.
+	\item A free VPN service was run to mask the system's IP address, however proxies were not utilized to decrease runtime.
+	\item Python's Requests library was used to make HTTP requests to the service provider.
+	\item A random wait time ranging from two to seven seconds was introduced after each requests.
+	\item In case of failure, a backup scrape was implemented with Selenium's Firefox WebDriver.
+\end{itemize}
+The web scraping process ran 
+
+
+
+\section{Monte Carlo Simulation}
 common to use scrapy. selenium is not preferred in general due to lack of speed. undetected chrome needs to be looked at further
 
 
@@ -943,7 +956,7 @@ common to use scrapy. selenium is not preferred in general due to lack of speed.
 
 \section{Limitations and Future Work}
 
-
+\section{Conclusion}
 
 
 
