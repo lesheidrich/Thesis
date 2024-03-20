@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  19 MAR 2024 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  19 MAR 2024 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,7 +990,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.7.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.936 \chapter
+l.931 \chapter
               {Results and Discussion} <./img/user-guide/MonteCarlo.png>]
 Chapter 8.
 [53
@@ -1000,141 +1000,137 @@ Chapter 9.
 [54
 
 ]
-Chapter 10.
-[55
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 978--980
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 978--980
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 978--980
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Overfull \hbox (173.14246pt too wide) in paragraph at lines 985--987
+Overfull \hbox (173.14246pt too wide) in paragraph at lines 978--980
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]various-[]domains-[]6b3c2b2f1ca3$[]\T1/lmr/m/n/12 ,
  []
 
-[56
+[55
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1065
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1058
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 1072--1075
+Underfull \hbox (badness 3375) in paragraph at lines 1065--1068
 []\T1/lmr/m/sc/12 Beautiful Soup 4.12.0 doc-u-men-ta-tion\T1/lmr/m/n/12 , \T1/l
 mr/m/it/12 Beau-ti-ful Soup Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 1072--1075
+Underfull \hbox (badness 5077) in paragraph at lines 1065--1068
 \T1/lmr/m/it/12 tion\T1/lmr/m/n/12 , 2004-2023 Leonard Richard-son, []$\T1/lmtt
 /m/n/12 https : / / www . crummy . com / software /
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1077--1080
+Underfull \hbox (badness 1675) in paragraph at lines 1070--1073
 []\T1/lmr/m/sc/12 MDN Web Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XML: Ex-ten-si-b
 le Markup Lan-guage\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / /
  []
 
-[57]
-Underfull \hbox (badness 6978) in paragraph at lines 1122--1125
+[56]
+Underfull \hbox (badness 6978) in paragraph at lines 1115--1118
 []\T1/lmr/m/sc/12 Matplotlib\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Mat-plotlib: Vi-su
 -al-iza-tion with Python\T1/lmr/m/n/12 , 2023, []$\T1/lmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 1132--1135
+Underfull \hbox (badness 6141) in paragraph at lines 1125--1128
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 pan-das (soft-ware)
 \T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wi
 ki /
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 1142--1145
+Underfull \hbox (badness 3872) in paragraph at lines 1135--1138
 []\T1/lmr/m/sc/12 Read the Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Re-quests: HTTP
  for Hu-mans\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / requests .
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 1157--1160
+Underfull \hbox (badness 1783) in paragraph at lines 1150--1153
 []\T1/lmr/m/sc/12 Harvard Scholar\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Se-le-nium Do
 c-u-men-ta-tion Re-lease 1.0\T1/lmr/m/n/12 , 2012, []$\T1/lmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1153
 \T1/lmtt/m/n/12 / / scholar . harvard . edu / files / tcheng2 / files / seleniu
 m _ documentation _ 0 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1165
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1158
 []\T1/lmr/m/sc/12 Github\T1/lmr/m/n/12 , \T1/lmr/m/it/12 undetected-chromedrive
 r\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1172--1175
+Underfull \hbox (badness 1622) in paragraph at lines 1165--1168
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XAMPP\T1/lmr/m/n/12
  , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / XAMPP$[]\
 T1/lmr/m/n/12 , [Re-
  []
 
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1185
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1178
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Desk-top Guid
 e (Win-dows Forms .NET)\T1/lmr/m/n/12 , 2023,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1178
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / des
 ktop / winforms / overview /
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 1187--1190
+Underfull \hbox (badness 2126) in paragraph at lines 1180--1183
 []\T1/lmr/m/sc/12 MariaDB Foun-da-tion\T1/lmr/m/n/12 , \T1/lmr/m/it/12 About Ma
 ri-aDB Server\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / mariadb . org /
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 1197--1200
+Underfull \hbox (badness 1147) in paragraph at lines 1190--1193
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data trans-fer ob-j
 ect\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org /
  wiki /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1225
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1218
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data-Grid-Vie
 w Class\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / learn . microsoft .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1225
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1218
 \T1/lmtt/m/n/12 com / en-[]us / dotnet / api / system . windows . forms . datag
 ridview ? view =
  []
 
-[59] (./thesis_gwjz4t.aux)
+[58] (./thesis_gwjz4t.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1143,31 +1139,57 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
-(rerunfilecheck)             Checksum: 7709701594D6551630B9AD0548624335;12705.
+
+Package rerunfilecheck Warning: File `thesis_gwjz4t.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_gwjz4t.out':
+(rerunfilecheck)             Before: 7709701594D6551630B9AD0548624335;12705
+(rerunfilecheck)             After:  BB70207E47FD7DE349D7289B95B104BC;11949.
  ) 
 Here is how much of TeX's memory you used:
- 15407 strings out of 474116
- 241721 string characters out of 5747718
+ 15406 strings out of 474116
+ 241714 string characters out of 5747718
  2017190 words of memory out of 5000000
  37114 multiletter control sequences out of 15000+600000
  648093 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,1166b,2070s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2023/texmf-dist/fonts
-/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/
-lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texl
-ive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist
-/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
-lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texl
-ive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dis
-t/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
-ic/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (59 pages, 1654700 bytes).
+
+pdfTeX warning (dest): name{section.10.3} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.10.2} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.10.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.10} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.9.3} has been referenced but does not exist
+, replaced by a fixed one
+
+<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/t
+exmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
+mi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texliv
+e/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/f
+onts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm
+/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texliv
+e/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/
+fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
+/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis_gwjz4t.pdf (58 pages, 1654079 bytes).
 PDF statistics:
- 1239 PDF objects out of 1440 (max. 8388607)
- 1120 compressed objects within 12 object streams
- 339 named destinations out of 1000 (max. 500000)
+ 1235 PDF objects out of 1440 (max. 8388607)
+ 1117 compressed objects within 12 object streams
+ 338 named destinations out of 1000 (max. 500000)
  773 words of extra memory for PDF output out of 10000 (max. 10000000)
 

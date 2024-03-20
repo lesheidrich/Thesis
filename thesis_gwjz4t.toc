@@ -107,10 +107,5 @@
 \contentsline {section}{\numberline {8.4}Comparison with Existing Methods}{53}{section.8.4}%
 \contentsline {chapter}{\numberline {9}Conclusion}{54}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Summary of Findings}{54}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Contributions to Knowledge}{54}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Limitations and Future Work}{54}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Appendices}{55}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Code Samples}{55}{section.10.1}%
-\contentsline {section}{\numberline {10.2}GUI Mockups}{55}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Test Cases}{55}{section.10.3}%
-\contentsline {chapter}{Bibliography}{56}{chapter*.35}%
+\contentsline {section}{\numberline {9.2}Limitations and Future Work}{54}{section.9.2}%
+\contentsline {chapter}{Bibliography}{55}{chapter*.35}%
