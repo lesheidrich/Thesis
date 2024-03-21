@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  21 MAR 2024 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  21 MAR 2024 22:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,7 +642,7 @@ Chapter 3.
 <img/usecase.png, id=463, 485.815pt x 443.6575pt>
 File: img/usecase.png Graphic file (type png)
 <use img/usecase.png>
-Package pdftex.def Info: img/usecase.png  used on input line 105.
+Package pdftex.def Info: img/usecase.png  used on input line 106.
 (pdftex.def)             Requested size: 199.16928pt x 181.88043pt.
 [9
 
@@ -651,16 +651,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 
+l.153 
        <./img/usecase.png>] [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.184 
+l.185 
       ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-98.
+99.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [11
@@ -668,19 +668,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.206 
+l.207 
       ] [12
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.219 \chapter
+l.220 \chapter
               {Architecture} \label{ch-architecture}]
 Chapter 4.
 [13
 
 ]
-Overfull \hbox (2.15634pt too wide) in paragraph at lines 234--235
+Overfull \hbox (2.15634pt too wide) in paragraph at lines 235--236
  []\T1/lmr/bx/n/12 Purpose:[] \T1/lmr/m/n/12 The pack-age is re-spon-si-ble for
  pro-cess-ing com-po-nent in-ter-ac-tion, and serves
  []
@@ -689,20 +689,20 @@ Overfull \hbox (2.15634pt too wide) in paragraph at lines 234--235
 File: img/component/component_controller.png Graphic file (type png)
 <use img/component/component_controller.png>
 Package pdftex.def Info: img/component/component_controller.png  used on input 
-line 245.
+line 246.
 (pdftex.def)             Requested size: 441.01773pt x 293.44989pt.
 [14] [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 
+l.264 
        <./img/component/component_controller.png>]
 <img/component/component_simulation.png, id=543, 775.89874pt x 495.8525pt>
 File: img/component/component_simulation.png Graphic file (type png)
 <use img/component/component_simulation.png>
 Package pdftex.def Info: img/component/component_simulation.png  used on input 
-line 279.
+line 280.
 (pdftex.def)             Requested size: 308.71106pt x 197.2858pt.
 <img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=544, 1179.40625
 pt x 1035.87pt>
@@ -710,7 +710,7 @@ File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
 type png)
 <use img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>
 Package pdftex.def Info: img/sequence/monte_carlo/monte_carlo_sequence_cerulean
-.png  used on input line 285.
+.png  used on input line 286.
 (pdftex.def)             Requested size: 441.01773pt x 387.34387pt.
  [16]
 
@@ -721,13 +721,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.294 \paragraph
+l.295 \paragraph
                 {Functionality:}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.294 \paragraph
+l.295 \paragraph
                 {Functionality:} <./img/component/component_simulation.png> <./
 img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [18]
 <img/sequence/scraping/scraping_caerilian.png, id=580, 957.5775pt x 591.20876pt
@@ -735,48 +735,48 @@ img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [18]
 File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
 <use img/sequence/scraping/scraping_caerilian.png>
 Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
-input line 316.
+input line 317.
 (pdftex.def)             Requested size: 396.91325pt x 245.04936pt.
 <img/component/component_webscraper.png, id=581, 1178.4025pt x 884.30376pt>
 File: img/component/component_webscraper.png Graphic file (type png)
 <use img/component/component_webscraper.png>
 Package pdftex.def Info: img/component/component_webscraper.png  used on input 
-line 322.
+line 323.
 (pdftex.def)             Requested size: 308.71106pt x 231.6677pt.
  [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.329 
+l.330 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.329 
+l.330 
        <./img/sequence/scraping/scraping_caerilian.png> <./img/component/compon
 ent_webscraper.png>] [20] [21] [22] [23] [24] [25] [26] [27]
 Chapter 5.
 <img/class/model.png, id=693, 791.95876pt x 678.535pt>
 File: img/class/model.png Graphic file (type png)
 <use img/class/model.png>
-Package pdftex.def Info: img/class/model.png  used on input line 476.
+Package pdftex.def Info: img/class/model.png  used on input line 477.
 (pdftex.def)             Requested size: 352.81552pt x 302.28362pt.
 [28
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 499.
+nput line 500.
  [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.499 ...abel=code-exec-query]{code/exec-quer.pas}
+l.500 ...abel=code-exec-query]{code/exec-quer.pas}
                                                    <./img/class/model.png (PNG 
 copy)>] (./code/exec-quer.pas) [30]
-Overfull \hbox (1.76923pt too wide) in paragraph at lines 515--516
+Overfull \hbox (1.76923pt too wide) in paragraph at lines 516--517
 []\T1/lmr/bx/n/12 /monte_carlo/season_data\T1/lmr/m/n/12 : Its get_season_data(
 ) method ini-ti-ates a scrape
  []
@@ -792,32 +792,32 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: img/class/controller_scrapecontrol.png Graphic file (type png)
 <use img/class/controller_scrapecontrol.png>
 Package pdftex.def Info: img/class/controller_scrapecontrol.png  used on input 
-line 532.
+line 533.
 (pdftex.def)             Requested size: 441.01773pt x 263.70084pt.
  [32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.549 
+l.550 
        <./img/class/controller_scrapecontrol.png (PNG copy)>] [33]
 <img/class/controller_teambuild.png, id=768, 1579.9025pt x 1227.58624pt>
 File: img/class/controller_teambuild.png Graphic file (type png)
 <use img/class/controller_teambuild.png>
 Package pdftex.def Info: img/class/controller_teambuild.png  used on input line
- 566.
+ 567.
 (pdftex.def)             Requested size: 441.01773pt x 342.67285pt.
  [34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.582 
+l.583 
        <./img/class/controller_teambuild.png (PNG copy)>] [35{c:/texlive/2023/t
 exmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.e
 nc}] (./code/get-ind-data.pas) [36]
-Overfull \hbox (12.60193pt too wide) in paragraph at lines 630--631
+Overfull \hbox (12.60193pt too wide) in paragraph at lines 631--632
 []\T1/lmr/m/n/12 The \T1/lmr/m/it/12 build_roster \T1/lmr/m/n/12 method con-str
 ucts \T1/lmr/m/it/12 Player \T1/lmr/m/n/12 in-stances from the as-sem-bled Data
 Frames,
@@ -827,20 +827,20 @@ Frames,
 <img/class/logger.png, id=823, 829.0975pt x 467.7475pt>
 File: img/class/logger.png Graphic file (type png)
 <use img/class/logger.png>
-Package pdftex.def Info: img/class/logger.png  used on input line 641.
+Package pdftex.def Info: img/class/logger.png  used on input line 642.
 (pdftex.def)             Requested size: 352.81552pt x 199.04341pt.
  [38
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.658 T
+l.659 T
        he package's simulation constructor classes, the \emph{GameBuilder} a...
  <./img/class/logger.png (PNG copy)>]
 <img/class/simulator.png, id=830, 1770.615pt x 1079.03125pt>
 File: img/class/simulator.png Graphic file (type png)
 <use img/class/simulator.png>
-Package pdftex.def Info: img/class/simulator.png  used on input line 662.
+Package pdftex.def Info: img/class/simulator.png  used on input line 663.
 (pdftex.def)             Requested size: 441.01773pt x 268.7528pt.
  (./code/step.pas [39
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5}) 
@@ -851,14 +851,14 @@ l.1     @staticmethod
                       <./img/class/simulator.png (PNG copy)>])
 (./code/rand-sample.pas) [40]
 
-LaTeX Warning: Reference `shot-attempt' on page 41 undefined on input line 686.
+LaTeX Warning: Reference `shot-attempt' on page 41 undefined on input line 687.
 
 
 (./code/shot-attempt.pas) [41] [42] (./code/convert.pas) [43] [44] [45]
 <img/class/webscraper.png, id=913, 1984.41376pt x 922.44624pt>
 File: img/class/webscraper.png Graphic file (type png)
 <use img/class/webscraper.png>
-Package pdftex.def Info: img/class/webscraper.png  used on input line 766.
+Package pdftex.def Info: img/class/webscraper.png  used on input line 767.
 (pdftex.def)             Requested size: 441.01773pt x 204.9938pt.
 
 [46
@@ -866,7 +866,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.772 \chapter
+l.773 \chapter
               {Testing} \label{ch-testing} <./img/class/webscraper.png (PNG cop
 y)>]
 Chapter 6.
@@ -875,13 +875,13 @@ Chapter 6.
 ] [48] [49]
 Chapter 7.
 
-Overfull \hbox (4.89832pt too wide) in paragraph at lines 857--858
+Overfull \hbox (4.89832pt too wide) in paragraph at lines 858--859
 []\T1/lmr/m/n/12 Retrieve the source code from []$\T1/lmtt/m/n/12 https : / / g
 ithub . com / lesheidrich / WebScraping _
  []
 
 
-Overfull \hbox (9.86041pt too wide) in paragraph at lines 865--866
+Overfull \hbox (9.86041pt too wide) in paragraph at lines 866--867
 \T1/lmr/m/n/12 client sys-tem. /view/NBA_Sim_View/bin/Debug/NBA_Sim_View.exe wi
 ll com-
  []
@@ -892,87 +892,87 @@ ll com-
 <img/user-guide/FindGame.png, id=950, 575.751pt x 370.38374pt>
 File: img/user-guide/FindGame.png Graphic file (type png)
 <use img/user-guide/FindGame.png>
-Package pdftex.def Info: img/user-guide/FindGame.png  used on input line 881.
+Package pdftex.def Info: img/user-guide/FindGame.png  used on input line 882.
 (pdftex.def)             Requested size: 304.3033pt x 195.76553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Underfull \hbox (badness 10000) in paragraph at lines 888--890
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Underfull \hbox (badness 10000) in paragraph at lines 888--890
 \T1/lmr/m/n/12 After press-ing the
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 887--889
+Underfull \hbox (badness 1142) in paragraph at lines 888--890
 \T1/lmr/m/it/12 Get Games \T1/lmr/m/n/12 but-ton, a
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 887--889
+Underfull \hbox (badness 6094) in paragraph at lines 888--890
 \T1/lmr/m/n/12 ta-ble ap-pears, where
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 887--889
+Underfull \hbox (badness 5036) in paragraph at lines 888--890
 \T1/lmr/m/n/12 all the pa-ram-e-ter-ized
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--898
+Underfull \hbox (badness 10000) in paragraph at lines 897--899
 
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 896--898
+Underfull \hbox (badness 1521) in paragraph at lines 897--899
 \T1/lmr/m/n/12 the Scrape-PopUp Win-dow ap-pears (see Fig-ure
  []
 
 <img/user-guide/ScrapePopUp.png, id=952, 202.95825pt x 320.397pt>
 File: img/user-guide/ScrapePopUp.png Graphic file (type png)
 <use img/user-guide/ScrapePopUp.png>
-Package pdftex.def Info: img/user-guide/ScrapePopUp.png  used on input line 902
+Package pdftex.def Info: img/user-guide/ScrapePopUp.png  used on input line 903
 .
 (pdftex.def)             Requested size: 119.07666pt x 187.98148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 903--903
+Underfull \hbox (badness 10000) in paragraph at lines 904--904
 []\T1/lmr/m/n/12 Figure 7.2: []The
  []
 
 <img/user-guide/MonteCarlo.png, id=953, 578.16pt x 371.58826pt>
 File: img/user-guide/MonteCarlo.png Graphic file (type png)
 <use img/user-guide/MonteCarlo.png>
-Package pdftex.def Info: img/user-guide/MonteCarlo.png  used on input line 913.
+Package pdftex.def Info: img/user-guide/MonteCarlo.png  used on input line 914.
 
 (pdftex.def)             Requested size: 304.3033pt x 195.57437pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--922
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--922
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
 \T1/lmr/m/n/12 Once all the nec-es-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--922
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
 \T1/lmr/m/n/12 the sys-tem pro-ceeds
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--922
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
 \T1/lmr/m/n/12 with the sim-u-la-tion.
  []
 
 
-Underfull \hbox (badness 4108) in paragraph at lines 919--922
+Underfull \hbox (badness 4108) in paragraph at lines 920--923
 \T1/lmr/m/n/12 wait at the pre-vi-ous
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 919--922
+Underfull \hbox (badness 6157) in paragraph at lines 920--923
 \T1/lmr/m/n/12 in the first win-dow.
  []
 
@@ -984,24 +984,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.7.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.927 
+l.928 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.927 
+l.928 
        <./img/user-guide/FindGame.png> <./img/user-guide/ScrapePopUp.png>]
 [52
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.931 \chapter
+l.932 \chapter
               {Results} <./img/user-guide/MonteCarlo.png>]
 Chapter 8.
 
-Overfull \hbox (6.15375pt too wide) in paragraph at lines 941--942
+Overfull \hbox (6.15375pt too wide) in paragraph at lines 942--943
 []\T1/lmr/m/n/12 Python's Re-quests li-brary was used to make HTTP re-quests to
  the ser-vice provider. 
  []
@@ -1009,33 +1009,33 @@ Overfull \hbox (6.15375pt too wide) in paragraph at lines 941--942
 [53
 
 ]
-Overfull \hbox (11.18564pt too wide) in paragraph at lines 951--952
+Overfull \hbox (11.18564pt too wide) in paragraph at lines 952--953
 []\T1/lmr/m/n/12 Parsing the re-sults with a com-bi-na-tion of Beau-ti-ful-Soup
 4 and Pan-das into DataFrames
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 1005--1006
+Underfull \hbox (badness 2213) in paragraph at lines 1006--1007
 []\T1/lmr/m/n/12 Table []8.1[] gives a good gen-
  []
 
 <img/results/chi_mia_1000.png, id=979, 576.9555pt x 368.577pt>
 File: img/results/chi_mia_1000.png Graphic file (type png)
 <use img/results/chi_mia_1000.png>
-Package pdftex.def Info: img/results/chi_mia_1000.png  used on input line 1010.
+Package pdftex.def Info: img/results/chi_mia_1000.png  used on input line 1011.
 
 (pdftex.def)             Requested size: 264.61333pt x 169.04692pt.
 [54]
 <img/results/chi_mia_5000.png, id=989, 575.14874pt x 365.56575pt>
 File: img/results/chi_mia_5000.png Graphic file (type png)
 <use img/results/chi_mia_5000.png>
-Package pdftex.def Info: img/results/chi_mia_5000.png  used on input line 1022.
+Package pdftex.def Info: img/results/chi_mia_5000.png  used on input line 1023.
 
 (pdftex.def)             Requested size: 211.68661pt x 134.54878pt.
 <img/results/chi_mia_10000.png, id=990, 576.35326pt x 368.577pt>
 File: img/results/chi_mia_10000.png Graphic file (type png)
 <use img/results/chi_mia_10000.png>
-Package pdftex.def Info: img/results/chi_mia_10000.png  used on input line 1029
+Package pdftex.def Info: img/results/chi_mia_10000.png  used on input line 1030
 .
 (pdftex.def)             Requested size: 211.68661pt x 135.37027pt.
  [55
@@ -1043,50 +1043,50 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.8.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1034 
+l.1035 
        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1034 
+l.1035 
         <./img/results/chi_mia_1000.png>] [56
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1039 \chapter
+l.1040 \chapter
                {Conclusion}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1039 \chapter
+l.1040 \chapter
                {Conclusion} <./img/results/chi_mia_5000.png> <./img/results/chi
 _mia_10000.png>]
 Chapter 9.
 [57
 
 ] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]$[]
  []
@@ -1094,106 +1094,106 @@ applications-[]across-[]$[]
 [59
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1148
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 1154--1157
+Underfull \hbox (badness 3375) in paragraph at lines 1155--1158
 []\T1/lmr/m/sc/12 Beautiful Soup 4.12.0 doc-u-men-ta-tion\T1/lmr/m/n/12 , \T1/l
 mr/m/it/12 Beau-ti-ful Soup Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 1154--1157
+Underfull \hbox (badness 5077) in paragraph at lines 1155--1158
 \T1/lmr/m/it/12 tion\T1/lmr/m/n/12 , 2004-2023 Leonard Richard-son, []$\T1/lmtt
 /m/n/12 https : / / www . crummy . com / software /
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1159--1162
+Underfull \hbox (badness 1675) in paragraph at lines 1160--1163
 []\T1/lmr/m/sc/12 MDN Web Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XML: Ex-ten-si-b
 le Markup Lan-guage\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / /
  []
 
 [60]
-Underfull \hbox (badness 6978) in paragraph at lines 1204--1207
+Underfull \hbox (badness 6978) in paragraph at lines 1205--1208
 []\T1/lmr/m/sc/12 Matplotlib\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Mat-plotlib: Vi-su
 -al-iza-tion with Python\T1/lmr/m/n/12 , 2023, []$\T1/lmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 1214--1217
+Underfull \hbox (badness 6141) in paragraph at lines 1215--1218
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 pan-das (soft-ware)
 \T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wi
 ki /
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 1224--1227
+Underfull \hbox (badness 3872) in paragraph at lines 1225--1228
 []\T1/lmr/m/sc/12 Read the Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Re-quests: HTTP
  for Hu-mans\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / requests .
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 1239--1242
+Underfull \hbox (badness 1783) in paragraph at lines 1240--1243
 []\T1/lmr/m/sc/12 Harvard Scholar\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Se-le-nium Do
 c-u-men-ta-tion Re-lease 1.0\T1/lmr/m/n/12 , 2012, []$\T1/lmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1242
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1243
 \T1/lmtt/m/n/12 / / scholar . harvard . edu / files / tcheng2 / files / seleniu
 m _ documentation _ 0 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1247
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
 []\T1/lmr/m/sc/12 Github\T1/lmr/m/n/12 , \T1/lmr/m/it/12 undetected-chromedrive
 r\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1254--1257
+Underfull \hbox (badness 1622) in paragraph at lines 1255--1258
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XAMPP\T1/lmr/m/n/12
  , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / XAMPP$[]\
 T1/lmr/m/n/12 , [Re-
  []
 
 [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Desk-top Guid
 e (Win-dows Forms .NET)\T1/lmr/m/n/12 , 2023,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / des
 ktop / winforms / overview /
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 1269--1272
+Underfull \hbox (badness 2126) in paragraph at lines 1270--1273
 []\T1/lmr/m/sc/12 MariaDB Foun-da-tion\T1/lmr/m/n/12 , \T1/lmr/m/it/12 About Ma
 ri-aDB Server\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / mariadb . org /
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 1279--1282
+Underfull \hbox (badness 1147) in paragraph at lines 1280--1283
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data trans-fer ob-j
 ect\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org /
  wiki /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1307
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data-Grid-Vie
 w Class\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / learn . microsoft .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1307
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
 \T1/lmtt/m/n/12 com / en-[]us / dotnet / api / system . windows . forms . datag
 ridview ? view =
  []
@@ -1228,7 +1228,7 @@ lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texl
 ive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dis
 t/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (63 pages, 1923475 bytes).
+Output written on thesis_gwjz4t.pdf (63 pages, 1923616 bytes).
 PDF statistics:
  1243 PDF objects out of 1440 (max. 8388607)
  1114 compressed objects within 12 object streams
