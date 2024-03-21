@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  21 MAR 2024 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  21 MAR 2024 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,7 +881,7 @@ ithub . com / lesheidrich / WebScraping _
  []
 
 
-Overfull \hbox (9.86041pt too wide) in paragraph at lines 866--867
+Overfull \hbox (9.86041pt too wide) in paragraph at lines 868--869
 \T1/lmr/m/n/12 client sys-tem. /view/NBA_Sim_View/bin/Debug/NBA_Sim_View.exe wi
 ll com-
  []
@@ -892,116 +892,116 @@ ll com-
 <img/user-guide/FindGame.png, id=950, 575.751pt x 370.38374pt>
 File: img/user-guide/FindGame.png Graphic file (type png)
 <use img/user-guide/FindGame.png>
-Package pdftex.def Info: img/user-guide/FindGame.png  used on input line 882.
+Package pdftex.def Info: img/user-guide/FindGame.png  used on input line 884.
 (pdftex.def)             Requested size: 304.3033pt x 195.76553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--890
+Underfull \hbox (badness 10000) in paragraph at lines 890--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--890
+Underfull \hbox (badness 10000) in paragraph at lines 890--892
 \T1/lmr/m/n/12 After press-ing the
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 888--890
+Underfull \hbox (badness 1142) in paragraph at lines 890--892
 \T1/lmr/m/it/12 Get Games \T1/lmr/m/n/12 but-ton, a
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 888--890
+Underfull \hbox (badness 6094) in paragraph at lines 890--892
 \T1/lmr/m/n/12 ta-ble ap-pears, where
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 888--890
+Underfull \hbox (badness 5036) in paragraph at lines 890--892
 \T1/lmr/m/n/12 all the pa-ram-e-ter-ized
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--899
+Underfull \hbox (badness 10000) in paragraph at lines 899--901
 
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 897--899
+Underfull \hbox (badness 1521) in paragraph at lines 899--901
 \T1/lmr/m/n/12 the Scrape-PopUp Win-dow ap-pears (see Fig-ure
  []
 
 <img/user-guide/ScrapePopUp.png, id=952, 202.95825pt x 320.397pt>
 File: img/user-guide/ScrapePopUp.png Graphic file (type png)
 <use img/user-guide/ScrapePopUp.png>
-Package pdftex.def Info: img/user-guide/ScrapePopUp.png  used on input line 903
+Package pdftex.def Info: img/user-guide/ScrapePopUp.png  used on input line 905
 .
 (pdftex.def)             Requested size: 119.07666pt x 187.98148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--904
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []\T1/lmr/m/n/12 Figure 7.2: []The
- []
-
-<img/user-guide/MonteCarlo.png, id=953, 578.16pt x 371.58826pt>
-File: img/user-guide/MonteCarlo.png Graphic file (type png)
-<use img/user-guide/MonteCarlo.png>
-Package pdftex.def Info: img/user-guide/MonteCarlo.png  used on input line 914.
-
-(pdftex.def)             Requested size: 304.3033pt x 195.57437pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--923
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--923
-\T1/lmr/m/n/12 Once all the nec-es-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--923
-\T1/lmr/m/n/12 the sys-tem pro-ceeds
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--923
-\T1/lmr/m/n/12 with the sim-u-la-tion.
- []
-
-
-Underfull \hbox (badness 4108) in paragraph at lines 920--923
-\T1/lmr/m/n/12 wait at the pre-vi-ous
- []
-
-
-Underfull \hbox (badness 6157) in paragraph at lines 920--923
-\T1/lmr/m/n/12 in the first win-dow.
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/user-guide/MonteCarlo.png, id=953, 578.16pt x 371.58826pt>
+File: img/user-guide/MonteCarlo.png Graphic file (type png)
+<use img/user-guide/MonteCarlo.png>
+Package pdftex.def Info: img/user-guide/MonteCarlo.png  used on input line 916.
+
+(pdftex.def)             Requested size: 304.3033pt x 195.57437pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--925
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--925
+\T1/lmr/m/n/12 Once all the nec-es-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--925
+\T1/lmr/m/n/12 the sys-tem pro-ceeds
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--925
+\T1/lmr/m/n/12 with the sim-u-la-tion.
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 922--925
+\T1/lmr/m/n/12 wait at the pre-vi-ous
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 922--925
+\T1/lmr/m/n/12 in the first win-dow.
+ []
 
 [51
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.928 
-      
+l.927 
+       <./img/user-guide/FindGame.png>] [52
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.928 
-       <./img/user-guide/FindGame.png> <./img/user-guide/ScrapePopUp.png>]
-[52
+l.934 \chapter
+              {Results}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.932 \chapter
-              {Results} <./img/user-guide/MonteCarlo.png>]
+l.934 \chapter
+              {Results} <./img/user-guide/ScrapePopUp.png> <./img/user-guide/Mo
+nteCarlo.png>]
 Chapter 8.
 
-Overfull \hbox (6.15375pt too wide) in paragraph at lines 942--943
+Overfull \hbox (6.15375pt too wide) in paragraph at lines 944--945
 []\T1/lmr/m/n/12 Python's Re-quests li-brary was used to make HTTP re-quests to
  the ser-vice provider. 
  []
@@ -1009,33 +1009,33 @@ Overfull \hbox (6.15375pt too wide) in paragraph at lines 942--943
 [53
 
 ]
-Overfull \hbox (11.18564pt too wide) in paragraph at lines 952--953
+Overfull \hbox (11.18564pt too wide) in paragraph at lines 954--955
 []\T1/lmr/m/n/12 Parsing the re-sults with a com-bi-na-tion of Beau-ti-ful-Soup
 4 and Pan-das into DataFrames
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 1006--1007
+Underfull \hbox (badness 2213) in paragraph at lines 1008--1009
 []\T1/lmr/m/n/12 Table []8.1[] gives a good gen-
  []
 
-<img/results/chi_mia_1000.png, id=979, 576.9555pt x 368.577pt>
+<img/results/chi_mia_1000.png, id=980, 576.9555pt x 368.577pt>
 File: img/results/chi_mia_1000.png Graphic file (type png)
 <use img/results/chi_mia_1000.png>
-Package pdftex.def Info: img/results/chi_mia_1000.png  used on input line 1011.
+Package pdftex.def Info: img/results/chi_mia_1000.png  used on input line 1013.
 
 (pdftex.def)             Requested size: 264.61333pt x 169.04692pt.
 [54]
-<img/results/chi_mia_5000.png, id=989, 575.14874pt x 365.56575pt>
+<img/results/chi_mia_5000.png, id=990, 575.14874pt x 365.56575pt>
 File: img/results/chi_mia_5000.png Graphic file (type png)
 <use img/results/chi_mia_5000.png>
-Package pdftex.def Info: img/results/chi_mia_5000.png  used on input line 1023.
+Package pdftex.def Info: img/results/chi_mia_5000.png  used on input line 1025.
 
 (pdftex.def)             Requested size: 211.68661pt x 134.54878pt.
-<img/results/chi_mia_10000.png, id=990, 576.35326pt x 368.577pt>
+<img/results/chi_mia_10000.png, id=991, 576.35326pt x 368.577pt>
 File: img/results/chi_mia_10000.png Graphic file (type png)
 <use img/results/chi_mia_10000.png>
-Package pdftex.def Info: img/results/chi_mia_10000.png  used on input line 1030
+Package pdftex.def Info: img/results/chi_mia_10000.png  used on input line 1032
 .
 (pdftex.def)             Requested size: 211.68661pt x 135.37027pt.
  [55
@@ -1043,50 +1043,50 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.8.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1035 
+l.1037 
        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1035 
+l.1037 
         <./img/results/chi_mia_1000.png>] [56
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1040 \chapter
+l.1042 \chapter
                {Conclusion}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1040 \chapter
+l.1042 \chapter
                {Conclusion} <./img/results/chi_mia_5000.png> <./img/results/chi
 _mia_10000.png>]
 Chapter 9.
 [57
 
 ] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1072
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 , \T1/lmr/m/it/12 The Power of Data: Un-
 der-stand-ing Its Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1072
 \T1/lmr/m/it/12 pact and Ap-pli-ca-tions Across Var-i-ous Do-mains\T1/lmr/m/n/1
 2 , Jonathan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1072
 \T1/lmr/m/n/12 Mon-daut, 2023, []$\T1/lmtt/m/n/12 https : / / medium . com / @j
 onathanmondaut /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1072
 \T1/lmtt/m/n/12 the-[]power-[]of-[]data-[]understanding-[]its-[]impact-[]and-[]
 applications-[]across-[]$[]
  []
@@ -1094,106 +1094,106 @@ applications-[]across-[]$[]
 [59
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1145--1148
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1150
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / csh
 arp / language-[]reference /
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 1155--1158
+Underfull \hbox (badness 3375) in paragraph at lines 1157--1160
 []\T1/lmr/m/sc/12 Beautiful Soup 4.12.0 doc-u-men-ta-tion\T1/lmr/m/n/12 , \T1/l
 mr/m/it/12 Beau-ti-ful Soup Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 1155--1158
+Underfull \hbox (badness 5077) in paragraph at lines 1157--1160
 \T1/lmr/m/it/12 tion\T1/lmr/m/n/12 , 2004-2023 Leonard Richard-son, []$\T1/lmtt
 /m/n/12 https : / / www . crummy . com / software /
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1160--1163
+Underfull \hbox (badness 1675) in paragraph at lines 1162--1165
 []\T1/lmr/m/sc/12 MDN Web Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XML: Ex-ten-si-b
 le Markup Lan-guage\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / /
  []
 
 [60]
-Underfull \hbox (badness 6978) in paragraph at lines 1205--1208
+Underfull \hbox (badness 6978) in paragraph at lines 1207--1210
 []\T1/lmr/m/sc/12 Matplotlib\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Mat-plotlib: Vi-su
 -al-iza-tion with Python\T1/lmr/m/n/12 , 2023, []$\T1/lmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 1215--1218
+Underfull \hbox (badness 6141) in paragraph at lines 1217--1220
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 pan-das (soft-ware)
 \T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wi
 ki /
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 1225--1228
+Underfull \hbox (badness 3872) in paragraph at lines 1227--1230
 []\T1/lmr/m/sc/12 Read the Docs\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Re-quests: HTTP
  for Hu-mans\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / requests .
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 1240--1243
+Underfull \hbox (badness 1783) in paragraph at lines 1242--1245
 []\T1/lmr/m/sc/12 Harvard Scholar\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Se-le-nium Do
 c-u-men-ta-tion Re-lease 1.0\T1/lmr/m/n/12 , 2012, []$\T1/lmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
 \T1/lmtt/m/n/12 / / scholar . harvard . edu / files / tcheng2 / files / seleniu
 m _ documentation _ 0 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1250
 []\T1/lmr/m/sc/12 Github\T1/lmr/m/n/12 , \T1/lmr/m/it/12 undetected-chromedrive
 r\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1255--1258
+Underfull \hbox (badness 1622) in paragraph at lines 1257--1260
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 XAMPP\T1/lmr/m/n/12
  , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / XAMPP$[]\
 T1/lmr/m/n/12 , [Re-
  []
 
 [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1270
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Desk-top Guid
 e (Win-dows Forms .NET)\T1/lmr/m/n/12 , 2023,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1270
 []$\T1/lmtt/m/n/12 https : / / learn . microsoft . com / en-[]us / dotnet / des
 ktop / winforms / overview /
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 1270--1273
+Underfull \hbox (badness 2126) in paragraph at lines 1272--1275
 []\T1/lmr/m/sc/12 MariaDB Foun-da-tion\T1/lmr/m/n/12 , \T1/lmr/m/it/12 About Ma
 ri-aDB Server\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / mariadb . org /
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 1280--1283
+Underfull \hbox (badness 1147) in paragraph at lines 1282--1285
 []\T1/lmr/m/sc/12 Wikipedia\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data trans-fer ob-j
 ect\T1/lmr/m/n/12 , 2024, []$\T1/lmtt/m/n/12 https : / / en . wikipedia . org /
  wiki /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1310
 []\T1/lmr/m/sc/12 Microsoft Learn\T1/lmr/m/n/12 , \T1/lmr/m/it/12 Data-Grid-Vie
 w Class\T1/lmr/m/n/12 , []$\T1/lmtt/m/n/12 https : / / learn . microsoft .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1310
 \T1/lmtt/m/n/12 com / en-[]us / dotnet / api / system . windows . forms . datag
 ridview ? view =
  []
@@ -1211,8 +1211,8 @@ Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
 (rerunfilecheck)             Checksum: 58A7D864714BE60C5AD992C1C987346D;11189.
  ) 
 Here is how much of TeX's memory you used:
- 15490 strings out of 474116
- 243404 string characters out of 5747718
+ 15491 strings out of 474116
+ 243410 string characters out of 5747718
  2017190 words of memory out of 5000000
  37193 multiletter control sequences out of 15000+600000
  648093 words of font info for 88 fonts, out of 8000000 for 9000
@@ -1228,10 +1228,10 @@ lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texl
 ive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dis
 t/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (63 pages, 1923616 bytes).
+Output written on thesis_gwjz4t.pdf (63 pages, 1923822 bytes).
 PDF statistics:
- 1243 PDF objects out of 1440 (max. 8388607)
- 1114 compressed objects within 12 object streams
- 339 named destinations out of 1000 (max. 500000)
+ 1244 PDF objects out of 1440 (max. 8388607)
+ 1115 compressed objects within 12 object streams
+ 340 named destinations out of 1000 (max. 500000)
  732 words of extra memory for PDF output out of 10000 (max. 10000000)
 
