@@ -86,7 +86,30 @@ Through these objectives, this thesis undertakes to promote a deeper understandi
 
 
 \chapter{Methodology}
+This chapter introduces the main methodologies employed in this project. The primary focus lies in the utilization and combination of two key techniques: web scraping and Monte Carlo simulation. Each plays a crucial role in the application's operations, contributing to the overall objectives of the study.
+
 \section{Web Scraping Techniques}
+The process of web scraping, as described by Krotov, Johnson, and Silva in their paper \emph{Legality and Ethics of Web Scraping} \cite{Krotov}, is a three stage data acquisition process, made up of analysis, web scraping or crawling, and organizing the retrieved data. 
+
+The website analysis portion of the process is focused on reviewing potential sources of information, learning about how they operate and store data. This allows for the formulation of the scraping or crawling strategy.
+
+The distinction between the two strategies is made in Khder's 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here, which involves the extracting useful data intended for further processing, while discarding the rest. 
+
+Finally, the organization of data stage is described as cleaning, processing, and organizing the data before it is stored for future use.
+
+\subsection{Fundamental Mechanics of Web Scraping}
+The extraction process utilizes HTTP (see secton \ref{sub-http}) to communicate with the website's hosting server. As stated by Khder, the process can be either manual or an automated scraper \cite{Khder}. 
+
+This data can be parsed and manipulated by a multitude of technologies. Khder outlines a few such as HTML parsing libraries*** and XML parsing libraries (XPath)***, which are technologies utilizing the content's metadata\footnote{Metadata is data that describes its accompanying data ***} to enable identification and location of key data points in the retrieved response. He goes on to describe manual proceedings (in cases of small datasets) and the use of regular expressions (REGEX)*** as other useful methods for grabbing key content elements.
+
+
+\subsection{Legalities}
+According to Krotov et al, the field of web data is paradoxical from a legal and ethical standpoint. Publicly accessible online data is meant to be open and available to the general public, therefore it's access through either manual or automated means is technically acceptable. However, as the data is generally owned by the purveyor of the website, its attainment and use should also be at the discretion of the service provider, especially when the data is used for profit. To further complicate matters, Krotov et al highlights, that in certain cases, a website's operator may not own the data which they provide.
+
+Furthermore, Krotov et al highlight that no legislation currently addresses web scraping directly, however fundamental legal theories such as “illegal access and use of data”, “breach of contract”, “copyright infringement”, and “trespass to chattels” have been applied in legislation with varying degrees of success.
+
+It has been my experience, that online content providers successful in identifying browser automation revoke user access utilizing IP addresses, on the grounds of the user breaching the provisions of service agreement set forth by the provider.
+
 
 \section{Monte Carlo Simulation}
 
@@ -1105,6 +1128,18 @@ Statistics [math.ST], Université de Bordeaux, 2022.
 English.
 NNT: 2022BORD0210.
 tel-03891393.
+
+\bibitem{Krotov}
+\textsc{Vlad Krotov, Leigh Johnson, Leiser Silva},
+\emph{Legality and Ethics of Web Scraping},
+\textit{Communications of the Association for Information Systems},
+vol. 47,
+pp. 539--563,
+2020,
+doi: 10.17705/1CAIS.04724.
+
+
+
 
 \bibitem{Booch}
 \textsc{Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Jim Conallen, Kelli A. Houston},
