@@ -56,7 +56,7 @@
 \contentsline {subsection}{\numberline {4.4.3}Fake User Agent}{22}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Flask}{23}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}HTTP}{23}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Matplotlib}{25}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.6}Matplotlib}{24}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}MySQL}{25}{subsection.4.4.7}%
 \contentsline {subsection}{\numberline {4.4.8}Pandas}{25}{subsection.4.4.8}%
 \contentsline {subsection}{\numberline {4.4.9}Python}{25}{subsection.4.4.9}%

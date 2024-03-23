@@ -91,16 +91,18 @@ This chapter introduces the main methodologies employed in this project. The pri
 \section{Web Scraping Techniques}
 The process of web scraping, as described by Krotov, Johnson, and Silva in their paper \emph{Legality and Ethics of Web Scraping} \cite{Krotov}, is a three stage data acquisition process, made up of analysis, web scraping or crawling, and organizing the retrieved data. 
 
-The website analysis portion of the process is focused on reviewing potential sources of information, learning about how they operate and store data. This allows for the formulation of the scraping or crawling strategy.
+They describe the website analysis portion of the process is focused on reviewing potential sources of information, learning about how they operate and store data. This allows for the formulation of the scraping or crawling strategy.
 
-The distinction between the two strategies is made in Khder's 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here, which involves the extracting useful data intended for further processing, while discarding the rest. 
+Khder distinguishes between the two strategies in his 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here, which involves the extracting useful data intended for further processing, while discarding the rest. 
 
 Finally, the organization of data stage is described as cleaning, processing, and organizing the data before it is stored for future use.
 
 \subsection{Fundamental Mechanics of Web Scraping}
-The extraction process utilizes HTTP (see secton \ref{sub-http}) to communicate with the website's hosting server. As stated by Khder, the process can be either manual or an automated scraper \cite{Khder}. 
+The extraction process utilizes HTTP (see secton \ref{sub-http}) to communicate with the website hosting server. As stated by Khder, the process can be either manual or an automated scraper \cite{Khder}. 
 
-This data can be parsed and manipulated by a multitude of technologies. Khder outlines a few such as HTML parsing libraries*** and XML parsing libraries (XPath)***, which are technologies utilizing the content's metadata\footnote{Metadata is data that describes its accompanying data ***} to enable identification and location of key data points in the retrieved response. He goes on to describe manual proceedings (in cases of small datasets) and the use of regular expressions (REGEX)*** as other useful methods for grabbing key content elements.
+This data can be parsed and manipulated by a multitude of technologies. Khder outlines a few such as HTML\footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.} parsing libraries and XML\footnote{Extensible Markup Language (XML) is a markup language for data transfer and storage.
+Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.} parsing libraries (XPath), which are technologies utilizing the content's metadata\footnote{According to the Oxford English Dictionary, Metadata is data that describes other data \cite{oxford}. To use HTML as an example, tags describe and give information about the data within their bounds.} to enable identification and location of key data points in the retrieved response \cite{xpath}. He goes on to describe manual proceedings (in cases of small datasets) and the use of regular expressions (REGEX)\footnote{
+Regular expressions (REGEX) find specified character combinations in strings, making tasks like pattern matching, searching, and string replacement easier \cite{mdn-regex}.} as other useful methods for grabbing key content elements.
 
 
 \subsection{Legalities}
@@ -371,17 +373,13 @@ Table metrics are presented in more detail during the \ref{sec-simulation} \emph
 \section{Technologies and Frameworks}
 
 \subsection{.NET}
-The .NET framework was built by Microsoft for developing Windows-based applications. Today, with the integration of cross-platform and open source frameworks, the .NET Core supports multiple operating systems and is also open source. It supports multiple programming languages, including C\#. \cite{.net}
+The .NET framework was built by Microsoft for developing Windows-based applications. Today, with the integration of cross-platform and open source frameworks, the .NET Core supports multiple operating systems and is also open source. It supports multiple programming languages, including C\# \cite{.net}.
 
 The view component of the application is based on the .Net framework and written in C\#, due to its ability to model a range of services. It's WinForms (see \ref{winform}) framework and RestSharp package allow for fast and secure development, as well as a seamless user exprience.
 
 \subsection{Beautiful Soup 4}
-Beautiful Soup \cite{bs4} is a popular python package, designed to extracts data from HTML 
-  \footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.}
-and XML 
-  \footnote{Extensible Markup Language (XML) is a markup language for data transfer and storage.
-  Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.}
-documents sourced from the web. By leveraging attributes unique to the selected markup language, it facilitates tag and text content based parsing in order to precisely identify and extract the desired data. Developed for web scarping purposes, it is often used alongside packages responsible for making content requests to websites. 
+Beautiful Soup  is a popular python package, designed to extracts data from HTML 
+and XML documents sourced from the web \cite{bs4}. By leveraging attributes unique to the selected markup language, it facilitates tag and text content based parsing in order to precisely identify and extract the desired data. Developed for web scarping purposes, it is often used alongside packages responsible for making content requests to websites. 
 
 This was also the case in this project. Beautiful Soup was a great asset during the allocation and extraction of acquired web contents, which could then be passed on for further formatting and storage.
 
@@ -1138,8 +1136,20 @@ pp. 539--563,
 2020,
 doi: 10.17705/1CAIS.04724.
 
+\bibitem{xpath}
+\textsc{MDN Web Docs},
+\emph{XPath}, 
+\url{https://developer.mozilla.org/en-US/docs/Web/XPath}, [Retrieved 23 March 2024]
 
+\bibitem{oxford}
+\textsc{Oxford English Dictionary},
+\emph{metadata},
+\url{https://www.oed.com/search/dictionary/?scope=Entries&q=metadata}, [Retrieved 23 March 2024]
 
+\bibitem{mdn-regex}
+\textsc{MDN Web Docs},
+\emph{Regular expressions},
+\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions}, [Retrieved 23 March 2024]
 
 \bibitem{Booch}
 \textsc{Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Jim Conallen, Kelli A. Houston},
