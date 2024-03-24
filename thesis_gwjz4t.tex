@@ -115,7 +115,26 @@ It has been my experience, that online content providers successful in identifyi
 
 \section{Monte Carlo Simulation}
 
+The Monte Carlo method is described by Paolo Brandimarte in his work \emph{Handbook of Monte Carlo Simulation} \cite{brandimarte} as the utilization of a random sampling process to estimate a deterministic quantity, such as a probability or expectation of an outcome. 
 
+The approach, as described by Aderibigbe in his paper on Monte Carlo analysis and simulation \cite{Aderibigbe}, is an analytical method utilized in computer based statistical sampling techniques, which takes a stochastic (random) sequence as input. This allows for the modeling of real life systems. He goes on to say that the method is capable of arriving at conclusions about the examined system by utilizing samples of its data.
+
+According to Brandimarte, the method was utilized even before it gained popularity during its use by the scientist creating the hydrogen bomb at Los Alamos in their studies of neutron diffusion. Brandimarte states the name Monte Carlo comes from a gambling house. Aderibigbe also traces the origins of the name to Monaco's casino gambling. 
+
+Based on Brandimarte's introduction, the simulation process draws random samples from a probability distribution, then runs numerous iterations of the simulated model to deduce the process' expected behavior. He discusses various probability distributions and variance reducing techniques to optimize results. He discusses normal distribution and its bell shaped curve, uniform distribution where each number has an equal probability, as well as exponential and Poisson distribution for time based events. 
+
+Another technique he introduces is the utilization of weighted random samples. This involves the assigning of a weight to each sample, characterizing its importance in the simulated task. This allows the simulation to increase its focus on input elements that play a more crucial role in the system's outcome, improving the accuracy of the simulation.
+
+Weights are utilized throughout the implementation of this project, in the form of basketball metrics such as player utilization statistics and shooting averages. Event probabilities are then sampled utilizing each elements respective weights.
+
+Monte Carlo methods encompass a wide range of approaches according to Aderibigbe. He does, however identify and outline a specific pattern of four key elements they all share (see Attributes of Monte Carlo Simulations p.2~\cite{Aderibigbe}):
+\begin{enumerate}
+	\item Defining the inputs domain.
+	\item Utilizing random sampling to acquire input elements.
+	\item Performing operations with the sample elements to receive individual results.
+	\item Aggregating all simulation results into a single outcome.
+\end{enumerate}
+The project's Monte Carlo simulation utilizes player and team statistics as the input domain. Players and their performance are randomly sampled from these metrics in order to perform the simulation process. This way, while the game process itself is deterministic, the outcomes rely on stochastic sampling from each team's relevant statistics. Finally, an aggregate of all matches is returned as a final result. For this project, I have chosen to display simulation results graphically. I have also chosen to forego the averaging of results, partially due to my preference for graphical representation, and also because I would like to further test the accuracy of my model by reviewing the mode of simulation scores for each team.
 
 
 \chapter{Requirements}
@@ -1115,12 +1134,12 @@ Faculty of Technology, University of Ibadan,
 \url{https://en.wikipedia.org/wiki/National_Basketball_Association}, [Retrieved 27 February 2024]
 
 \bibitem{McLeish}
-\textsc{Don L. McLeish}: 
+\textsc{Don L. McLeish}, 
 \emph{Monte Carlo Simulation and Finance}, 
-Hoboken, New Jersey, USA, John Wiley \& Sons, Inc., 2005.
+USA, John Wiley \& Sons, Inc., 2005.
 
 \bibitem{Steffen}
-\textsc{Paul Steffen}:
+\textsc{Paul Steffen},
 \emph{Statistical Modeling of Event Probabilities Subject to Sports Bets: Theory and Applications to Soccer, Tennis, and Basketball},
 Statistics [math.ST], Université de Bordeaux, 2022.
 English.
@@ -1150,6 +1169,19 @@ doi: 10.17705/1CAIS.04724.
 \textsc{MDN Web Docs},
 \emph{Regular expressions},
 \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions}, [Retrieved 23 March 2024]
+
+\bibitem{brandimarte}
+\textsc{Paolo Brandimarte},
+\emph{Handbook in Monte Carlo Simulation - Applications in Financial Engineering, Risk Management, and Economics},
+USA, John Wiley \& Sons, Inc., 2014.
+
+
+
+
+
+
+
+
 
 \bibitem{Booch}
 \textsc{Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Jim Conallen, Kelli A. Houston},
