@@ -51,7 +51,7 @@
 \clearpage
 \section*{Acknowledgments}
 \thispagestyle{empty} 
-I would like to express my gratitude to Dr.~Eric Grono and Mr.~Garrett Weinzierl for their mentorship and support throughout my journey into the domain of Monte Carlo simulation and analytical forecasting. Their expertise, patience, and guidance have not only paved the way for new avenues of exploration but have also instilled within me an appreciation for the intersection of computer science and predictive modeling.
+I would like to express my gratitude to Dr.~Eric Grono and Mr.~Garrett Weinzierl for their mentorship and support throughout my journey into the domain of Monte Carlo simulation and analytical forecasting. Their expertise, patience, and guidance have not only paved the way for new avenues of exploration but have also instilled within me an appreciation for both computer science and predictive modeling.
 
 Their influence has played an instrumental role in shaping my academic and professional trajectory. I am indebted to them for their impact on my endeavors.
 
@@ -62,12 +62,12 @@ Thank you both for your generosity in sharing your time and knowledge, and your 
 
 
 \chapter{Introduction}
-In today’s world, data has become of paramount importance, profoundly influencing our lives and shaping decision making processes. The acquisition, processing, and interpretation of data is fundamental across multiple domains. \cite{Mondaut} Recognized as the cornerstone of contemporary insights, data serves as the basis of deriving valuable insights, and making informed projections, thereby guiding strategic planning and allowing for suitable preparation in the face of uncertainty. However, utilizing the full potential of acquired information effectively in a complex, multi-variable dynamic environment can be a challenging task \cite{Kornwitz}.
+In today’s world, data has become of paramount importance, profoundly influencing our lives through the shaping of decision making processes. The acquisition, processing, and interpretation of data is fundamental across multiple domains \cite{Mondaut}. Recognized as the cornerstone of contemporary insights, data serves as the basis of deriving valuable insights, and making informed projections, thereby guiding strategic planning and allowing for suitable preparation in the face of uncertainty. However, utilizing the full potential of acquired information effectively in a complex, multi-variable dynamic environment can be a challenging task \cite{Kornwitz}.
 
-This thesis approaches data collection and forecasting from a sports analytical perspective, aiming to derive statistical insights and formulate projections regarding future performance. It endeavors to utilize a combination of web scarping techniques \cite{Khder} and Monte Carlo simulation \cite{Aderibigbe} for analytical forecasting. Through the integration of these techniques, this research aims to explore a comprehensive methodology for data acquisition and predictive modeling.
+This thesis approaches data collection and forecasting from a sports analytical perspective, aiming to derive statistical insights and formulate projections regarding future performance. It endeavors to utilize a combination of web scarping techniques (see section \ref{sec-web-scraping} and \cite{Khder} for details) and Monte Carlo simulation (see \ref{sec-monte-carlo} and \cite{Aderibigbe}) for analytical forecasting. Through the integration of these techniques, this research aims to explore a comprehensive methodology for data acquisition and predictive modeling.
 
 \section{Contextual Background}
-The National Basketball Association (NBA) \cite{NBA} is well known for its worldwide prominence and dedicated fan base. Its enduring popularity has resulted in a multitude of analytical data relating to historic games. This abundance of statistical data, along with a widespread general awareness of the sport and my personal enthusiasm for it, positions historic NBA games an ideal domain for exploring predictive modeling based on data obtained through web scraping.
+The National Basketball Association (NBA) \cite{NBA} is well known for its worldwide prominence and dedicated fan base. Its enduring popularity has resulted in a multitude of analytical data relating to historic games. This abundance of statistical data, along with a widespread general awareness of the sport and my personal enthusiasm for it, positions historic NBA games as an ideal domain for exploring predictive modeling based on data obtained through web scraping.
 
 \section{Motivation}
 The incentive for this research is derived from a keen interest in the technical intricacies of web scraping and probabilistic elegance of Monte Carlo simulations. The application of these techniques transcends the domain of sports analytics, with uses in finance \cite{McLeish}, physics \cite{Aderibigbe}, and beyond \cite{Steffen}.
@@ -86,40 +86,40 @@ Through these objectives, this thesis undertakes to promote a deeper understandi
 
 
 \chapter{Methodology}
-This chapter introduces the main methodologies employed in this project. The primary focus lies in the utilization and combination of two key techniques: web scraping and Monte Carlo simulation. Each plays a crucial role in the application's operations, contributing to the overall objectives of the study.
+This chapter introduces the main methodologies employed in the thesis project. The primary focus lies in the utilization and combination of two key techniques: web scraping and Monte Carlo simulation. Each plays a crucial role in the application's operations, contributing to the overall objectives of the study.
 
-\section{Web Scraping Techniques}
-The process of web scraping, as described by Krotov, Johnson, and Silva in their paper \emph{Legality and Ethics of Web Scraping} \cite{Krotov}, is a three stage data acquisition process, made up of analysis, web scraping or crawling, and organizing the retrieved data. 
+\section{Web Scraping Techniques} \label{sec-web-scraping}
+Web scraping, as described by Krotov, Johnson, and Silva in their paper \emph{Legality and Ethics of Web Scraping} \cite{Krotov}, is a three stage data acquisition process, made up of analysis, web scraping or crawling, and organizing the retrieved data. 
 
-They describe the website analysis portion of the process is focused on reviewing potential sources of information, learning about how they operate and store data. This allows for the formulation of the scraping or crawling strategy.
+According to Krotov et al the website analysis portion of the process focuses on reviewing potential sources of information, as well as learning about how they operate and store data. This allows for the formulation of the scraping, or crawling strategy.
 
-Khder distinguishes between the two strategies in his 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here, which involves the extracting useful data intended for further processing, while discarding the rest. 
+Khder distinguishes between the two strategies in his 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers on the other hand are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here procedurally, which involves the extraction of useful data intended for further processing, while discarding the rest. 
 
-Finally, the organization of data stage is described as cleaning, processing, and organizing the data before it is stored for future use.
+Finally, the organization of data stage is described as cleaning, processing, and arranging the data before it is stored for future use.
 
 \subsection{Fundamental Mechanics of Web Scraping}
-The extraction process utilizes HTTP (see secton \ref{sub-http}) to communicate with the website hosting server. As stated by Khder, the process can be either manual or an automated scraper \cite{Khder}. 
+The extraction process utilizes HTTP (see section \ref{sub-http}) to communicate with the website hosting server, states Khder, and the process can be either manual or an automated scraper \cite{Khder}. 
 
-This data can be parsed and manipulated by a multitude of technologies. Khder outlines a few such as HTML\footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.} parsing libraries and XML\footnote{Extensible Markup Language (XML) is a markup language for data transfer and storage.
-Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.} parsing libraries (XPath), which are technologies utilizing the content's metadata\footnote{According to the Oxford English Dictionary, Metadata is data that describes other data \cite{oxford}. To use HTML as an example, tags describe and give information about the data within their bounds.} to enable identification and location of key data points in the retrieved response \cite{xpath}. He goes on to describe manual proceedings (in cases of small datasets) and the use of regular expressions (REGEX)\footnote{
+The data can be parsed and manipulated by a multitude of technologies. Khder outlines a few such as HTML\footnote{HyperText Markup Language (HTML) is a markup language used to house online content and set its layout, thereby creating the basic structure of web pages \cite{mdn-html}.} parsing libraries and XML\footnote{Extensible Markup Language (XML) is a markup language for data transfer and storage.
+Rather than offer preset tags, users can organize content subjectively through the application of a key value pair data structure \cite{mdn-xml}.} parsing libraries (XPath), which are technologies utilizing the content's metadata\footnote{According to the Oxford English Dictionary, metadata is data that describes other data \cite{oxford}. To use HTML as an example, tags describe and give information about the data within their bounds.} to enable identification and location of key data points in the retrieved response \cite{xpath}. He goes on to describe manual proceedings (in cases of small datasets) and the use of regular expressions (REGEX)\footnote{
 Regular expressions (REGEX) find specified character combinations in strings, making tasks like pattern matching, searching, and string replacement easier \cite{mdn-regex}.} as other useful methods for grabbing key content elements.
 
 
 \subsection{Legalities}
-According to Krotov et al, the field of web data is paradoxical from a legal and ethical standpoint. Publicly accessible online data is meant to be open and available to the general public, therefore it's access through either manual or automated means is technically acceptable. However, as the data is generally owned by the purveyor of the website, its attainment and use should also be at the discretion of the service provider, especially when the data is used for profit. To further complicate matters, Krotov et al highlights, that in certain cases, a website's operator may not own the data which they provide.
+According to Krotov et al, the field of website related data is paradoxical from a legal and ethical standpoint. Publicly accessible online data is meant to be open and available to the general public, therefore its access through either manual or automated means is technically acceptable. However, as the data is generally owned by the website's purveyor, its attainment and use should also be at the discretion of the service provider, especially when the data is used for profit. To further complicate matters, Krotov et al highlights, that in certain cases, a website's operator may not own the data which they provide.
 
 Furthermore, Krotov et al highlight that no legislation currently addresses web scraping directly, however fundamental legal theories such as “illegal access and use of data”, “breach of contract”, “copyright infringement”, and “trespass to chattels” have been applied in legislation with varying degrees of success.
 
-It has been my experience, that online content providers successful in identifying browser automation revoke user access utilizing IP addresses, on the grounds of the user breaching the provisions of service agreement set forth by the provider.
+It has been my experience, that online content providers successful in identifying browser automation revoke user access utilizing IP addresses, on the grounds of the user breaching the provisions set forth by the website provider in the service agreement.
 
 
-\section{Monte Carlo Simulation}
+\section{Monte Carlo Simulation} \label{sec-monte-carlo}
 
-The Monte Carlo method is described by Paolo Brandimarte in his work \emph{Handbook of Monte Carlo Simulation} \cite{brandimarte} as the utilization of a random sampling process to estimate a deterministic quantity, such as a probability or expectation of an outcome. 
+The Monte Carlo method is described by Paolo Brandimarte in his work \emph{Handbook of Monte Carlo Simulation} \cite{brandimarte} as the utilization of a random sampling process to arrive at a deterministic quantity, such as a probability or expectation of an outcome. 
 
 The approach, as described by Aderibigbe in his paper on Monte Carlo analysis and simulation \cite{Aderibigbe}, is an analytical method utilized in computer based statistical sampling techniques, which takes a stochastic (random) sequence as input. This allows for the modeling of real life systems. He goes on to say that the method is capable of arriving at conclusions about the examined system by utilizing samples of its data.
 
-According to Brandimarte, the method was utilized even before it gained popularity during its use by the scientist creating the hydrogen bomb at Los Alamos in their studies of neutron diffusion. Brandimarte states the name Monte Carlo comes from a gambling house. Aderibigbe also traces the origins of the name to Monaco's casino gambling. 
+According to Brandimarte, the method was utilized even before it gained popularity during its use by the scientist creating the hydrogen bomb at Los Alamos during their studies of neutron diffusion. Brandimarte states the name Monte Carlo comes from a gambling house. Aderibigbe also traces the origins of the name to Monaco's casino gambling. 
 
 Based on Brandimarte's introduction, the simulation process draws random samples from a probability distribution, then runs numerous iterations of the simulated model to deduce the process' expected behavior. He discusses various probability distributions and variance reducing techniques to optimize results. He discusses normal distribution and its bell shaped curve, uniform distribution where each number has an equal probability, as well as exponential and Poisson distribution for time based events. 
 
@@ -127,7 +127,7 @@ Another technique he introduces is the utilization of weighted random samples. T
 
 Weights are utilized throughout the implementation of this project, in the form of basketball metrics such as player utilization statistics and shooting averages. Event probabilities are then sampled utilizing each elements respective weights.
 
-Monte Carlo methods encompass a wide range of approaches according to Aderibigbe. He does, however identify and outline a specific pattern of four key elements they all share (see Attributes of Monte Carlo Simulations p.2~\cite{Aderibigbe}):
+Monte Carlo methods encompass a wide range of approaches according to Aderibigbe. He does, however identify and outline a specific pattern of four key elements they all share (see \emph{Attributes of Monte Carlo Simulations} p.~2 \cite{Aderibigbe}):
 \begin{enumerate}
 	\item Defining the inputs domain.
 	\item Utilizing random sampling to acquire input elements.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  24 MAR 2024 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.3)  26 MAR 2024 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,7 +685,7 @@ c-cord-ing to Aderibigbe.
 
 [10]
 Chapter 3.
-<img/usecase.png, id=515, 485.815pt x 443.6575pt>
+<img/usecase.png, id=517, 485.815pt x 443.6575pt>
 File: img/usecase.png Graphic file (type png)
 <use img/usecase.png>
 Package pdftex.def Info: img/usecase.png  used on input line 149.
@@ -731,7 +731,7 @@ Overfull \hbox (2.15634pt too wide) in paragraph at lines 278--279
  pro-cess-ing com-po-nent in-ter-ac-tion, and serves
  []
 
-<img/component/component_controller.png, id=563, 1316.92pt x 876.27374pt>
+<img/component/component_controller.png, id=565, 1316.92pt x 876.27374pt>
 File: img/component/component_controller.png Graphic file (type png)
 <use img/component/component_controller.png>
 Package pdftex.def Info: img/component/component_controller.png  used on input 
@@ -744,13 +744,13 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.307 
        <./img/component/component_controller.png>]
-<img/component/component_simulation.png, id=591, 775.89874pt x 495.8525pt>
+<img/component/component_simulation.png, id=593, 775.89874pt x 495.8525pt>
 File: img/component/component_simulation.png Graphic file (type png)
 <use img/component/component_simulation.png>
 Package pdftex.def Info: img/component/component_simulation.png  used on input 
 line 323.
 (pdftex.def)             Requested size: 308.71106pt x 197.2858pt.
-<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=592, 1179.40625
+<img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png, id=594, 1179.40625
 pt x 1035.87pt>
 File: img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png Graphic file (
 type png)
@@ -776,14 +776,14 @@ has been already used, duplicate ignored
 l.338 \paragraph
                 {Functionality:} <./img/component/component_simulation.png> <./
 img/sequence/monte_carlo/monte_carlo_sequence_cerulean.png>] [20]
-<img/sequence/scraping/scraping_caerilian.png, id=630, 957.5775pt x 591.20876pt
+<img/sequence/scraping/scraping_caerilian.png, id=632, 957.5775pt x 591.20876pt
 >
 File: img/sequence/scraping/scraping_caerilian.png Graphic file (type png)
 <use img/sequence/scraping/scraping_caerilian.png>
 Package pdftex.def Info: img/sequence/scraping/scraping_caerilian.png  used on 
 input line 360.
 (pdftex.def)             Requested size: 396.91325pt x 245.04936pt.
-<img/component/component_webscraper.png, id=631, 1178.4025pt x 884.30376pt>
+<img/component/component_webscraper.png, id=633, 1178.4025pt x 884.30376pt>
 File: img/component/component_webscraper.png Graphic file (type png)
 <use img/component/component_webscraper.png>
 Package pdftex.def Info: img/component/component_webscraper.png  used on input 
@@ -804,7 +804,7 @@ l.373
        <./img/sequence/scraping/scraping_caerilian.png> <./img/component/compon
 ent_webscraper.png>] [22] [23] [24] [25] [26] [27] [28] [29]
 Chapter 5.
-<img/class/model.png, id=734, 791.95876pt x 678.535pt>
+<img/class/model.png, id=736, 791.95876pt x 678.535pt>
 File: img/class/model.png Graphic file (type png)
 <use img/class/model.png>
 Package pdftex.def Info: img/class/model.png  used on input line 516.
@@ -834,7 +834,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 [33]
-<img/class/controller_scrapecontrol.png, id=788, 1572.87625pt x 940.51375pt>
+<img/class/controller_scrapecontrol.png, id=790, 1572.87625pt x 940.51375pt>
 File: img/class/controller_scrapecontrol.png Graphic file (type png)
 <use img/class/controller_scrapecontrol.png>
 Package pdftex.def Info: img/class/controller_scrapecontrol.png  used on input 
@@ -847,7 +847,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.589 
        <./img/class/controller_scrapecontrol.png (PNG copy)>] [35]
-<img/class/controller_teambuild.png, id=808, 1579.9025pt x 1227.58624pt>
+<img/class/controller_teambuild.png, id=810, 1579.9025pt x 1227.58624pt>
 File: img/class/controller_teambuild.png Graphic file (type png)
 <use img/class/controller_teambuild.png>
 Package pdftex.def Info: img/class/controller_teambuild.png  used on input line
@@ -870,7 +870,7 @@ Frames,
  []
 
 (./code/build-roster.pas) [39]
-<img/class/logger.png, id=864, 829.0975pt x 467.7475pt>
+<img/class/logger.png, id=866, 829.0975pt x 467.7475pt>
 File: img/class/logger.png Graphic file (type png)
 <use img/class/logger.png>
 Package pdftex.def Info: img/class/logger.png  used on input line 681.
@@ -883,7 +883,7 @@ has been already used, duplicate ignored
 l.698 T
        he package's simulation constructor classes, the \emph{GameBuilder} a...
  <./img/class/logger.png (PNG copy)>]
-<img/class/simulator.png, id=871, 1770.615pt x 1079.03125pt>
+<img/class/simulator.png, id=873, 1770.615pt x 1079.03125pt>
 File: img/class/simulator.png Graphic file (type png)
 <use img/class/simulator.png>
 Package pdftex.def Info: img/class/simulator.png  used on input line 702.
@@ -901,7 +901,7 @@ LaTeX Warning: Reference `shot-attempt' on page 43 undefined on input line 726.
 
 
 (./code/shot-attempt.pas) [43] [44] (./code/convert.pas) [45] [46] [47]
-<img/class/webscraper.png, id=954, 1984.41376pt x 922.44624pt>
+<img/class/webscraper.png, id=956, 1984.41376pt x 922.44624pt>
 File: img/class/webscraper.png Graphic file (type png)
 <use img/class/webscraper.png>
 Package pdftex.def Info: img/class/webscraper.png  used on input line 806.
@@ -935,7 +935,7 @@ ll com-
 [52
 
 ]
-<img/user-guide/FindGame.png, id=990, 575.751pt x 370.38374pt>
+<img/user-guide/FindGame.png, id=992, 575.751pt x 370.38374pt>
 File: img/user-guide/FindGame.png Graphic file (type png)
 <use img/user-guide/FindGame.png>
 Package pdftex.def Info: img/user-guide/FindGame.png  used on input line 923.
@@ -975,7 +975,7 @@ Underfull \hbox (badness 1521) in paragraph at lines 938--940
 \T1/lmr/m/n/12 the Scrape-PopUp Win-dow ap-pears (see Fig-ure
  []
 
-<img/user-guide/ScrapePopUp.png, id=992, 202.95825pt x 320.397pt>
+<img/user-guide/ScrapePopUp.png, id=994, 202.95825pt x 320.397pt>
 File: img/user-guide/ScrapePopUp.png Graphic file (type png)
 <use img/user-guide/ScrapePopUp.png>
 Package pdftex.def Info: img/user-guide/ScrapePopUp.png  used on input line 944
@@ -989,7 +989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 945--945
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/user-guide/MonteCarlo.png, id=993, 578.16pt x 371.58826pt>
+<img/user-guide/MonteCarlo.png, id=995, 578.16pt x 371.58826pt>
 File: img/user-guide/MonteCarlo.png Graphic file (type png)
 <use img/user-guide/MonteCarlo.png>
 Package pdftex.def Info: img/user-guide/MonteCarlo.png  used on input line 955.
@@ -1065,20 +1065,20 @@ Underfull \hbox (badness 2213) in paragraph at lines 1047--1048
 []\T1/lmr/m/n/12 Table []8.1[] gives a good gen-
  []
 
-<img/results/chi_mia_1000.png, id=1021, 576.9555pt x 368.577pt>
+<img/results/chi_mia_1000.png, id=1023, 576.9555pt x 368.577pt>
 File: img/results/chi_mia_1000.png Graphic file (type png)
 <use img/results/chi_mia_1000.png>
 Package pdftex.def Info: img/results/chi_mia_1000.png  used on input line 1052.
 
 (pdftex.def)             Requested size: 264.61333pt x 169.04692pt.
 [56]
-<img/results/chi_mia_5000.png, id=1031, 575.14874pt x 365.56575pt>
+<img/results/chi_mia_5000.png, id=1033, 575.14874pt x 365.56575pt>
 File: img/results/chi_mia_5000.png Graphic file (type png)
 <use img/results/chi_mia_5000.png>
 Package pdftex.def Info: img/results/chi_mia_5000.png  used on input line 1064.
 
 (pdftex.def)             Requested size: 211.68661pt x 134.54878pt.
-<img/results/chi_mia_10000.png, id=1032, 576.35326pt x 368.577pt>
+<img/results/chi_mia_10000.png, id=1034, 576.35326pt x 368.577pt>
 File: img/results/chi_mia_10000.png Graphic file (type png)
 <use img/results/chi_mia_10000.png>
 Package pdftex.def Info: img/results/chi_mia_10000.png  used on input line 1071
@@ -1261,7 +1261,7 @@ ridview ? view =
 
 pdfTeX warning: pdflatex.exe (file ./declaration.pdf): PDF inclusion: found PDF
  version <1.7>, but at most version <1.5> allowed
-<declaration.pdf, id=1152, 597.55246pt x 845.07718pt>
+<declaration.pdf, id=1154, 597.55246pt x 845.07718pt>
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf>
 Package pdftex.def Info: declaration.pdf  used on input line 1408.
@@ -1282,7 +1282,7 @@ pdfTeX warning: pdflatex.exe (file ./declaration.pdf): PDF inclusion: found PDF
 
 pdfTeX warning: pdflatex.exe (file ./declaration.pdf): PDF inclusion: found PDF
  version <1.7>, but at most version <1.5> allowed
-<declaration.pdf, id=1155, page=1, 597.55246pt x 845.07718pt>
+<declaration.pdf, id=1157, page=1, 597.55246pt x 845.07718pt>
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
 Package pdftex.def Info: declaration.pdf , page1 used on input line 1408.
@@ -1319,10 +1319,10 @@ Package rerunfilecheck Info: File `thesis_gwjz4t.out' has not changed.
 (rerunfilecheck)             Checksum: 2529ECEFD222502A7DCFACCF0BACC8A3;11626.
  ) 
 Here is how much of TeX's memory you used:
- 16301 strings out of 474116
- 257568 string characters out of 5747718
+ 16303 strings out of 474116
+ 257603 string characters out of 5747718
  2017190 words of memory out of 5000000
- 37963 multiletter control sequences out of 15000+600000
+ 37965 multiletter control sequences out of 15000+600000
  648093 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,93p,1166b,2070s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1336,10 +1336,10 @@ lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texl
 ive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dis
 t/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis_gwjz4t.pdf (66 pages, 1994990 bytes).
+Output written on thesis_gwjz4t.pdf (66 pages, 1995218 bytes).
 PDF statistics:
- 1323 PDF objects out of 1440 (max. 8388607)
- 1184 compressed objects within 12 object streams
+ 1325 PDF objects out of 1440 (max. 8388607)
+ 1186 compressed objects within 12 object streams
  356 named destinations out of 1000 (max. 500000)
  768 words of extra memory for PDF output out of 10000 (max. 10000000)
 
