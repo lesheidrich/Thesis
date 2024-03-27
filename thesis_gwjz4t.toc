@@ -27,7 +27,7 @@
 \contentsline {paragraph}{Interaction:}{17}{section*.8}%
 \contentsline {subsection}{\numberline {4.2.3}\emph {model}}{17}{subsection.4.2.3}%
 \contentsline {paragraph}{Purpose:}{17}{section*.9}%
-\contentsline {paragraph}{Functionality:}{18}{section*.10}%
+\contentsline {paragraph}{Functionality:}{17}{section*.10}%
 \contentsline {paragraph}{Interaction:}{18}{section*.11}%
 \contentsline {subsection}{\numberline {4.2.4}\emph {simulation}}{18}{subsection.4.2.4}%
 \contentsline {paragraph}{Purpose:}{18}{section*.12}%

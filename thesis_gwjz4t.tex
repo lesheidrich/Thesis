@@ -93,7 +93,7 @@ Web scraping, as described by Krotov, Johnson, and Silva in their paper \emph{Le
 
 According to Krotov et al the website analysis portion of the process focuses on reviewing potential sources of information, as well as learning about how they operate and store data. This allows for the formulation of the scraping, or crawling strategy.
 
-Khder distinguishes between the two strategies in his 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application}, where he describes web scraping as the retrieval of data from websites. Web crawlers on the other hand are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here procedurally, which involves the extraction of useful data intended for further processing, while discarding the rest. 
+Khder distinguishes between the two strategies in his 2021 study \emph{Web Scraping or Web Crawling: State of Art, Techniques, Approaches and	Application} \cite{Khder}, where he describes web scraping as the retrieval of data from websites. Web crawlers on the other hand are used for traversing a multitude of websites, the purpose of which can be for example to find new websites. Krotov et al also place the parsing of acquired data here procedurally, which involves the extraction of useful data intended for further processing, while discarding the rest. 
 
 Finally, the organization of data stage is described as cleaning, processing, and arranging the data before it is stored for future use.
 
@@ -108,7 +108,7 @@ Regular expressions (REGEX) find specified character combinations in strings, ma
 \subsection{Legalities}
 According to Krotov et al, the field of website related data is paradoxical from a legal and ethical standpoint. Publicly accessible online data is meant to be open and available to the general public, therefore its access through either manual or automated means is technically acceptable. However, as the data is generally owned by the website's purveyor, its attainment and use should also be at the discretion of the service provider, especially when the data is used for profit. To further complicate matters, Krotov et al highlights, that in certain cases, a website's operator may not own the data which they provide.
 
-Furthermore, Krotov et al highlight that no legislation currently addresses web scraping directly, however fundamental legal theories such as “illegal access and use of data”, “breach of contract”, “copyright infringement”, and “trespass to chattels” have been applied in legislation with varying degrees of success.
+Furthermore, Krotov et al highlight the absence of legislation specifically addressing web scraping \cite[p.~561]{Krotov}. Fundamental theories have been applied with varying degrees of success. Examples include “illegal access and use of data”, “breach of contract”, “copyright infringement”, and “trespass to chattels”  \cite[p.~560]{Krotov}.
 
 It has been my experience, that online content providers successful in identifying browser automation revoke user access utilizing IP addresses, on the grounds of the user breaching the provisions set forth by the website provider in the service agreement.
 
@@ -127,7 +127,7 @@ Another technique he introduces is the utilization of weighted random samples. T
 
 Weights are utilized throughout the implementation of this project, in the form of basketball metrics such as player utilization statistics and shooting averages. Event probabilities are then sampled utilizing each elements respective weights.
 
-Monte Carlo methods encompass a wide range of approaches according to Aderibigbe. He does, however identify and outline a specific pattern of four key elements they all share (see \emph{Attributes of Monte Carlo Simulations} p.~2 \cite{Aderibigbe}):
+Monte Carlo methods encompass a wide range of approaches according to Aderibigbe. He does, however identify and outline a specific pattern of four key elements they all share (see \emph{Attributes of Monte Carlo Simulations} \cite[p.~2]{Aderibigbe}):
 \begin{enumerate}
 	\item Defining the inputs domain.
 	\item Utilizing random sampling to acquire input elements.
@@ -140,14 +140,14 @@ The project's Monte Carlo simulation utilizes player and team statistics as the 
 \chapter{Requirements}
 
 \section{Requirements List}
-The system shall be constructed to uniquely fulfill both the requirements of a computer science thesis, and the domain of data acquisition and simulation based projections. It should therefore result in an intuitive end-user experience, leveraging the web scraping and Monte Carlo simulation methodologies explored in this thesis.
+The application shall be constructed to uniquely fulfill both the requirements of a computer science thesis, and the domain of data acquisition and simulation based projections. It should therefore result in an intuitive end-user experience, leveraging the web scraping and Monte Carlo simulation methodologies explored in this thesis.
 
-The client interface should allow users to interact with the business logic\footnote{The term refers to the collection of algorithms responsible for allocating and processing data through communication with the database in order to serve the user interface, while maintaining its independence from both. For further information, please see \cite{Booch}.}, thereby accessing the database through built-in functions. It should also allow for the utilization of web scraping and Monte Carlo methodologies. The Use Case diagram depicted below outlines the basic functionality described by the Functional - (see table {\ref{table-funct-req}}), Non-Functional - (see table {\ref{table-non-funct-req}}), and Platform Requirements (see table {\ref{table-platform-req}}) outlined in this chapter.
+The client interface should allow users to interact with the business logic\footnote{The term refers to the collection of algorithms responsible for allocating and processing data through communication with the database in order to serve the user interface, while maintaining its independence from both. For further information, please see \cite{Booch}.}, and access the database through built-in functions. It should also allow for the utilization of web scraping and Monte Carlo methodologies. Figure \ref{img-usecase} outlines the basic operations described by the Functional (see table {\ref{table-funct-req}}), Non-Functional (see table {\ref{table-non-funct-req}}), and Platform Requirements (see table {\ref{table-platform-req}}) outlined in this chapter.
 
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=7cm]{img/usecase}
-	\caption{Use Case Diagram}
+	\caption{Application Use Case Diagram}
 	\label{img-usecase}
 \end{figure}
 
@@ -159,9 +159,9 @@ The client interface should allow users to interact with the business logic\foot
 		\hline
 		\textbf{ID} & \textbf{Name} & \textbf{Description} \\ 
 		\hline
-		R1	& Database & The system must allow users to select either the default database or utilize their own, based on a URI connection string. \\ 
+		R1	& Database & The system must allow users to select either the default database or utilize their own, based on a URL connection string. \\ 
 		\hline
-		R2	& Game Parameters & It should provide users with a method to set the season, home- and away team. \\ 
+		R2	& Game Parameters & It should provide users with a method to set the season, home and away team. \\ 
 		\hline
 		R3	& Epochs & The system must enable users to specify the number of epochs for the Monte Carlo simulation. \\ 
 		\hline
@@ -183,7 +183,7 @@ The client interface should allow users to interact with the business logic\foot
 		\hline
 		R12	& Simulation & The system must execute Monte Carlo simulations based on the selected game parameters. \\ 
 		\hline
-		R13	& Graphs & It should visualize simulation results with graphs, including a probability density graph and a violin graph. \\ 
+		R13	& Graphs & It should visualize simulation results with graphs, including a probability density, and a violin graph. \\ 
 		\hline
 		R14	& Metrics & The system must return basic metrics such as the number of wins for each team and the mode of scores. \\ 
 		\hline
@@ -211,7 +211,7 @@ The client interface should allow users to interact with the business logic\foot
 		\hline
 		NR5 & Intuitive & The system must have an easy-to-use and intuitive interface. \\
 		\hline
-		NR6 & Requests & The client side of the system must communicate with the server-side logic using HTTP to attain services as a responses. \\
+		NR6 & Requests & The client side of the system must communicate with the server-side logic using HTTP to attain services through a response. \\
 		\hline
 		NR7 & SQL & The server-side logic should interact with the database using SQL queries. \\
 		\hline
@@ -250,11 +250,11 @@ The client interface should allow users to interact with the business logic\foot
 
 \subsection{Use Cases}
 \begin{itemize}
-	\item \textbf{Game Selection}: The user selects parameters such as the desired season, home- and away team, to initialize game selection, then chooses the desired match from the returned table. 
+	\item \textbf{Game Selection}: The user selects parameters such as the desired season, home and away team, to initialize game selection, then chooses the desired match from the returned table. 
 	\item \textbf{Validation}: After accidentally setting a team to play against themselves, the user receives an error message alerting them of the mistake.
 	\item \textbf{Scraping}: Following the game selection process, the system determines the game data is not in the database, then proceeds to utilize web scraping techniques to gather the data from online sources. 
 	\item \textbf{Simulation}: A user parameterizes the number of epochs for the Monte Carlo simulation and initializes game selection. The system utilizes the acquired historical data to run simulations, generating probabilistic outcomes for the historic NBA game.
-	\item \textbf{Comparison}: Users compare the results of the Monte Carlo simulation with the original game data, assessing the accuracy of the model. The system further provides probability density- and violin graphs to further facilitate result analysis.
+	\item \textbf{Comparison}: Users compare the results of the Monte Carlo simulation with the original game data, assessing the accuracy of the model. The system further provides probability density and violin graphs to further facilitate result analysis.
 	\item \textbf{Error Handling}: When the user tries to initialize game selection, the database is down. The host service returns an error, notifying the user of the access issue. The user escalates the error, and upon its resolution normal system operations resume.
 \end{itemize}
 
@@ -262,14 +262,14 @@ The client interface should allow users to interact with the business logic\foot
 
 \chapter{Architecture} \label{ch-architecture}
 \section{Design Concepts}
-At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
+At its core, the application relies heavily on a three principal layer \cite[p.~19]{Fowler} concept, commonly found in systems utilizing a database and presentation layer. Fowler refers to these as presentation logic, domain logic, and data source in his book \emph{Patterns of Enterprise Application Architecture}. The presentation logic facilitates user interaction with the system, the data source handles data transactions and houses application information, while the domain logic's algorithms are responsible for data modification and layer interaction. 
 
-This is in line with the Gang-of-Four's \footnote{The Gang of Four \cite{GOF2} (GOF) are a group of four writers, all computer science professionals and entrepreneurs. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the application's data. It is capable of connecting directly to the model, while operating in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
+This is in line with the Gang-of-Four's\footnote{The Gang of Four (GOF) are a group of four writers, all computer science professionals and entrepreneurs \cite{GOF2}. Their literature and courses focus on professional development in the domain of computer science.} Model-View-Controller (MVC) \cite[p.~529]{GOF} design pattern. The View receives user-initiated interactions along with their parameters, and presents the application's data. It is capable of connecting directly to the model, while operating in conjunction with the Controller. The Controller interacts with both components as it processes their data and coordinates operations. The Model houses and manages the application data.
 
-As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking use parameters and displaying host response results. The host service, operating as the back-end, encompasses the previously discussed Model, Controller and all other components of the application.
+As discussed by Ahlan, A. R., Ahrnud, M. B., and Arshad, Y. \cite{Kulliyyah}, there have been several uses and variations of thin client applications since the 1970s. As a generalization, the \emph{view} in its capacity as the client receives application data and logic based services from a host system. This application adheres to the this concept quite strictly, with the client acting as an intermediary between the user and the host, taking user parameters and displaying host response results. The host service, operating as the back-end, encompasses the previously discussed Model, Controller and all other components of the application.
 
 \section{Components}
-Following the MVC design pattern's component structure, the application's presentation logic is allocated to the \emph{view} package. The database and simple business logic allowing for record management is stored in the \emph{model}. Acting as an intermediary between the two, the \emph{controller} package orchestrates the flow of information along with its processing. The \emph{webscraper} and \emph{simulator} packages also tie into the \emph{controller}, offering web scraping, and Monte Carlo simulation logic respectively, while further decoupling the application's components and allowing for better organization and maintainability through separation of concerns \footnote{Separation of concerns (SoC) is a software development design principle promoting segregation of source code elements by functionality in order to improve readability, organization and modification \cite{Reade}.}.
+Following the MVC design pattern's component structure, the application's presentation logic is allocated to the \emph{view} package. The database management logic allowing for record handling is stored in the \emph{model}. Acting as an intermediary between the two, the \emph{controller} package orchestrates the flow of information along with its processing. The \emph{webscraper} and \emph{simulator} packages also tie into the \emph{controller}, offering web scraping, and Monte Carlo simulation logic respectively, while further decoupling the application's components and allowing for better organization and maintainability through separation of concerns\footnote{Separation of concerns (SoC) is a software development design principle promoting segregation of source code elements by functionality in order to improve readability, organization and modification \cite{Reade}.}.
 
 The application is organized in a manner, that all components embody system packages allowing improved readability and usability. The following subsections discuss each package's purpose and functionality.
 
@@ -279,11 +279,11 @@ The package is responsible for processing component interaction, and serves as t
 \paragraph{Functionality:}
 Serving as the system's host, the \emph{controller} is responsible for handling user prompts sent by the client in order to formulate an appropriate response. In order to fulfill this function it utilizes its connection to each component of the application, accessing their functionality as needed.
 
-One of its responsibilities is accumulating data through the application of various web scraping methods, which are stored for future use. It's web scraper control functionality enables it to utilize the \emph{webscraper} package to appropriate preset website data into memory, then reallocate it to the database using a combination of its own control processes along with the business logic of the \emph{model} package. The web scraping sequence diagram illustrates the process (see {\ref{img-scraping-sequence}}).
+One of its responsibilities is accumulating data through the application of various web scraping methods, which are stored for future use. It's web scraping control functionality enables it to utilize the \emph{webscraper} package to appropriate preset website data into memory, then reallocate it to the database using a combination of its own control processes along with the logic of the \emph{model} package. The web scraping sequence diagram illustrates the process (see Figure {\ref{img-scraping-sequence}}).
 
-When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The simulator returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see {\ref{img-monte-carlo-sequence}}).
+When running a simulation for a parameterized game, the \emph{controller} restructures relevant data for the selected historic games from the \emph{model} into player, roster, and team objects usable by the \emph{simulator}. The \emph{simulator} then returns the results to the host, which are forwarded back to the client. The Monte Carlo simulation sequence diagram shows further details (see Figure {\ref{img-monte-carlo-sequence}}).
 \paragraph{Interaction:}
-In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system. The package's component diagram provides a high level overview of basic component interaction (see{\ref{img-controller-component}}).
+In its capacity as the main communications hub of the application, the \emph{controller} interacts with every component in the system. The package's component diagram provides a high level overview of its basic interactions (see Figure {\ref{img-controller-component}}).
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=1\linewidth]{img/component/component_controller}
@@ -295,7 +295,7 @@ In its capacity as the main communications hub of the application, the \emph{con
 \paragraph{Purpose:}
 The component provides logging functionality for back-end operations.
 \paragraph{Functionality:}
-The \emph{log} package contains logic allowing components to access system logs to document runtime errors and operations, useful for debugging potential issues. Log management functionality is also provided by the package, ensuring proper settings, size limitations and functionality.
+The \emph{log} package contains logic allowing components to access system logs to document runtime errors and operations, useful for debugging potential issues. Log management features are also provided by the package, ensuring proper settings, size limitations and functionality.
 \paragraph{Interaction:}
 The \emph{log} interacts with the \emph{controller} and \emph{webscraper} packages.
 
@@ -303,25 +303,25 @@ The \emph{log} interacts with the \emph{controller} and \emph{webscraper} packag
 \paragraph{Purpose:}
 The package ensures successful data management services within the application, through the storage and manipulation of data records and structures. 
 \paragraph{Functionality:}
-The business logic enables system interaction with the database, encapsulating data access and administration services. Data security is enforced by minimizing vulnerabilities and prevents data corruption trough validation logic. The \emph{model} services the system through the \emph{controller} package's data manipulation and retrieval components.
+The package's logic enables system interaction with the database, encapsulating data access and administration services. Data security is enforced by minimizing vulnerabilities and prevents data corruption trough validation logic. The \emph{model} services the system through the \emph{controller} package's data manipulation and retrieval components.
 
-The package also contains the NBA team enums \footnote{In their capacity as a distinct object type, enumerations (enums) offer value binding across a group of encapsulated constants tied together through enumeration. Each value can act as a key identifier during instantiation, making enums a powerful structure for housing validated data \cite{enum}.} employed by the back-end logic. These ensure data validation and encapsulate all occurrences of team names in the system and its dataset, streamlining their application throughout processes.
+The package also contains the NBA team enums\footnote{Enumerations (enums) are objects utilizing value binding for encapsulated constants tied together through enumeration. Each value can act as a key identifier during instantiation, making enums a powerful structure for housing validated data \cite{enum}.} employed by the back-end logic. These ensure data validation and encapsulate all occurrences of team names in the system and its dataset, streamlining their application throughout processes.
 \paragraph{Interaction:}
-The primary business logic elements of the \emph{model} communicate exclusively with the \emph{controller}, enhancing system modularity (see {\ref{img-controller-component}). Due to their earlier described functionality, NBA team enums are also widely employed throughout the \emph{simulation} package. 
+The primary elements of the \emph{model} communicate exclusively with the \emph{controller}, enhancing system modularity (see Figure {\ref{img-controller-component}). Due to their earlier described functionality, NBA team enums are also widely employed throughout the \emph{simulation} package. 
 
 \subsection{\emph{simulation}}
 \paragraph{Purpose:}
-The package's primary objective encompasses the repetitive simulation of a basketball game between selected teams at a specific point in time, with the end goal of returning the outcomes as graphical representations, comparable with the original historic game's outcome.
+The package's primary objective encompasses the repetitive simulation of a basketball game between selected teams at a specific point in time, with the end goal of returning the outcomes as graphical representations, comparable with the original historic game's results.
 \paragraph{Functionality:}
 The core functionality of the application revolves around implementing Monte Carlo simulations over a preset range of epochs to determine the probabilistic outcome of a historic NBA game. 
 
-The \emph{simulator} package receives the relevant compiled data from the \emph{controller}, initializing the creation of the simulation. Upon successful completion of the simulation, probability density and violin graphs are returned to the \emph{controller} along with minimal game statistic like total win percentage and mode of scores reached per team. A detailed description of the process is illustrated in the Monte Carlo simulation's sequence diagram (see {\ref{img-monte-carlo-sequence}}).
+The \emph{simulator} package receives the relevant compiled data from the \emph{controller}, initializing the creation of the simulation. Upon successful completion of the simulation, probability density and violin graphs are returned to the \emph{controller} along with minimal game statistic like total win percentage and mode of scores reached per team. A detailed description of the process is illustrated in the Monte Carlo simulation's sequence diagram (see Figure {\ref{img-monte-carlo-sequence}}).
 \paragraph{Interaction:}
-The \emph{simulator} relies on the \emph{model}'s NBA team enum during operation, along with the \emph{controller} for providing the necessary historic game data for simulation's successful operations. It further communicates with the \emph{controller} in its capacity as the host. The \emph{simulation} component diagram offers an overview of component interaction (see \ref{img-simulation-component}).
+The \emph{simulator} relies on the \emph{model}'s NBA team enum during its operation, along with the \emph{controller} for providing the necessary historic game data for the simulation's successful operations. It further communicates with the \emph{controller} in its capacity as the host. The \emph{simulation} component diagram offers an overview of each element's interactions (see Figure \ref{img-simulation-component}).
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/component/component_simulation}
-	\caption{\emph{simulation} UML Component Diagram}
+	\caption{\emph{simulator} UML Component Diagram}
 	\label{img-simulation-component}
 \end{figure}
 \begin{figure}[th!]
@@ -336,13 +336,13 @@ The \emph{simulator} relies on the \emph{model}'s NBA team enum during operation
 \paragraph{Purpose:}
 The component is responsible for providing comprehensive back-end testing services.
 \paragraph{Functionality:}
-The test package constitutes a wide spectrum of tests focusing on the back-end of the system. It provides full-scale uni tests organized by module. Integration testing and linting is also included. The Testing and Validation chapter (see \ref{ch-testing}) contains a detailed breakdown of the package's functionality and implementation.
+The test package constitutes a wide spectrum of tests focusing on the back-end of the system. It provides full-scale unit testing organized by module. Integration testing and linting is also included. The Testing and Validation chapter (\ref{ch-testing}) contains a detailed breakdown of the package's functionality and implementation.
 \paragraph{Interaction:}
 Each unit test interacts with their respective components on the back-end. Integration tests interact with multiple packages following their functionality, in their attempt to check full system compatibility.
 
 \subsection{\emph{view}}
 \paragraph{Purpose:}
-To allow for user interaction with the system through communication with the host along with its application logic and data.
+The component facilitates user interaction with the system through communication with the host along with its application logic and data.
 \paragraph{Functionality:}
 The view package operates as a thin client, taking user input through a graphic user interface (GUI) \cite{Wiki-GUI}. User data is cached on the client side for the sake of user convenience, decreasing the input required to achieve functionality. Host responses, along with operational errors are displayed for user viewing. Errors are not logged on the client side of the application.
 \paragraph{Interaction:}
@@ -352,9 +352,9 @@ The component interacts with the user and the host module of the \emph{controlle
 \paragraph{Purpose:}
 The package completes data gathering services from the amalgamation of preset websites and parameters representing selected NBA games, in order to supply historic statistical game data for the application.
 \paragraph{Functionality:}
-The acquisition process extracts data from a combination of preset URLs, set to match parameterized game data originating from the user. It includes functionality to interact with each URL in a manner defined by the user's chosen scraping method. Collected information is preprocessed and transformed before being committed to memory in a preset reusable format, easily accessed by the \emph{controller} as it looks to the \emph{webscraper} to acquire new information. Web scraping requests are generally not repeated, as the system is built to house already accessed data, thereby minimizing dependency on online sources to bare necessity. The component's sequence diagram (see \ref{img-scraping-sequence}) illustrates the process during runtime.
+The acquisition process extracts data from a combination of preset URLs, set to match parameterized game data originating from the user. It includes functionality to interact with each URL in a manner defined by the user's chosen scraping method. Collected information is preprocessed and transformed before being committed to memory in a preset reusable format, easily accessed by the \emph{controller} as it looks to the \emph{webscraper} to acquire new information. Web scraping requests are generally not repeated, as the system is built to house already accessed data, thereby minimizing dependency on online sources to bare necessity. The component's sequence diagram (see Figure \ref{img-scraping-sequence}) illustrates the process during runtime.
 \paragraph{Interaction:}
-The \emph{webscraper} package primarily communicates with the \emph{controller} in order to receive data acquisition requests and parameters. Its preprocessed results are also returned to the \emph{controller}. The package's component diagram (see \ref{img-webscraper-component}) illustrates the \emph{webscraper}'s interactions. Logging is utilized throughout the process.
+The \emph{webscraper} package primarily communicates with the \emph{controller} in order to receive data acquisition requests and parameters. Its preprocessed results are also returned to the \emph{controller}. The package's component diagram (see Figure \ref{img-webscraper-component}) illustrates the \emph{webscraper}'s interactions. Logging is utilized throughout the process.
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{img/sequence/scraping/scraping_caerilian}
@@ -383,33 +383,33 @@ There are three types of metrics tables:
 	
 	\item \textbf{Player tables} are unique to each player of each team. They represent the player's averages for the given season. Due to the differences in performance, separate tables exist for home and away games, but also for regular season and playoff games, making a total of four player tables.
 	
-	\item \textbf{Team tables} house averages pertaining to the each team's performance in the given season, therefore each team is unique to each season. Once again, due to the high fluctuation between regular season and playoff metrics, tables are separated into these two categories.
+	\item \textbf{Team tables} house averages pertaining to the each team's performance in the given season, therefore each team is unique to each season. Once again, due to the performance difference between regular season and playoff metrics, tables are separated into these two categories.
 \end{itemize}
 To ensure all information remains unique, yet no new data is erroneously deemed as a duplicate, all cells of a record are expected to be unique in each table. This constraint ensures data validation, as a player will not be able to appear twice in relation to a game date with all the same metrics, or in the same season. Teams undergo the same validation process, being unique for each season.
 
-Table metrics are presented in more detail during the \ref{sec-simulation} \emph{simulation} and \ref{sec-webscraper} \emph{webscraper} sections of the Implementation chapter.
+Table metrics are presented in more detail during the \emph{simulation} (\ref{sec-simulation}) and \emph{webscraper} (\ref{sec-webscraper}) sections of the Implementation chapter.
 
 \section{Technologies and Frameworks}
 
 \subsection{.NET}
-The .NET framework was built by Microsoft for developing Windows-based applications. Today, with the integration of cross-platform and open source frameworks, the .NET Core supports multiple operating systems and is also open source. It supports multiple programming languages, including C\# \cite{.net}.
+The .NET Framework was built by Microsoft for developing Windows-based applications. Today, with the integration of cross-platform and open source frameworks, the .NET Core supports many programming languages (including C\#) and operating systems, and is also open source \cite{.net}.
 
-The view component of the application is based on the .Net framework and written in C\#, due to its ability to model a range of services. It's WinForms (see \ref{winform}) framework and RestSharp package allow for fast and secure development, as well as a seamless user exprience.
+The view component of the application is based on the .NET Framework and written in C\#, due to its ability to model a range of services. It's WinForms (see \ref{winform}) framework and RestSharp (see \ref{restsharp}) package allow for fast and secure development, as well as a seamless user exprience.
 
 \subsection{Beautiful Soup 4}
-Beautiful Soup  is a popular python package, designed to extracts data from HTML 
-and XML documents sourced from the web \cite{bs4}. By leveraging attributes unique to the selected markup language, it facilitates tag and text content based parsing in order to precisely identify and extract the desired data. Developed for web scarping purposes, it is often used alongside packages responsible for making content requests to websites. 
+Beautiful Soup  is a popular Python (see \ref{sub-python}) package, designed to extracts data from HTML 
+and XML documents retrieved from the web \cite{bs4}. It utilizes attributes unique to the selected markup language in order to facilitates tag based parsing in order to precisely identify and extract the desired data. As it was developed for web scarping purposes, it is often used with packages responsible for making content requests to websites. 
 
 This was also the case in this project. Beautiful Soup was a great asset during the allocation and extraction of acquired web contents, which could then be passed on for further formatting and storage.
 
 \subsection{Fake User Agent}
-Throughout the extraction of data from websites it is crucial to consider the exchange of information between the client making the request, and the website's host server responding to the request. During this process, the host receives client information in the header, allowing it to discern information about the requesting client, like its operating system and browser type (see subsection \ref{sub-http} for information on HTTP requests and their headers).
+Throughout the extraction of data from websites it is crucial to consider the exchange of information between the client making the request, and the website's host server responding to the request. During this process, the host receives client information in the header, allowing it to discern information about the requesting client, like its operating system and browser type (see subsection \ref{sub-http} for information on HTTP requests and their headers) \cite{req-head}.
 
-Operations requiring repeated content requests to a single host, such as web scraping, can therefore be identified as outside the scope of regular usage requirements provided by the website. This in turn may lead to limitations of service, disrupting web scraping-based system operations.
+Operations requiring repeated content requests to a single host, such as web scraping, can therefore be identified as outside the scope of regular usage requirements provided by the website. This in turn may lead to limitations of service, disrupting web scraping-based system operations \cite{fake-useragent}.
 
-Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests \cite{fake-useragent}. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool.
+Fake user agent applications are designed to solve this problem. Python's \emph{fake-useragent} library allows for the creation of random user agent headers, which can be assigned to requests \cite{fake-useragent}. Users have the option to select from a wide range of preset options, which can also be filtered to only mimic specific browser technologies and operating systems. 
 
-The package was employed in the project for this ability to generate random user agents at runtime, thereby contributing to the application's anonymity while web scraping.
+While this method only changes a portion of the request data, when used alongside other methodologies promoting anonymity, it can prove to be a powerful tool. The package was employed in the project for this ability to generate random user agents at runtime, thereby contributing to the application's anonymity while web scraping.
 
 \subsection{Flask}
 Flask is a Python based web framework created to facilitate the development of web applications. The framework is known for its versatility, and aims to provide a minimalistic and flexible approach in comparison with other web application frameworks \cite{docs-flask}. 
@@ -423,13 +423,12 @@ The framework was employed in the application due in part to its ease-of-use and
 \subsection{HTTP} \label{sub-http}
 Hypertext Transfer Protocol (HTTP) is a method of communication employed to facilitate data exchange between servers hosting web-based resources, and clients such as web browsers or web-applications \cite{mdn-http}.
 
-HTTP is unidirectional, operating on a request-response basis. When the client, such as a web browser requests services in the form of online content from a server, it does so through an HTTP request. The server processes the request, and sends an appropriate HTTP response. Data can be transmitted in multiple formats. Common examples include JSON 
- \footnote{JavaScript Object Notation (JSON) is a popular lightweigth data structure which utilizes key-value pair functionality. Due to it's simplicity and compatibility with many programming languages it is a common choice for online information exchange \cite{mdn-json}.}
+HTTP is unidirectional, operating on a request-response basis. When the client, such as a web browser requests services in the form of online content from a server, it does so through an HTTP request. The server processes the request, and sends an appropriate HTTP response. Data can be transmitted in multiple formats. Common examples include JSON\footnote{JavaScript Object Notation (JSON) is a popular lightweigth data structure which utilizes key-value pair functionality. Due to it's simplicity and compatibility with many programming languages it is a common choice for online information exchange \cite{mdn-json}.}
 , HTML, and XML \cite{wiki-http}.
 
 The client's request contains information such as the request line, message body, and headers \cite{req-head}. The request line contains the destination resource, the message body stores parameters used by request methods, and the headers contain information about the client's choice of operating system and web browser. The response is comprised of a status code, headers and message body, which houses the requested data \cite{wiki-http}.
 
-HTTP offers methods which can apply parameterized actions to the selected resource. Some examples include:
+HTTP offers methods which can apply parameterized actions to the selected resource. Some examples include \cite{wiki-http}:
 \begin{itemize}
 	\item The GET method presents the specified resource. 
 	\item POST submits data parameters to the server which are required for further functionality.
@@ -437,7 +436,7 @@ HTTP offers methods which can apply parameterized actions to the selected resour
 	\item The DELETE method removes the parameterized resource from the server.
 \end{itemize}
 
-Status codes are utilized to indicate the outcome of processes initiated by the client's HTTP request. They are categorized into groups, covering categories such as informational responses of success as well as errors. Some common examples of success codes include:
+Status codes are utilized to indicate the outcome of processes initiated by the client's HTTP request. They are categorized into groups, covering categories such as informational responses of success as well as errors \cite{wiki-http}. Some common examples of success codes include:
 \begin{itemize}
 	\item 200: The requested transaction was completed successfully and the requested content is returned.
 	\item 204: The server processed the request, and is not returning any content.
@@ -454,47 +453,47 @@ Matplotlib is an extensive community-maintained Python library utilized in the c
 Ultimately the plotting capabilities of the package's Pyplot module led to its utilization in the system.
 
 \subsection{MySQL}
-MySQL is a free open source relational database management system (RDBMS). It is widely used due to it's speed, reliability and scalability. Structured Query Language (SQL) is utilized to communicate with the database for data management and user access modifications. \cite{wiki-mysql}
+MySQL is a free open source relational database management system (RDBMS). It is widely used due to it's speed, reliability and scalability. Structured Query Language (SQL) is utilized to communicate with the database for data management and user access modifications \cite{wiki-mysql}.
 
 The decision to use MySQL as the application's database management system was reached due to several factors. The application required a relational model for easier storage of acquired statistical data, which in turn allowed easier processing upon extraction from the database. Its reliability and complementary open source nature, coupled with its widespread adoption and accessibility solidified the decision to utilize it in the application.
 
 \subsection{Pandas}
-The pandas library is an open source project developed for Python by Wes McKinney and Chang She during their time at  AQR Capital Management. The developers sought to attain the tabular functionality of DataFrames \footnote{DataFrames are two-dimensional tabular data structures in pandas, housing data accessible by rows and columns. Visually, DataFrames resemble spreadsheets, while structurally they key-value pair data structures. \cite{wiki-pd}}} in the R programming language for their flexibility and functionality in working with financial data. \cite{wiki-pd}
+The pandas library is an open source project developed for Python by Wes McKinney and Chang She during their time at  AQR Capital Management. The developers wanted to attain the tabular functionality of DataFrames\footnote{DataFrames are two-dimensional tabular data structures in pandas, housing data accessible by rows and columns. Visually, DataFrames resemble spreadsheets, while structurally they key-value pair data structures. \cite{wiki-pd}}} in the R programming language for their flexibility and functionality in working with financial data \cite{wiki-pd}.
 
 Pandas remains an open source library to this day, and has become very popular for its versatility and functionality in data analysis endeavors. It has been employed in this project due to this high level of tabular functionality and data accessibility, along with its efficiency in parsing tabular data into DataFrames.
 
 \subsection{Python} \label{sub-python}
-Python is a high level open source object-oriented programming language, with features such as dynamic typing, dynamic binding, and built in data structures. It is an interpreted language with a modular structure, and an easily readable syntax. \cite{python}
+Python is a high level open source object-oriented programming language, with features such as dynamic typing, dynamic binding, and built in data structures. It is an interpreted language with a modular structure, and an easily readable syntax \cite{python}.
 
-The programming language was utilized for the back-end due to its extensive complementary open source library. There availability of multiple web scraping packages, along with powerful data analytics libraries such as pandas or matplotlib allow for convenient and fast paced development.
+The programming language was utilized for the back-end due to its extensive complementary open source library. The availability of multiple web scraping packages, along with powerful data analytics libraries such as pandas or matplotlib allow for convenient and fast paced development.
 
 \subsection{Requests}
-The Python requests library is a simple package allowing for communication through HTTP requests. \cite{req} It is utilized in the application for making requests to specified websites in order to retrieve their HTML content in the response. Requests allows for parameterized customization of proxies, timeout settings, and request methods, many of which are utilized in the web scraping process. 
+The Python requests library is a simple package allowing for communication through HTTP requests. It allows for parameterized customization of proxies, timeout settings, and request methods, many of which are utilized in the web scraping process \cite{req}. It is utilized in the application for making requests to specified websites in order to retrieve their HTML content in the response. 
 
 \subsection{REST API}
-Representational State Transfer (REST) refers to a set of principles acting as guidelines in the development of APIs for web services. These stipulate the use of HTTP as a communication protocol, however data encoding is left up to the developer, with options including JSON, HTML, and XML. Requests should be independent, not relying on each-other's success. Caching of data is acceptable, along with the sending of executable code to the client where needed. REST further requires a standard method of sending data and a layered organizational approach. \cite{redhat-rest}
+Representational State Transfer (REST) refers to a set of principles acting as guidelines in the development of APIs for web services. These stipulate the use of HTTP as a communication protocol, however data encoding is left up to the developer, with options including JSON, HTML, and XML. Requests should be independent, not relying on each-other's success. Caching of data is acceptable, along with the sending of executable code to the client where needed. REST further requires a standard method of sending data and a layered organizational approach \cite{redhat-rest}.
 
 In the application, REST is utilized to facilitate communication between the client and host. HTTP requests are sent to the host in order to receive responses in the form of JSON.  
 
-\subsection{RestSharp}
-RestSharp is a tool utilized in .NET development, offering synchronous and asynchronous communication to remote resources using HTTP. It allows for easier managing of diverse request and response types while interacting with APIs by handling serialization and deserialization of message bodies to JSON and XML. \cite{restsharp}
+\subsection{RestSharp} \label{restsharp}
+RestSharp is a tool utilized in .NET development, offering both synchronous and asynchronous communication to resources using HTTP. It allows for easier managing of diverse request and response types while interacting with APIs by handling serialization and deserialization of message bodies to JSON and XML \cite{restsharp}.
 
 The package is utilized on the client side of the application, due to these capabilities. Its GET and POST methods handle interactions with the host's API. Response JSONs are deserialized to access response content.
 
 \subsection{Selenium}
-Selenium is an open source test automation tool created for web applications. It enables developers to single out and interact with user interface (UI) elements thereby simulating user interaction. Selenium's WebDriver tool allows for the utilization of web browsers to interact with online sources, enabling programmatic clicking of buttons, mouse movements, and traversing web pages. Selenium supports multiple programming languages, including Python. \cite{selenium}
+Selenium is an open source test automation tool created for web applications. It enables developers to single out and interact with user interface (UI) elements thereby simulating user interaction. Selenium's WebDriver tool allows for the utilization of web browsers to interact with online sources, enabling programmatic clicking of buttons, mouse movements, and traversing web pages. Selenium supports multiple programming languages, including Python \cite{selenium}.
 
 While driver instantiation already allows for the use of well known browsers, such as Mozilla's Firefox and Google's Chrome, the open source community has further contributed packages such as Undetected ChromeDriver. This Python library aims to provide the same driver functionality, while attempting to be less detectable by the host server. \cite{udc}
 
 This project utilizes Python's Selenium package for web scraping purposes. Instantiating the driver allows for content retrieval in a less detectable, albeit slower manner.
 
 \subsection{TestStack.White}
-White is a test automation framework used to test Windows desktop applications. It is based on the .NET framework and does not require the use of scripting languages. Test code can be written in any .NET supported language. \cite{docs-white}
+White is a test automation framework used to test Windows desktop applications. It is based on the .NET framework. Scripting languages are not required for its use, and test code can be written in any .NET supported language \cite{docs-white}.
 
-The framework is implemented in the project for UI automation testing purposes. The client's WinForms-based desktop application is tested for returning appropriate responses and basic functionality for quality assurance purposes.
+The framework is implemented in the project for user interface (UI) automation testing purposes. The client's WinForms-based desktop application is tested for returning appropriate responses and basic functionality for quality assurance purposes.
 
 \subsection{WinForms} \label{winform}
-Windows Forms (WinForms) is a .NET graphical user interface (GUI) framework for building desktop applications. It provides developers with controls for dragging and dropping elements to rapidly create interactive user interfaces. \cite{winforms}
+Windows Forms (WinForms) is a .NET graphical user interface (GUI) framework for building desktop applications. It provides developers with controls for dragging and dropping elements to rapidly create interactive user interfaces \cite{winforms}.
 
 The application's client interface is built with WinForms in the C\# programming language. WinForms allowed for timely and precise development process, creating a visually appealing Windows desktop application.
 
