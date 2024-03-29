@@ -506,10 +506,10 @@ XAMPP is utilized as a development environment in the project, housing the appli
 
 
 \chapter{Implementation}
-In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application. As other components require its presence, the \emph{model} package is introduced first, along with an introduction of the business logic.
+In keeping with the structural approach of the Architecture chapter, the project's implementation is presented by package. Each section will delve deeper into the modular and functional breakdown of the project, along with their application. As other components require its presence, the \emph{model} package is introduced first.
 
 \section{\emph{model}}
-The \emph{model} package contains two classes: \emph{Teams}, and \emph{MySQLHandler}. They represent the business logic, responsible for encapsulation of the database's operations for data manipulation and contain the enum ensuring team names are handled appropriately throughout the application. As figure \ref{img-model-class}'s class diagram shows, the package mainly services the \emph{controller}, with the \emph{simulator} also utilizing team enums for smoother operations.
+The \emph{model} package contains two classes: \emph{Teams}, and \emph{MySQLHandler}. They are respectively responsible for the encapsulation of the database's operations for data manipulation, and contain the enum ensuring team names are handled appropriately throughout the application. As Figure \ref{img-model-class}'s class diagram shows, the package mainly services the \emph{controller}, with the \emph{simulator} also utilizing team enums for smoother operations.
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{img/class/model}
@@ -522,17 +522,17 @@ The Teams enumeration represents each NBA team in the database in all forms of t
 \begin{itemize}
 	\item \textbf{Full Name}: represents both the city and team name (e.g.: Chicago Bulls).
 	\item \textbf{Short Name}: short form of the team's city (e.g.: CHI).
-	\item \textbf{Link Name}: both the city and team's name along with their unique id number as used in RealGM website URLs (e.g.: Chicago-Bulls/4).
+	\item \textbf{Link Name}: both the city and team's name along with their unique id number as used in RealGM\footnote{\url{www.realgm.com} is a website focused on providing statistical data for well known American sports leagues such as the NBA.} website URLs (e.g.: Chicago-Bulls/4).
 	\item \textbf{City Name}: only the city the team plays for (e.g.: Chicago).
 \end{itemize} 
-The class contains logic to create enums from each of these name forms, along with the logic for displaying their converted values.
+The class contains logic to create enums from each of these name forms, along with the capability to display their converted values.
 
 \subsection{\emph{MySQLHandler}}
 The class facilitates communication with a MySQL or MariaDB database, initialized through the parameterized URL string. The connection string is parsed to allocate the correct sub-strings of the parameter to each class attribute (such as host, username, password, and port). Python's \emph{mysql.connector} library (see \cite{mysql.conn} for details) then proceeds to establish a connection to the database, allowing for use of the provided data management methods.
 
 This initialization method allows the application to establish a connection at will with the user's database of choice. 
 
-Data management functionality is customizable and secure, due to cursor parameterization with placeholders for dynamically inserting values into SQL queries. This decreases the likelihood of injection attacks, which would otherwise modify the code with malicious intent, or access unauthorized information \cite{injection-attack}.
+Data management functionality is customizable and secure, due to cursor parameterization with placeholders for dynamically inserting values into SQL queries. This decreases the likelihood of injection attacks, which could otherwise modify the code with malicious intent, or protentially access unauthorized information \cite{injection-attack}.
 
 Data modification proceeds through a query execution function, which initializes a cursor and attempts to execute the parameterized query string. Changes are rolled back upon encountering potential connection errors. Code Extract \ref{code-exec-query} illustrates the source code of the method. Upon successful completion of the operation, a separate function handles the commit to the database, and closes the cursor.
 \lstinputlisting[caption=Cursor Execution of Query, label=code-exec-query]{code/exec-quer.pas}
@@ -542,23 +542,23 @@ While the client side of the application does not require update, delete, and tr
 \section{\emph{controller}}
 The package is responsible for the implementation of three high level functionalities: the API host service, web scraping, and constructing \emph{TeamBuilder} NBA team instances for the simulator. Each of these controls manage a designated section of the back-end logic's operations. 
 
-As discussed in the Architecture chapter (see \ref{ch-architecture}), the \emph{Host} amalgamates final operations of both web scraping -, and Monte Carlo simulation services. Web scraping operations are coordinated by the \emph{controller}'s \emph{ScrapeControl} class, while NBA team instantiation is handled by the \emph{TeamBuilder}. Team instances are provided for the \emph{simulator} package, which in turn services the \emph{Host}. The following sub-sections presents each functionality in detail.
+As discussed in the Architecture chapter (\ref{ch-architecture}), the \emph{Host} amalgamates final operations of both web scraping, and Monte Carlo simulation services. Web scraping operations are coordinated by the \emph{controller}'s \emph{ScrapeControl} class, while NBA team instantiation is handled by the \emph{TeamBuilder}. Team instances are provided for the \emph{simulator} package, which in turn services the \emph{Host}. The following sub-sections presents each functionality in detail.
 
 \subsection{Host Service}
-The \emph{host\_service.py} module houses the \emph{Host} class containing the Flask server handling requests pertaining to the functionality provided by the above described \emph{webscraper} and \emph{simulator} packages. Server instances handle these requests through the following endpoints and their respective class methods:
+The \emph{host\_service} module houses the \emph{Host} class containing the Flask server handling requests pertaining to the functionality provided by the above described \emph{webscraper} and \emph{simulator} packages. Server instances handle these requests through the following endpoints utilizing their respective class methods:
 \begin{itemize}
-	\item \textbf{/monte\_carlo/game\_data}: Its get\_game\_data() method reads the game schedule from the database based on the provided arguments, returning a JSON of the records to the client.
+	\item \textbf{/monte\_carlo/game\_data}: Its \emph{get\_game\_data()} method reads the game schedule from the database based on the provided arguments, returning a JSON of the records to the client.
 	
-	\item \textbf{/monte\_carlo/team\_in\_db}: The get\_teams\_in\_db() method checks if the selected and previous season's data is present in the database for both teams, notifying the client of its findings.
+	\item \textbf{/monte\_carlo/team\_in\_db}: The \emph{get\_teams\_in\_db()} method checks if the selected and previous season's data are present in the database for both teams, notifying the client of its findings.
 	
-	\item \textbf{/monte\_carlo/season\_data}: Its get\_season\_data() method initiates a scrape of missing game data. In case of failure, the method re-initiates the process for a second time, logging the attempt. The client is notified of the operation's success or failure via a REST response. In case of failure, the method removes records from the players table, thereby ensuring future checks will see it is still missing from the database.
+	\item \textbf{/monte\_carlo/season\_data}: Its \emph{get\_season\_data()} method initiates a scrape of missing game data. In case of failure, the method re-initiates the process for a second time, logging the attempt. The client is notified of the operation's success or failure via a REST response. In case of failure, the method removes records from the players table, thereby ensuring future checks will see it is still missing from the database.
 	
-	\item \textbf{/monte\_carlo/simulation}: The get\_monte\_carlo\_sim() initiates the parameterized Monte Carlo simulation, returning its results to the client. The JSON contains the probability density plot and violin plots as base64-encoded strings of the plot image files created by matplotlib. Basic game statistics are also included, such as modes of the score arrays, and win percentage. 
+	\item \textbf{/monte\_carlo/simulation}: The \emph{get\_monte\_carlo\_sim()} initiates the parameterized Monte Carlo simulation, returning its results to the client. The JSON contains the probability density plot and violin plots as base64-encoded strings of the plot image files created by matplotlib. Basic game statistics are also included, such as modes of the score arrays, and win percentage. 
 \end{itemize}
 
-Flask instances are initialized with a timeout of 500 seconds, just over 8 min.~allowing adequate time for slightly longer simulations (see line 5 in Code Extract \ref{code-flask-init}). 
+Flask instances are initialized with an extended timeout setting, allowing adequate time for slightly longer simulations (see line 5 in Code Extract \ref{code-flask-init}). 
 
-Utilizing matplotlib to create graphs during server runtime was challenging at first. When the server instance was running alongside the WinForms GUI, threading conflicts would randomly occur. This was because matplotlib's default back-end GUIs are not guaranteed to be thread-safe, therefore WinForms would occasionally attempt to utilize a resource already allocated to the plotting function. The solution was to set matplotlib to the Anti-Grain Geometry (Agg) plotting library (see line 3 in Code Extract \ref{code-flask-init}), which does not require the use of said resources. \cite{agg}
+Utilizing matplotlib to create graphs during server runtime was challenging at first. When the server instance was running alongside the WinForms GUI, threading conflicts would randomly occur. This was because matplotlib's default back-end GUIs are not guaranteed to be thread-safe, therefore WinForms would occasionally attempt to utilize a resource already allocated to the plotting function. The solution was to set matplotlib to the Anti-Grain Geometry (Agg) plotting library (see line 3 in Code Extract \ref{code-flask-init}), which does not require the use of said resources \cite{agg}.
 
 \lstinputlisting[caption=Flask Instance Initialization, label=code-flask-init]{code/flask-init.pas}
 
@@ -586,11 +586,11 @@ The \emph{controller} package's web scraping functionality is encapsulated in tw
 
 The class is comprised of basic logic for scraping each table type, stored in the database: player, individual game, and team statistics. These are utilized by two main operating functions: \emph{run\_single} and \emph{run\_all}. This is because the application is designed to allow for simple use through a client interface, but also complex back-end use for a more detailed control of the process as required by analysts. The \emph{run\_all} method completes a full scrape for the chosen team and season, while the \emph{run\_single} method takes parameters allowing for further specification of the table type to acquire and populate (player, individual game, or team statistics).
 
-The dictionary data structure housing the URLs allows for a controlled and detailed iteration, utilizing the assessment of the team's participation in playoffs for the given season set up during the instance's initialization. While iterating over the URLs, the appropriate scrape methods are utilized to attain raw HTML data as text, parse it to a Pandas DataFrame, and finally persist the data to the database. This functionality is further discussed in section \ref{sec-webscraper} titled \emph{webscraper}.
+The dictionary data structure housing the URLs allows for a controlled and detailed iteration, utilizing the assessment of the team's participation in playoffs for the given season, set up during the instance's initialization. While iterating over the URLs, the appropriate scrape methods are utilized to attain raw HTML data as text, parse it to a Pandas DataFrame, and finally persist the data to the database. This functionality is further discussed in section \ref{sec-webscraper} titled \emph{webscraper}.
 
 \paragraph{The \emph{dto\_service} module} contains the \emph{DataTransferObject}\label{element-dto} and \emph{Persist} classes. \emph{DataTransferObject} instances facilitate the retrieval of data through \emph{ScraperFacade} instances (see section \ref{sec-webscraper}). Users have the option to choose from a variety of scrape methods, with or without the utilization of proxies. The class further provides logic for handling data sourced from each pre-determined URL, flipping through pages where they are available, and storing them in Pandas DataFrames. 
 
-Beyond utilizing services encapsulated by the \emph{webscraper} package, the class aims to alter and store data in memory for easier processing and better accessibility. Utilizing Pandas DataFrames as a data transfer object \footnote{Data transfer objects (DTO) facilitate data transfer between processes, where the only behavior allowed to the data structure is the storage of data \cite{dto-wiki}.} allows the class to compartmentalize data in structures that are easy to handle, debug, view and transfer to database tables.
+Beyond utilizing services encapsulated by the \emph{webscraper} package, the class aims to alter and store data in memory for easier processing and better accessibility. Utilizing Pandas DataFrames as a data transfer object\footnote{Data transfer objects (DTO) facilitate data transfer between processes, where the only behavior allowed to the data structure is the storage of data \cite{dto-wiki}.} allows the class to compartmentalize data in structures that are easy to handle, debug, view and transfer to database tables.
 
 With a collection of static utility methods, the \emph{Persist} class is responsible for handling data management operations within the application's database. Trough interaction with the \emph{MySQLHandler}'s business logic, it facilitates the insertion, deletion, and retrieval of data.
 
@@ -621,7 +621,7 @@ Each position list houses the \emph{Player} instances assigned to the respective
 
 \begin{itemize}
 	\item \textbf{adjusted\_points}: \\
-	Adjusted points are an attempt to numerically categorize a player's true effectiveness via their affect on the team's offense, due to the player's direct contributions through points scored, rebounds, assists, etc. The are multiple approaches for this calculation. This project utilizes the model put forth by Jim Lackritz\footnote{Jim Lackritz is the co-founder of the Sports Business MBA program at San Diego State University's Fowler College \cite{SDSU}.} and Ira Horowitz\footnote{Ira Horowitz is an emeritus professor of statistics at the University of Florida \cite{SDSU}.}, available at the San Diego State University Fowler College Sports Business Program \cite{SDSU}.
+	Adjusted points are an attempt to numerically categorize a player's true effectiveness via their affect on the team's offense, due to the player's direct contributions through points scored, rebounds, assists, etc. There are multiple approaches for this calculation. This project utilizes the model put forth by Jim Lackritz\footnote{Jim Lackritz is the co-founder of the Sports Business MBA program at San Diego State University's Fowler College \cite{SDSU}.} and Ira Horowitz\footnote{Ira Horowitz is an emeritus professor of statistics at the University of Florida \cite{SDSU}.}, available at the San Diego State University Fowler College Sports Business Program \cite{SDSU}:
 	\begin{equation}
 		\label{eq-adj-pts}
 		\tag{Model 5.1: Lackritz's Adjusted Points Equation}
@@ -632,9 +632,9 @@ Each position list houses the \emph{Player} instances assigned to the respective
 	A player's weight is the metric allowing the Monte Carlo simulation to make random weighted decisions about a players participation in the specified game. It is calculated by averaging the player's adjusted points percentage and playtime weight.
 	
 	\item \textbf{playtime\_w}:\\
-	A players playtime weight is my arbitrary representation of a weight representing the player's probability to be on the court for any given possession. It utilizes the player's depth in the official roster for the season, and the player's average minutes played during the season divided by the number of minutes per basketball game (48). Second string players probability is then decreased to a quarter of its original value, why third string players are decreased even more, to 2\% of their original playtime. All other players are not considered during the simulation. 
+	A players playtime weight is my arbitrary representation of the weight for the player's probability to be on court during any given possession. It utilizes the player's depth in the official roster for the season, and the player's average minutes played during the season divided by the number of minutes per basketball game (48 min). Second string players probability are then decreased to a quarter of their original value, while third string players are decreased even more, to 2\% of their original playtime. All other players are not considered during the simulation. 
 	
-	This is representative of a players playtime in a real life scenario, where third-string players will generally not see a lot of playtime unless the match itself is a statistical outlier. This can mean either injury, or the team performing so well or so poorly, that novice players can be introduced without detrimentally affecting the outcome of the match.
+	This is representative of a players' playtime in a real life scenario, where third-string players will generally not see a lot of playtime unless the match itself is a statistical outlier. This can mean either injury, or the team performing so well or so poorly, that novice players can be introduced without detrimentally affecting the outcome of the match.
 	
 	This approach is a simplified representation of basketball analytics. More professional methods exist for calculating player utilization, however they are outside the scope of this project as it endeavors to approach the subject matter from a computer science perspective at the BSc level.
 	
@@ -664,9 +664,9 @@ It is important to note, that the three initialized DataFrames are filtered spec
 
 The team's individual games table consists of one calendar year's data leading up to the game date. Code Extract \ref{code-get-ind-data} illustrates the source code responsible for compiling the DataFrame.
 \lstinputlisting[caption=Initializing Individual Games DataFrame, label=code-get-ind-data]{code/get-ind-data.pas}
-The DataFrame is then modified, repeating records pertaining to the last 2-3 games (those in the 98.5\% time span threshold of the game date) five times. Games falling within the 80\% threshold of the game date are repeated three times, while games in the more distant past only appear once in the re-constructed DataFrame. As all player data is reconstructed from stats in this DataFrame, more recent games will carry a greater weight in the player's performance. This is intended to represent the psychological affect an individual's recent performance has on their current output.
+The DataFrame is then modified, repeating records pertaining to the last 2-3 games (those in the 98.5\% time span threshold of the game date) five times. Games falling within the 80\% threshold of the game date are repeated three times, while games in the more distant past only appear once in the re-constructed DataFrame. As all player data is reconstructed from stats in this DataFrame, more recent games will carry a greater weight in the player's performance. This is intended to represent the psychological effect an individual's recent performance has on their current output.
 
-The \emph{build\_roster} method constructs \emph{Player} instances from the assembled DataFrames, populating them in their respective positions in the team's \emph{Roster}. This is done by iterating over each player in the players DataFrame. A boolean test ensures the player is assigned to a position (novice players that don't see playtime are not always assigned to positions). This is a preliminary filter to once again decrease the strain on memory. Second, the logic ensures the player is present in the individual games DataFrame. This ensures the player has seen playtime in the past 365 days. Players that do not meet this criteria are overlooked during the team construction process, as their chances of seeing playtime would be minuscule in reality as well. This further decreases demand on memory and computing time. All players who meet the requirements of the test logic are instantiated utilizing the individual games DataFrame filtered to the player's stats, and additional stats from the player DataFrame. Code Extract \ref{code-build-roster} illustrates the testing and appending functionality of the method.
+The \emph{build\_roster} method constructs \emph{Player} instances from the assembled DataFrames, populating them in their respective positions in the team's \emph{Roster}. This is done by iterating over each player in the players DataFrame. A boolean test ensures the player is assigned to a position (novice players that don't see playtime are not always assigned to positions). This is a preliminary filter to once again decrease the strain on memory. Second, the logic ensures the player is present in the individual games DataFrame. This ensures the player has seen playtime in the past 365 days. Players that do not meet this criteria are overlooked during the team construction process, as their chances of seeing playtime would be minuscule in reality as well. This further decreases demand on memory and computing time. All players who meet the requirements of the test logic are instantiated utilizing the individual games DataFrame filtered to the player's stats, along with additional stats from the player DataFrame. Code Extract \ref{code-build-roster} illustrates the testing and appending functionality of the method.
 \lstinputlisting[caption=Code Snippet of Roster Construction, label=code-build-roster]{code/build-roster.pas}
 The finished \emph{TeamBuilder} instance is then easily utilized by the simulation's \emph{GameBuilder}. The encapsulated data allows for fast access in a logical and intuitive structure.
 
@@ -684,7 +684,7 @@ The \emph{logger} module houses a single \emph{Logger} class, which provides thi
 
 By default \emph{Logger} instances receive a log level of INFO and are referred to the \emph{application\_log.log}, however parameters exist to alter these settings upon initialization. 
 
-Instances complete the initialization process by ensuring the log size has not exceeded the allotted 10 MB threshold. Upon passing this benchmark, truncation is ensured with the next instantiation.
+Instances complete the initialization process by ensuring the log size has not exceeded the allotted 10 MB threshold. Upon passing this benchmark, truncation is ensured upon the following instantiation.
 
 The service allows the application to log messages of varying severity levels through the use of the \emph{info}, \emph{warning}, and \emph{error} methods. Messages logged under the base log level are omitted from the log file. This functionality allows different components to access the log for different purposes, and allow better control of what gets logged during debugging, testing, or runtime.
 
@@ -692,9 +692,9 @@ The logger also supports advanced operations, useful during testing and debuggin
 
 
 \section{\emph{simulation}} \label{sec-simulation}
-The package is responsible for setting up and running the Monte Carlo simulation, returning its findings for the parameterized epochs to the \emph{controller} package's host service. The package consists of four classes: \emph{GameBuilder}, \emph{Simulation}, \emph{MonteCarlo}, and the \emph{GameTools} static utility class.
+The package is responsible for setting up and running the Monte Carlo simulation, and returning its findings for the parameterized epochs to the \emph{controller} package's host service. The package consists of four classes: \emph{GameBuilder}, \emph{Simulation}, \emph{MonteCarlo}, and the \emph{GameTools} static utility class.
 
-The package's simulation constructor classes, the \emph{GameBuilder} and \emph{Simulation} classes, both utilize the static utility methods the \emph{GameTools} class in their logic. The enum service provided by the \emph{model} package is also used throughout the \emph{simulator} package, as depicted in Figure \ref{img-simulator-class} displaying the \emph{simulator}'s class diagram.
+The package's simulation constructor classes, the \emph{GameBuilder} and \emph{Simulation} classes, both utilize the static utility methods of the \emph{GameTools} class in their logic. The enum service provided by the \emph{model} package is also used throughout the \emph{simulator} package, as depicted in Figure \ref{img-simulator-class} displaying the \emph{simulator}'s class diagram.
 
 \begin{figure}[th!]
 	\centering
@@ -722,7 +722,7 @@ Each possession randomly samples the players on the court, however not all playe
 
 The \emph{simualte\_stat} and \emph{shot\_attempt} methods randomly decide if their respective events come to pass by utilizing the step method. The first is meant to simulate metrics such as turn overs (when a player looses the ball for any reason), among other, and allows for further development of the simulation through its utilization on additional metrics to improve results. 
 
-The \emph{shot\_attempt} method is specifically meant to deal with scoring attempts. It first decides who, of the players actively participating in the play will attempt to score the point. Then their shot metrics are reviewed to decide what type of shot they will attempt (3 point or regular 2 point). Code Extract \ref{shot-attempt} shows the method.
+The \emph{shot\_attempt} method is specifically meant to deal with scoring attempts. It first decides who, of the players actively participating in the play will attempt to score the point. Then their shot metrics are reviewed to decide what type of shot they will attempt (3 point or regular 2 point). Code Extract \ref{code-shot-attempt} shows the method.
 \lstinputlisting[caption=Weighted Random Player Sampoling Method, label=code-shot-attempt]{code/shot-attempt.pas}
 
 Finally, the \emph{switch\_possession} method awards the ball to the opposing team, allowing them an offensive attempt in turn. Further functionality is added to the simulation through the utilization of these methods by the \emph{Simulation} class.
@@ -731,7 +731,7 @@ Finally, the \emph{switch\_possession} method awards the ball to the opposing te
 \subsection{\emph{Simulation}}
 The class constructs a simulation instance which will play a single basketball game. The parameters and data reconstruct a specific historical match. Upon initialization, the class utilizes the \emph{GameBuilder} class to construct the game scenario, before proceeding with the simulation and returning the final score.
 
-The pace\footnote{In a basketball game, the pace metric indicates the average or expected amount of possessions the team will have during the expected 48 minutes of play \cite{pace}.} of the game is determined by the combination of each teams relevant metric, providing the required number of possession iterations to conclude the match.
+The pace\footnote{In a basketball game, the pace metric indicates a team's expected amount of possessions \cite{pace}.} of the game is determined by the combination of each teams relevant metric, providing the required number of possession iterations to conclude the match.
 
 \textbf{The \emph{possession} method} applies the relevant logic encapsulated by the \emph{GameBuilder} instance to the parameterized \emph{TeamBuilder} object. After deciding which players are on court, and which of these are actively involved in play, the possibility of a turnover is reviewed. If the ball is turned over, the opposing team continues with their possession, otherwise a shot attempt is made. If the shot is unsuccessful, the rebound metrics are simulated to determine if the offensive team will attack again (this does not count as a new possession in the iteration), otherwise the ball is turned over to the opposing team. 
 
@@ -742,24 +742,24 @@ Monte Carlo simulation instances are initialized with parameters specifying a da
 
 The class provides two separate run methods, allowing for both client and back-end utilization. Client-based use is constructed specifically for the purpose of presenting this project for academic review, and is therefore limited by a connection time which consequently limits the amount of epochs. Back-end use is meant for higher epoch counts, placing less demand on the system. This is utilized to test the application's results with higher epoch counts, and determine how realistic the outcomes are.
 
-Both methods create a \emph{Simulation} instance utilized to play one basketball game per epoch iteration. Results are tracked and returned as matplotlib plots, one probability density, and one violin. The back-end method \emph{run\_plt} displays the plots upon completion of the simulation, while the \emph{run} method, intended for client use, returns a list of the plots as strings, along with the basic statistics of the simulation such as the team's win percentage per the total number of epochs and the mode of their results. Code Extract \ref{code-convert} illustrates how the method utilized to convert matplotlib graphs to base64.
+Both methods create a \emph{Simulation} instance utilized to play one basketball game per epoch iteration. Results are tracked and returned as matplotlib plots, one probability density, and one violin. The back-end method \emph{run\_plt} displays the plots upon completion of the simulation, while the \emph{run} method, intended for client use, returns a list of the plots as strings, along with the basic statistics of the simulation such as the team's win percentage per the total number of epochs and the mode of their results. Code Extract \ref{code-convert} illustrates the method source code utilized to convert matplotlib graphs to base64.
 
 \lstinputlisting[caption=Plot Conversion to Base64, label=code-convert]{code/convert.pas}
 
 \section{\emph{view}}
-The package is a WinForms .NET framework application, and it acts as the client side of the system. Users can utilize the Windows-based program to communicate with the back-end's Python host via REST API. C\#'s RestSharp package provides the capability to handle HTTP requests and deserialize the returning responses into the appropriate objects for utilization.
+The package is a WinForms .NET Framework application, and it acts as the client side of the system. Users can utilize the Windows-based program to communicate with the back-end's Python host via REST API. C\#'s RestSharp package provides the capability to handle HTTP requests and deserialize the returning responses into the appropriate objects for utilization.
 
-The view is comprised of three windows: \emph{FindGame}, \emph{ScrapePopUp}, and \emph{MonteCarlo}. Each of these handles the communication necessary for their operation. The client operates only as a display, and an interface for the user. All operations are performed by back-end logic, and the results sent to the client as a JSON. Parameters are cached on the client side, decreasing the necessity of taking the same input parameters from the user. This information is also passed on to subsequent windows allowing for a smoother user experience.
+The view is comprised of three windows: \emph{FindGame}, \emph{ScrapePopUp}, and \emph{MonteCarlo}. Each of these handles the communication necessary for their operation. The client operates only as a display, and an interface for the user. All operations are performed by back-end logic, the results are sent to the client as a JSON. Parameters are cached on the client side, decreasing the necessity of taking the same input parameters from the user. This information is also passed on to subsequent windows allowing for a smoother user experience.
 
-The client only allows for simple, minimal client control of the application. Database operations are purposely limited to the back-end logic. The \emph{view} is truly a minimalist use interface intended to display the application's capabilities for the sake of presenting this project.
+The client only allows for simple, minimal client control of the application. Database operations are purposely limited to the back-end logic. The \emph{view} is truly a minimalist user interface intended to display the application's capabilities for the sake of presenting this project.
 
-The \emph{FindGame} window takes initial parameters for setting up the game, such as home and away teams, season, and epoch count. When the \emph{Get Games} button is pressed, it requests all historic games via the \emph{/monte\_carlo/game\_data} resource endpoint, displaying them in a table via DataGridView \cite{dgv}.
+The \emph{FindGame} window takes initial parameters for setting up the game, such as home and away teams, season, and epoch count. When the \emph{Get Games} button is pressed, it requests all historic games via the \emph{/monte\_carlo/game\_data} resource endpoint, displaying them in a table via a DataGridView (see \cite{dgv} for details).
 
 The selected row automatically parameterizes the \emph{/monte\_carlo/team\_in\_db} endpoint, which notifies the client of the required data's presence, or lack thereof, in the database. If required, the \emph{ScrapePopUp} window appears, allowing the user to specify their choice of scrape settings to acquire the data with the \emph{/monte\_carlo/season\_data} endpoint. 
 
 If the user wishes, web scraping can be forced, even if the data already exists by pressing the \emph{Forced Scrape} button. In this case all data is scraped again, however as all tables in the database require unique records, the data will only be added to the database if it is truly missing from a table.
 
-The application does not include a VPN, therefore users are encouraged to use a third party service. Proxies are included with the application, and if turned on can provide an additional layer of security, however these are free proxy addresses that have not been thoroughly reviewed. They therefore cannot guarantee anonymity. Furthermore, the use of the built in proxies greatly decreases application speed, as the system will likely need a long time to locate one that is operational, due to the high demand for these services. Users do have the option to provide their own proxy list. If they choose to do so, they must provide it as a CSV table, with the first row being header, first column containing IP addresses, and second row containing port numbers.
+The application does not include a VPN (see \cite{vpn} for details), therefore users are encouraged to use a third party service. Proxies are included with the application, and if turned on can provide an additional layer of security, however these are free proxy addresses that have not been thoroughly reviewed. They therefore cannot guarantee anonymity. Furthermore, the use of the built in proxies greatly decreases application speed, as the system will likely need a long time to locate one that is operational, due to the high demand for these services. Users do have the option to provide their own proxy list. If they choose to do so, they must provide it as a CSV table, with the first row being the header, first column containing IP addresses, and second row containing port numbers.
 
 Once it is established that the database contains the necessary information (either by means of a successful scrape, or by confirmation from the host), the final window is activated. This \emph{MonteCarlo} window receives all previous parameters from the previous windows upon initialization, and commences the simulation without the need for user interaction via the \emph{/monte\_carlo/simulation} endpoint, displaying both graphs along with original and simulated game data for the user.
 
@@ -776,7 +776,7 @@ The \emph{WebKit} class is a collection of static methods that are generally use
 \begin{itemize}
 	\item Creating new random headers for HTTP requests, mimicking varying operating systems and browser technologies.
 	
-	\item Introducing random with preset intervals for delays between requests.
+	\item Introducing random delays with preset intervals between requests.
 	
 	\item In case of Selenium utilization, providing mouse movements to specific elements within the HTML.
 \end{itemize}
@@ -800,7 +800,7 @@ The facade therefore provides full data acquisition services to the \emph{contro
 \subsection{Parsing Service}
 The \emph{RealGMParser} is treated as a standalone component within the package. The class consists of static utility methods, built for parsing and handling content acquired form the RealGM website's URLs. The class makes use of the BeautifulSoup4 and Pandas Python libraries to parse the scraped data into DataFrames.
 
-\begin{figure}[th!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{img/class/webscraper}
 	\caption{\emph{webscraper} UML Class Diagram}
@@ -811,7 +811,7 @@ The \emph{RealGMParser} is treated as a standalone component within the package.
 \chapter{Testing} \label{ch-testing}
 The application contains over one-hundred tests, responsible for reviewing operational integrity at all levels. The majority of the tests are unit tests, however both integration and system tests are included. 
 
-Tests are run separately for the front and back-end of the application. Front end testing is discussed in the System Testing section. Back-end testing consists of a combination of unit and integration tests, both utilizing Python's built-in \emph{unittest} framework, which provide a suite of testing methods specifically designed for this purpose \cite{unittest}.
+Tests are run separately for the front and back-end of the application. Front end testing is discussed in the System Testing section (\ref{sec-sys-tst}). Back-end testing consists of a combination of unit and integration tests, both utilizing Python's built-in \emph{unittest} framework, which provide a suite of testing methods specifically designed for this purpose \cite{unittest}.
 
 It was not my original intention to have such a comprehensive test suite, however due to the complexity of the project, as the application grew, it became necessary to run frequent tests. The \emph{regression\_test} module was therefore created, which includes all unit and integration tests, along with a full linting of the back-end. Tests can be run form their respective modules as well, either by activating the full module test, or just running the individual test pertaining to the single component, by pressing the green triangle beside the name of the class or method.
 
@@ -854,10 +854,10 @@ The \emph{control\_service\_test} runs a full scrape of the Chicago Bulls' 1991-
 
 The \emph{monte\_carlo\_test} runs a simulation for both regular season and playoff games, ensuring proper functionality of Monte Carlo simulation services.
 
-\section{System Testing}
+\section{System Testing} \label{sec-sys-tst}
 The full systems test is completed through the Client interface, utilizing .NET's TestStack.White package. As discussed in the Technologies and Frameworks section, this package allows interface testing, and supports WinForms, among others.
 
-The test suite first checks window parameterization functionality by applying a combination of erroneous choices and ensuring a message box return and error. The incorrect parameters tested include:
+The test suite first checks window parameterization functionality by applying a combination of erroneous choices and ensuring a message box return an error. The incorrect parameters tested include:
 \begin{itemize}
 	\item Epoch count is not filled.
 	\item Epoch count is filled with non-numeric value.
@@ -867,7 +867,7 @@ The test suite first checks window parameterization functionality by applying a 
 	\item Away team drop-down menu is left unselected.
 \end{itemize}
 
-Finally, selected seasons are tested by iterating over all teams and performing a Monte Carlo simulation on the parameters. This is done by creating two array: \emph{nbaTeams} and \emph{seasons}, and iterating through the combination of teams where they are not equal for each season's iteration. Errors are logged during the testing, and the culmination of the process automatically opens the log for user viewing. The log is not truncated automatically. This allows users to view previous results, but also holds them accountable for file management.
+Finally, selected seasons are tested by iterating over all teams and performing a Monte Carlo simulation on the parameters. This is done by creating two arrays: \emph{nbaTeams} and \emph{seasons}, and iterating through the combination of teams where they are not equal for each season's iteration. Errors are logged during the testing, and the culmination of the process automatically opens the log for user viewing. The log is not truncated automatically. This allows users to view previous results, but also holds them accountable for file management.
 
 The test does not include every game of the season, only the first game of each team combination. Even so, runtime is in excess of an hour due to the amount of combinations the suite needs to iterate over.
 
@@ -897,7 +897,7 @@ Due to the expanse of data utilized during operations, this approach became high
 	
 	\item From /model/data/ upload \emph{nba.sql} and \emph{nba\_test.sql} to your database. Depending on your database provider you may need to break the \emph{individual\_games\_regular} table into smaller chunks, due to row limitations.
 	
-	\item Install requirements with the command by navigating to the project folder or using the absolute path with the command: \emph{pip install -r requirements.txt}
+	\item Install requirements by navigating to the project folder or using the absolute path with the command: \emph{pip install -r requirements.txt}
 	
 	\item Fill out \emph{project\_secrets.py} with the necessary access data.
 	
@@ -964,7 +964,7 @@ Users are greeted with the FindGames Window (see Figure \ref{img-findgames}), wh
 \end{figure}
 
 
-The top left corner shows the percentage of games won by each team and the mode of their results. Both the probability density (left) and violin plots (right) are based on the final outcomes of the game per each epoch, displaying the frequency of each outcomes occurrence. Home scores are shown in yellow, away are blue.
+The top left corner shows the percentage of games won by each team and the mode of their results. Both the probability density (left) and violin plots (right) are based on the final outcomes of the game per each epoch, displaying the frequency of each outcome's occurrence. Home scores are shown in yellow, away are in blue.
 
 Users can navigate back to the initial FindGames window at any time by pressing the home button on the top right-hand side, and initiate a new simulation by changing the parameters.
 
@@ -985,7 +985,7 @@ The measured scraping process spanning all teams for fifteen seasons contained t
 \end{itemize}
 The web scraping process ran for over twelve hours. During the process, HTTP requests made with the Requests library failed four times. All scrape attempts executed with Selenium's Firefox were successful.
 
-In comparison with other scraping technologies, the applied method of a quick HTTP request followed by browser imitation in case of potential issues show promise. It combines the speed and effectiveness of the Requests library, while still providing the higher success probability of a Selenium based scrape as a backup. This also ensures timely execution, as using Selenium on its own would drastically increase processing time. Requests based web scraping attempts only approached the two minute cutoff in case of connection errors, while Selenium based scrapes generally performed around the three minute mark.
+In comparison with other scraping technologies, the applied method of a quick HTTP request followed by browser imitation in case of potential issues showed promise. It combines the speed and effectiveness of the Requests library, while still providing the higher success probability of a Selenium based scrape as a backup. This also ensures timely execution, as using Selenium on its own would drastically increase processing time. Requests based web scraping attempts only approached the two minute cutoff in case of connection errors, while Selenium based scrapes generally performed around the three minute mark.
 
 This approach is not novel, the combination has been discussed over multiple research papers, forums and blogs. Ajay Bale et al give a thorough evaluation of the web scraping methods in their 2022 paper titled \emph{Web Scraping Approaches and their Performance on Modern Websites} \cite{bale}.
 
@@ -1073,7 +1073,7 @@ As seen in Figures \ref{img-results-1000}, \ref{img-results-5000}, and \ref{img-
 	\end{minipage}
 \end{figure}
 
-Overall the Monte Carlo simulation surpassed my expectations, performing quite admirably despite the inherent limitations. It is interesting to note that the model's lightweight build not only didn't decrease performance as expected, but also decreased the required amount of epochs to realize an acceptable outcome. As seen in the above images, sometimes even one thousand epochs result in a successful simulation. While this model is rudimentary in comparison to Monte Carlo simulation capabilities, it helped gain insight and lay the foundations for future research and refined my understanding of simulation methodologies.
+Overall, the Monte Carlo simulation surpassed my expectations, performing quite admirably despite the inherent limitations. It is interesting to note that the model's lightweight build not only didn't decrease performance as expected, but also decreased the required amount of epochs to realize an acceptable outcome. As seen in the above images, sometimes even one thousand epochs result in a successful simulation. While this model is rudimentary in comparison to Monte Carlo simulation capabilities, it helped gain insight and lay the foundations for future research and refined my understanding of simulation methodologies.
 
 
 
@@ -1090,7 +1090,7 @@ Data validation is one of my biggest takeaways as I look towards future projects
 I am eager to explore further applications of Monte Carlo simulations, not just in sports analytics, but also regarding finance, particularly in investments. Integrating deep learning techniques into repetitive high data volume parts of this methodology also present exciting research opportunities for enhanced analysis and prediction.
 
 \section{Conclusion}
-In this thesis, I undertook to explore a combination of web scraping techniques and Monte Carlo simulations as they apply to analytical forecasting through utilizing the methods to predicting historic basketball game outcomes in the 1990s. By developing a web scraping tool, I acquired vast amounts of statistical data pertaining to the NBA games from free online sources, which enabled the creation of a robust dataset used for analysis and simulation.
+In this thesis, I undertook to explore a combination of web scraping techniques and Monte Carlo simulations as they apply to analytical forecasting through utilizing the methods to predict historic basketball game outcomes from the 1990s. By developing a web scraping tool, I acquired vast amounts of statistical data pertaining to the NBA games from free online sources, which enabled the creation of a robust dataset used for analysis and simulation.
 
 The implemented Monte Carlo simulations provided insight into the potential outcomes of basketball games, the success of which was analyzed based on the historic outcomes of the matches. Despite the inherent challenges and limitations, such as the complexity of the metrics, the simulation results showed a promising correlation with historical game data.
 
@@ -1399,6 +1399,11 @@ DOI: \href{https://doi.org/10.1109/ICESC54411.2022.9885689}{10.1109/ICESC54411.2
 \textsc{Scrapy},
 \emph{Scrapy 2.11 documentation}, 2024, 
 \url{https://docs.scrapy.org/en/latest/}, [Retrieved 20 March 2024]
+
+\bibitem{vpn}
+\textsc{Mozilla},
+\emph{What is a VPN?},
+\url{https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/}, [Retrieved 28 March 2024]
 
 \end{thebibliography}
 
