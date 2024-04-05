@@ -39,7 +39,7 @@
 \institute{Institute of Mathematics and Informatics}
 \title{Web Scraping and Monte Carlo Simulations for Analytical Forecasting}
 \author{Lorand Heidrich\\ Computer Science BSc}
-\supervisor{Adam Kovacs\\ Teaching Assistant}
+\supervisor{Adam Kovacs\\ Assistant Lecturer}
 \city{Eger}
 \date{2024}
 
@@ -353,14 +353,17 @@ The component interacts with the user and the host module of the \emph{controlle
 The package completes data gathering services from the amalgamation of preset websites and parameters representing selected NBA games, in order to supply historic statistical game data for the application.
 \paragraph{Functionality:}
 The acquisition process extracts data from a combination of preset URLs, set to match parameterized game data originating from the user. It includes functionality to interact with each URL in a manner defined by the user's chosen scraping method. Collected information is preprocessed and transformed before being committed to memory in a preset reusable format, easily accessed by the \emph{controller} as it looks to the \emph{webscraper} to acquire new information. Web scraping requests are generally not repeated, as the system is built to house already accessed data, thereby minimizing dependency on online sources to bare necessity. The component's sequence diagram (see Figure \ref{img-scraping-sequence}) illustrates the process during runtime.
-\paragraph{Interaction:}
-The \emph{webscraper} package primarily communicates with the \emph{controller} in order to receive data acquisition requests and parameters. Its preprocessed results are also returned to the \emph{controller}. The package's component diagram (see Figure \ref{img-webscraper-component}) illustrates the \emph{webscraper}'s interactions. Logging is utilized throughout the process.
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{img/sequence/scraping/scraping_caerilian}
 	\caption{Web Scraping UML Sequence Diagram}
 	\label{img-scraping-sequence}
 \end{figure}
+
+\paragraph{Interaction:}
+The \emph{webscraper} package primarily communicates with the \emph{controller} in order to receive data acquisition requests and parameters. Its preprocessed results are also returned to the \emph{controller}. The package's component diagram (see Figure \ref{img-webscraper-component}) illustrates the \emph{webscraper}'s interactions. Logging is utilized throughout the process.
+
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/component/component_webscraper}
@@ -772,7 +775,16 @@ The \emph{webscraper} package provides a variety of web scraping services, which
 This section reviews the \emph{webscraper}'s implementation broken down by functionality in order to give an overview of how they work together with the facade class that represents the package's functionality.
 
 \subsection{Utility Classes}
-The \emph{WebKit} class is a collection of static methods that are generally used by scrape services throughout the package. They attempt to mimic human use and introduce randomness to decrease the chance of being blocked by the service provider. Services include:
+The \emph{WebKit} class is a collection of static methods that are generally used by scrape services throughout the package. They attempt to mimic human use and introduce randomness to decrease the chance of being blocked by the service provider. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{img/class/webscraper}
+	\caption{\emph{webscraper} UML Class Diagram}
+	\label{img-webscraper-class}
+\end{figure}
+
+Services include:
 \begin{itemize}
 	\item Creating new random headers for HTTP requests, mimicking varying operating systems and browser technologies.
 	
@@ -800,12 +812,7 @@ The facade therefore provides full data acquisition services to the \emph{contro
 \subsection{Parsing Service}
 The \emph{RealGMParser} is treated as a standalone component within the package. The class consists of static utility methods, built for parsing and handling content acquired form the RealGM website's URLs. The class makes use of the BeautifulSoup4 and Pandas Python libraries to parse the scraped data into DataFrames.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\linewidth]{img/class/webscraper}
-	\caption{\emph{webscraper} UML Class Diagram}
-	\label{img-webscraper-class}
-\end{figure}
+
 
 
 \chapter{Testing} \label{ch-testing}
@@ -903,7 +910,7 @@ Due to the expanse of data utilized during operations, this approach became high
 	
 	\item Ensure your database is running, then start the back end service by running \emph{main.py}.
 	
-	\item The client application found in /view should be downloaded to, and run from the client system. /view/NBA\_Sim\_View/bin/Debug/NBA\_Sim\_View.exe will commence the client application.
+	\item The client application found in /view should be downloaded too, and run from the client system. /view/NBA\_Sim\_View/bin/Debug/NBA\_Sim\_View.exe will commence the client application.
 \end{enumerate}
 
 \section{User Guide}
@@ -1077,7 +1084,7 @@ Overall, the Monte Carlo simulation surpassed my expectations, performing quite 
 
 
 
-\chapter{Conclusion}
+\chapter{Summary}
 \section{Limitations and Future Work}
 Throughout the course of the research, numerous insights and challenges have surfaced, shedding light on possible alternate approaches, limitations, and areas of improvement. As with any ambitious project, time management and realistic goals are key factors of success. While I would have liked to delve deeper into data analysis, validation, and certain technical aspects of the simulation, I found it necessary to curb my enthusiasm and maintain focus on the project's core objectives.
 

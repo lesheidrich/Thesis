@@ -91,21 +91,21 @@
 \contentsline {section}{\numberline {5.5}\emph {view}}{45}{section.5.5}%
 \contentsline {section}{\numberline {5.6}\emph {webscraper}}{46}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Utility Classes}{46}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Selenium WebDrivers}{47}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.2}Selenium WebDrivers}{48}{subsection.5.6.2}%
 \contentsline {subsection}{\numberline {5.6.3}The Facade}{48}{subsection.5.6.3}%
 \contentsline {subsection}{\numberline {5.6.4}Parsing Service}{48}{subsection.5.6.4}%
-\contentsline {chapter}{\numberline {6}Testing}{50}{chapter.6}%
-\contentsline {paragraph}{Warning:}{50}{section*.34}%
-\contentsline {section}{\numberline {6.1}Unit Testing}{50}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration Testing}{51}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Testing}{52}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Manual}{53}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Installation}{53}{section.7.1}%
-\contentsline {section}{\numberline {7.2}User Guide}{54}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Results}{56}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Web Scraping}{56}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Monte Carlo Simulation}{57}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Conclusion}{60}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Limitations and Future Work}{60}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Conclusion}{61}{section.9.2}%
-\contentsline {chapter}{Bibliography}{62}{chapter*.35}%
+\contentsline {chapter}{\numberline {6}Testing}{49}{chapter.6}%
+\contentsline {paragraph}{Warning:}{49}{section*.34}%
+\contentsline {section}{\numberline {6.1}Unit Testing}{49}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration Testing}{50}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Testing}{51}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Manual}{52}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Installation}{52}{section.7.1}%
+\contentsline {section}{\numberline {7.2}User Guide}{53}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Results}{55}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Web Scraping}{55}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Monte Carlo Simulation}{56}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Summary}{59}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Limitations and Future Work}{59}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Conclusion}{60}{section.9.2}%
+\contentsline {chapter}{Bibliography}{61}{chapter*.35}%
